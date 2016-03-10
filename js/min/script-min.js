@@ -1,0 +1,1 @@
+function scrollPage(){requestAnimFrame(scrollPage)}window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n){window.setTimeout(n,1e3/60)}}(),$(function(){}),$(window).resize(function(){});

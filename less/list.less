@@ -1,3 +1,162 @@
 /* @group List */
-
+#etapes-event{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 424px;
+	margin: 40px auto;
+	padding: 0;
+	border-radius: 8px;
+	overflow: hidden;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	counter-reset: counter-step-event;
+	&.etape-1-active{
+		>li{
+			&.etape-1{
+				transform: translateX(0%);
+			}
+			&.etape-2{
+				transform: translateX(50%);
+			}
+			&.etape-3{
+				transform: translateX(50%);
+			}
+			&.etape-4{
+				transform: translateX(50%);
+			}
+		}
+	}
+	&.etape-2-active{
+		>li{
+			&.etape-1{
+				transform: translateX(0%);
+			}
+			&.etape-2{
+				transform: translateX(0%);
+			}
+			&.etape-3{
+				transform: translateX(50%);
+			}
+			&.etape-4{
+				transform: translateX(50%);
+			}
+		}
+	}
+	&.etape-3-active{
+		>li{
+			&.etape-1{
+				transform: translateX(0%);
+			}
+			&.etape-2{
+				transform: translateX(0%);
+			}
+			&.etape-3{
+				transform: translateX(0%);
+			}
+			&.etape-4{
+				transform: translateX(50%);
+			}
+		}
+	}
+	&.etape-4-active{
+		>li{
+			&.etape-1{
+				transform: translateX(0%);
+			}
+			&.etape-2{
+				transform: translateX(0%);
+			}
+			&.etape-3{
+				transform: translateX(0%);
+			}
+			&.etape-4{
+				transform: translateX(0%);
+			}
+		}
+	}
+	>li{
+		display: block;
+		height: 100%;
+		width: 40%;
+		position: absolute;
+		top: 0;
+		transition: transform 0.3s ease-in-out;
+		border-left: 1px solid @grisBleuFioulReduc;
+		box-sizing: border-box;
+		counter-increment: counter-step-event;
+		background-color: @blanc;
+		h3{
+			position: relative;
+			.lato-italic(1.375em);
+			margin: 30px 0 0 30px;
+			padding: 0 0 0 34px;
+			&:before{
+				content: counter(counter-step-event);
+				display: block;
+				width: 24px;
+				height: 24px;
+				line-height: 24px;
+				text-align: center;
+				background-color: #fa6f06;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin: -12px 0 0 0;
+				.lato-bold-italic(0.727em);
+				color: @blanc;
+			}
+		}
+		p{
+			box-sizing: border-box;
+			width: 100%;
+			padding: 75px 30px 0 60%;
+			.lato-italic(1em);
+			position: relative;
+			line-height: 1.4em;
+			strong{
+			    .lato-bold-italic(1em);
+			}
+		}
+		img{
+			position: absolute;
+			max-width: 100%;
+			display: block;
+		}
+		&.etape-1{
+			left: 0;
+			border-left: none;
+			img{
+				top: 107px;
+				left: 3px;
+			}
+		}
+		&.etape-2{
+			left: 20%;
+			img{
+				top: 91px;
+				left: 0px;
+			}
+		}
+		&.etape-3{
+			left: 40%;
+			img{
+				bottom: 0px;
+				left: 0px;
+			}
+			p{
+				padding-right: 25px;
+			}
+		}
+		&.etape-4{
+			left: 60%;
+			img{
+				width: 100%;
+				bottom: 0px;
+				left: 0px;
+			}
+		}
+	}
+}
 /* @end */

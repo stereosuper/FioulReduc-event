@@ -54,9 +54,22 @@ h1{
     margin: 0 0 20px 0;
 }
 
+h2{
+    .lato-bold(1.563em);
+    margin: 0;
+    padding: 0;
+}
+
 p{
     .lato(1em);
     margin: 10px 0;
+    strong{
+        .lato-bold(1em);
+    }
+}
+
+b, strong{
+    font-weight: normal;
 }
 
 .container{
@@ -68,6 +81,20 @@ p{
 
 .txt-centered{
     text-align: center;
+}
+
+.logo-fioulreduc{
+    display: inline-block;
+    vertical-align: top;
+    width: 262px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    background: url("../layoutImg/logo.png") no-repeat 0 0;
+}
+
+.bloc-gris-bleu{
+    background-color: @grisBleuFioulReduc;
 }
 
 .grid{
@@ -87,6 +114,15 @@ p{
     }
     .container{
         position: relative;
+    }
+}
+
+.wrapper-compteurs{
+    .compteur-participants{
+        float: left;
+    }
+    .decompteur-event{
+        float: right;
     }
 }
 

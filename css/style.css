@@ -82,15 +82,17 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'fioulreduc';
-  src: url('../fonts/fioulreduc.eot?e76zua');
-  src: url('../fonts/fioulreduc.eot?#iefixe76zua') format('embedded-opentype'), url('../fonts/fioulreduc.woff?e76zua') format('woff'), url('../fonts/fioulreduc.ttf?e76zua') format('truetype'), url('../fonts/fioulreduc.svg?e76zua#fioulreduc') format('svg');
+  font-family: 'FioulReducEvent';
+  src: url('../fonts/FioulReducEvent.eot?erh2gf');
+  src: url('../fonts/FioulReducEvent.eot?erh2gf#iefix') format('embedded-opentype'), url('../fonts/FioulReducEvent.woff2?erh2gf') format('woff2'), url('../fonts/FioulReducEvent.ttf?erh2gf') format('truetype'), url('../fonts/FioulReducEvent.woff?erh2gf') format('woff'), url('../fonts/FioulReducEvent.svg?erh2gf#FioulReducEvent') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-[class^="ic-"],
-[class*=" ic-"] {
-  font-family: 'fioulreduc';
+[class^="icon-"],
+[class*=" icon-"],
+.font-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'FioulReducEvent' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -101,62 +103,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.ic-alerte:before {
-  content: "\e611";
-}
-.ic-bottom:before {
-  content: "\e60f";
-}
-.ic-top:before {
-  content: "\e610";
-}
-.ic-moins:before {
-  content: "\e60e";
-}
-.ic-error:before {
-  content: "\e60b";
-}
-.ic-cadenas:before {
-  content: "\e60a";
-}
-.ic-fleche-rond-top:before {
-  content: "\e609";
-}
-.ic-arrow-bottom:before {
-  content: "\e600";
-}
-.ic-arrow-left:before {
-  content: "\e601";
-}
-.ic-arrow-right:before {
-  content: "\e602";
-}
-.ic-arrow-top:before {
-  content: "\e603";
-}
-.ic-fleche-rond:before {
-  content: "\e604";
-}
-.ic-icon-plus:before {
-  content: "\e605";
-}
-.ic-maison:before {
-  content: "\e606";
-}
-.ic-play:before {
-  content: "\e607";
-}
-.ic-sousligne:before {
-  content: "\e608";
-}
-.ic-navicon:before {
-  content: "\f0c9";
-}
-.ic-plus:before {
-  content: "\e60c";
-}
-.ic-camion:before {
-  content: "\e60d";
+.icon-fleche-rond:before {
+  content: "\e900";
 }
 /* @end */
 /* @group Mes styles */
@@ -213,12 +161,30 @@ h1 {
   font-size: 2em;
   margin: 0 0 20px 0;
 }
+h2 {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.563em;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+}
 p {
   font-family: 'lato', sans-serif;
   font-weight: normal;
   font-size: 1em;
   text-rendering: optimizeLegibility;
   margin: 10px 0;
+}
+p strong {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+b,
+strong {
+  font-weight: normal;
 }
 .container {
   max-width: 1220px;
@@ -229,8 +195,21 @@ p {
 .txt-centered {
   text-align: center;
 }
+.logo-fioulreduc {
+  display: inline-block;
+  vertical-align: top;
+  width: 262px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  background: url("../layoutImg/logo.png") no-repeat 0 0;
+}
+.bloc-gris-bleu {
+  background-color: #ebeef2;
+}
 .grid {
   background-color: #071d63;
+  background-image: -webkit-radial-gradient(50% 50%, 800px 800px, #457db7 0%, #071d63 100%);
   background-image: radial-gradient(50% 50%, 800px 800px, #457db7 0%, #071d63 100%);
   color: #ffffff;
 }
@@ -247,6 +226,12 @@ p {
 }
 .grid .container {
   position: relative;
+}
+.wrapper-compteurs .compteur-participants {
+  float: left;
+}
+.wrapper-compteurs .decompteur-event {
+  float: right;
 }
 /* @end */
 /* @group Non semantic Boilerplate */
@@ -281,6 +266,22 @@ p {
 }
 /* @end */
 /* @group Header */
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 23px 0;
+  z-index: 2;
+}
+#header .logo-fioulreduc {
+  float: left;
+  margin: 16px 0 0 60px;
+}
+#header a.btn-block,
+#header button.btn-block {
+  float: right;
+}
 /* @end */
 /* @group Top event */
 #top-event {
@@ -289,11 +290,277 @@ p {
   padding: 155px 0 0 0;
 }
 /* @end */
+/* @group Content event */
+#content-event {
+  padding: 80px 0 44px 0;
+  color: #2947a0;
+}
+#inscription-event {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+}
+/* @end */
 /* @group Footer */
 /* @end */
 /* @group Buttons */
+a.btn-block,
+button.btn-block {
+  display: inline-block;
+  vertical-align: top;
+  padding: 21px 69px;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.125em;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 2px;
+  background: #fb8206;
+  box-shadow: 0 2px 0 #ba4a00;
+  background-image: -webkit-linear-gradient(bottom, rgba(242, 84, 15, 0.56) 0%, rgba(242, 84, 15, 0) 100%);
+  background-image: linear-gradient(bottom, rgba(242, 84, 15, 0.56) 0%, rgba(242, 84, 15, 0) 100%);
+  color: #ffffff;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.15s ease-in-out;
+          transition: background-color 0.15s ease-in-out;
+}
+a.btn-block:after,
+button.btn-block:after {
+  content: "\e900";
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'FioulReducEvent' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 22px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 16px;
+  padding: 0;
+}
+a.btn-block:hover,
+button.btn-block:hover,
+a.btn-block:focus,
+button.btn-block:focus {
+  background: #f86708;
+  background-image: -webkit-linear-gradient(bottom, rgba(242, 84, 15, 0.56) 0, rgba(242, 84, 15, 0) 100%);
+  background-image: linear-gradient(to top, rgba(242, 84, 15, 0.56) 0, rgba(242, 84, 15, 0) 100%);
+  -webkit-transition: background-color 0.15s ease-in-out;
+          transition: background-color 0.15s ease-in-out;
+}
+a.btn-block:active,
+button.btn-block:active {
+  background: #f86708;
+  background-image: -webkit-linear-gradient(bottom, rgba(242, 84, 15, 0.56) 0, rgba(242, 84, 15, 0) 100%);
+  background-image: linear-gradient(to top, rgba(242, 84, 15, 0.56) 0, rgba(242, 84, 15, 0) 100%);
+  box-shadow: none;
+  -webkit-transition: background-color 0.15s ease-in-out;
+          transition: background-color 0.15s ease-in-out;
+}
+a.btn-block:focus,
+button.btn-block:focus {
+  outline: none;
+}
 /* @end */
 /* @group List */
+#etapes-event {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 424px;
+  margin: 40px auto;
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  counter-reset: counter-step-event;
+}
+#etapes-event.etape-1-active > li.etape-1 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event.etape-1-active > li.etape-2 {
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+#etapes-event.etape-1-active > li.etape-3 {
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+#etapes-event.etape-1-active > li.etape-4 {
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+#etapes-event.etape-2-active > li.etape-1 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event.etape-2-active > li.etape-2 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event.etape-2-active > li.etape-3 {
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+#etapes-event.etape-2-active > li.etape-4 {
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+#etapes-event.etape-3-active > li.etape-1 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event.etape-3-active > li.etape-2 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event.etape-3-active > li.etape-3 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event.etape-3-active > li.etape-4 {
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+#etapes-event.etape-4-active > li.etape-1 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event.etape-4-active > li.etape-2 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event.etape-4-active > li.etape-3 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event.etape-4-active > li.etape-4 {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+#etapes-event > li {
+  display: block;
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
+  border-left: 1px solid #ebeef2;
+  box-sizing: border-box;
+  counter-increment: counter-step-event;
+  background-color: #ffffff;
+}
+#etapes-event > li h3 {
+  position: relative;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1.375em;
+  text-rendering: optimizeLegibility;
+  margin: 30px 0 0 30px;
+  padding: 0 0 0 34px;
+}
+#etapes-event > li h3:before {
+  content: counter(counter-step-event);
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #fa6f06;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: -12px 0 0 0;
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.727em;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+}
+#etapes-event > li p {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 75px 30px 0 60%;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  line-height: 1.4em;
+}
+#etapes-event > li p strong {
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+#etapes-event > li img {
+  position: absolute;
+  max-width: 100%;
+  display: block;
+}
+#etapes-event > li.etape-1 {
+  left: 0;
+  border-left: none;
+}
+#etapes-event > li.etape-1 img {
+  top: 107px;
+  left: 3px;
+}
+#etapes-event > li.etape-2 {
+  left: 20%;
+}
+#etapes-event > li.etape-2 img {
+  top: 91px;
+  left: 0px;
+}
+#etapes-event > li.etape-3 {
+  left: 40%;
+}
+#etapes-event > li.etape-3 img {
+  bottom: 0px;
+  left: 0px;
+}
+#etapes-event > li.etape-3 p {
+  padding-right: 25px;
+}
+#etapes-event > li.etape-4 {
+  left: 60%;
+}
+#etapes-event > li.etape-4 img {
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+}
 /* @end */
 /* @group Form */
 /* @end */
@@ -306,4 +573,22 @@ p {
 }
 /* @end */
 /* retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .logo-fioulreduc {
+    background-image: url("../layoutImg/logo@2x.png");
+    background-size: 262px 32px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .logo-fioulreduc {
+    background-image: url("../layoutImg/logo@2x.png");
+    background-size: 262px 32px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi) {
+  .logo-fioulreduc {
+    background-image: url("../layoutImg/logo@3x.png");
+    background-size: 262px 32px;
+  }
+}
 /* @end */

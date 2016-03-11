@@ -14,7 +14,9 @@ function scrollPage(){
 }
 
 $(function(){
-	
+	$("#etapes-event >li").mouseenter(function() {
+		$("#etapes-event").removeClass("etape-1-active etape-2-active etape-3-active etape-4-active").addClass($(this).attr("class")+"-active");
+	});
 });
 
 $(window).resize(function(){

@@ -1,3 +1,43 @@
 /* @group Buttons */
-
+a, button{
+	&.btn-block{
+		display: inline-block;
+		vertical-align: top;
+		padding: 21px 69px;
+		border: none;
+		.lato-bold(1.125em);
+		text-transform: uppercase;
+		border: none;
+		letter-spacing: 2px;
+		background: @orangeFioulReduc;
+		box-shadow: 0 2px 0 #ba4a00;
+		background-image: linear-gradient(bottom, rgba(242,84,15,.56) 0%, rgba(242,84,15,0) 100%);
+		color: @blanc;
+		border-radius: 4px;
+		transition: background-color .15s ease-in-out;
+		&:after{
+			content: "\e900";
+			.font-icon;
+			font-size: 22px;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 0 0 16px;
+			padding: 0;
+		}
+		&:hover, &:focus{
+			background: @orange2FioulReduc;
+			background-image: linear-gradient(to top,rgba(242,84,15,.56) 0,rgba(242,84,15,0) 100%);
+			transition: background-color .15s ease-in-out;
+		}
+		&:active{
+			background: #f86708;
+			background-image: linear-gradient(to top,rgba(242,84,15,.56) 0,rgba(242,84,15,0) 100%);
+			box-shadow: none;
+			transition: background-color .15s ease-in-out;
+		}
+		&:focus{
+			outline: none;
+		}
+	}
+}
 /* @end */

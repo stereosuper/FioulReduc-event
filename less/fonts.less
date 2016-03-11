@@ -99,87 +99,36 @@
 }
 
 @font-face {
-	font-family: 'fioulreduc';
-	src:url('../fonts/fioulreduc.eot?e76zua');
-	src:url('../fonts/fioulreduc.eot?#iefixe76zua') format('embedded-opentype'),
-		url('../fonts/fioulreduc.woff?e76zua') format('woff'),
-		url('../fonts/fioulreduc.ttf?e76zua') format('truetype'),
-		url('../fonts/fioulreduc.svg?e76zua#fioulreduc') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'FioulReducEvent';
+    src:    url('../fonts/FioulReducEvent.eot?erh2gf');
+    src:    url('../fonts/FioulReducEvent.eot?erh2gf#iefix') format('embedded-opentype'),
+        url('../fonts/FioulReducEvent.woff2?erh2gf') format('woff2'),
+        url('../fonts/FioulReducEvent.ttf?erh2gf') format('truetype'),
+        url('../fonts/FioulReducEvent.woff?erh2gf') format('woff'),
+        url('../fonts/FioulReducEvent.svg?erh2gf#FioulReducEvent') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-[class^="ic-"], [class*=" ic-"] {
-	font-family: 'fioulreduc';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+[class^="icon-"], [class*=" icon-"], .font-icon{
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'FioulReducEvent' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.ic-alerte:before {
-	content: "\e611";
+.icon-fleche-rond:before {
+    content: "\e900";
 }
-.ic-bottom:before {
-	content: "\e60f";
-}
-.ic-top:before {
-	content: "\e610";
-}
-.ic-moins:before {
-	content: "\e60e";
-}
-.ic-error:before {
-	content: "\e60b";
-}
-.ic-cadenas:before {
-	content: "\e60a";
-}
-.ic-fleche-rond-top:before {
-	content: "\e609";
-}
-.ic-arrow-bottom:before {
-	content: "\e600";
-}
-.ic-arrow-left:before {
-	content: "\e601";
-}
-.ic-arrow-right:before {
-	content: "\e602";
-}
-.ic-arrow-top:before {
-	content: "\e603";
-}
-.ic-fleche-rond:before {
-	content: "\e604";
-}
-.ic-icon-plus:before {
-	content: "\e605";
-}
-.ic-maison:before {
-	content: "\e606";
-}
-.ic-play:before {
-	content: "\e607";
-}
-.ic-sousligne:before {
-	content: "\e608";
-}
-.ic-navicon:before {
-	content: "\f0c9";
-}
-.ic-plus:before {
-	content: "\e60c";
-}
-.ic-camion:before {
-	content: "\e60d";
-}
+
 
 .lato-bold(@size){
 	font-family: 'lato-bold', sans-serif;

@@ -16,10 +16,14 @@ function scrollPage(){
 // Fonction pour animer le compteur
 function compteur(){
 	// valeur max compteur
-	var valeurMaxCompteur = 1456622570;
+	var valeurMaxCompteur = 5347;
 	// valeur compteur init
-	var valeurCompteur = 1456622470;
-    var compteur = new Odometer({ el: $('.compteur-participants')[0], theme: 'train-station', value: valeurCompteur });
+	var valeurCompteur = 5302;
+    var compteur = new Odometer({
+    	el: $('.compteur-participants')[0], 
+    	theme: 'train-station', value: valeurCompteur,
+    	format: ''
+    });
     compteur.render();
 
     setInterval(function(){

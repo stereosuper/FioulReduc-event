@@ -207,6 +207,11 @@ strong {
 .bloc-gris-bleu {
   background-color: #ebeef2;
 }
+.bloc-degrade-bleu {
+  background-color: #071d63;
+  background-image: -webkit-radial-gradient(50% 350%, 800px 800px, #457db7 0%, #071d63 100%);
+  background-image: radial-gradient(50% 350%, 800px 800px, #457db7 0%, #071d63 100%);
+}
 .grid {
   background-color: #071d63;
   background-image: -webkit-radial-gradient(50% 50%, 800px 800px, #457db7 0%, #071d63 100%);
@@ -227,10 +232,10 @@ strong {
 .grid .container {
   position: relative;
 }
-.wrapper-compteurs .compteur-participants {
+.wrapper-compteurs .wrapper-compteur-participants {
   float: left;
 }
-.wrapper-compteurs .decompteur-event {
+.wrapper-compteurs .wrapper-decompteur-event {
   float: right;
 }
 /* @end */
@@ -302,6 +307,9 @@ strong {
 }
 /* @end */
 /* @group Footer */
+#footer {
+  padding: 38px 0;
+}
 /* @end */
 /* @group Buttons */
 a.btn-block,
@@ -560,6 +568,126 @@ button.btn-block:focus {
   width: 100%;
   bottom: 0px;
   left: 0px;
+}
+.menu-contact {
+  text-align: center;
+}
+.menu-contact ul {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+.menu-contact ul > li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin: 0 35px;
+}
+.menu-contact ul > li.tel a {
+  cursor: default;
+}
+.menu-contact ul > li.tel a:hover .visu-menu {
+  -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+          transform: rotate(0deg) translate3d(0, 0, 0);
+}
+.menu-contact ul > li a {
+  display: block;
+  text-decoration: none;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+.menu-contact ul > li a:hover .visu-menu {
+  -webkit-transform: rotate(-10deg) translate3d(0, 0, 0);
+          transform: rotate(-10deg) translate3d(0, 0, 0);
+}
+.menu-contact ul > li a .illus-menu {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0 16px 0 0;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+}
+.menu-contact ul > li a .illus-menu .visu-menu {
+  display: block;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+          transition: transform 0.1s ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.menu-contact ul > li a .illus-menu .visu-menu.mascotte {
+  width: 55px;
+  height: 56px;
+  background: url('../layoutImg/mascotte.png') no-repeat center center;
+  bottom: 3px;
+  left: 4px;
+  -webkit-transform-origin: 45% 55%;
+      -ms-transform-origin: 45% 55%;
+          transform-origin: 45% 55%;
+}
+.menu-contact ul > li a .illus-menu .visu-menu.adresse {
+  width: 56px;
+  height: 49px;
+  background: url('../layoutImg/adresse.png') no-repeat center center;
+  bottom: 3px;
+  left: 3px;
+  -webkit-transform-origin: 25px 23px;
+      -ms-transform-origin: 25px 23px;
+          transform-origin: 25px 23px;
+}
+.menu-contact ul > li a .illus-menu .visu-menu.site {
+  width: 57px;
+  height: 40px;
+  background: url('../layoutImg/site.png') no-repeat center center;
+  bottom: 3px;
+  left: 3px;
+  -webkit-transform-origin: 24px 15px;
+      -ms-transform-origin: 24px 15px;
+          transform-origin: 24px 15px;
+}
+.menu-contact ul > li a .zone-texte-menu {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 10px 0 0 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  color: #ffffff;
+}
+.menu-contact ul > li a .zone-texte-menu .indic-menu {
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 0 0 0;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.75em;
+  text-rendering: optimizeLegibility;
+  color: #ffcb00;
+  line-height: 1.2em;
+  width: auto;
+  max-width: 132px;
+  height: 17px;
+  overflow: hidden;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  position: relative;
+  letter-spacing: 1px;
+}
+.menu-contact ul > li a .zone-texte-menu .indic-menu.underline {
+  text-decoration: underline;
 }
 /* @end */
 /* @group Form */

@@ -159,4 +159,109 @@
 		}
 	}
 }
+
+.menu-contact{
+	text-align: center;
+	ul{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		padding: 0;
+		>li{
+			display: inline-block;
+			vertical-align: top;
+			text-align: left;
+			margin: 0 35px;
+			&.tel{
+				a{
+					cursor: default;
+					&:hover{
+						.visu-menu{
+							transform: rotate(0deg) translate3d(0,0,0);
+						}
+					}
+				}
+			}
+			a{
+				display: block;
+				text-decoration: none;
+				.lato-bold(1em);
+				&:hover{
+					.visu-menu{
+						transform: rotate(-10deg) translate3d(0,0,0);
+					}
+				}
+				.illus-menu{
+					display: inline-block;
+					vertical-align: top;
+					position: relative;
+					margin: 0 16px 0 0;
+					padding: 0;
+					width: 56px;
+					height: 56px;
+					border-radius: 50%;
+					background: #fff;
+					.visu-menu{
+						display: block;
+						position: absolute;
+						transition: transform .1s ease-in-out;
+						backface-visibility: hidden;
+						transform-style: preserve-3d;
+						&.mascotte{
+							width: 55px;
+							height: 56px;
+							background: url('../layoutImg/mascotte.png') no-repeat center center;
+							bottom: 3px;
+							left: 4px;
+							transform-origin: 45% 55%;
+						}
+						&.adresse{
+							width: 56px;
+							height: 49px;
+							background: url('../layoutImg/adresse.png') no-repeat center center;
+							bottom: 3px;
+							left: 3px;
+							transform-origin: 25px 23px;
+						}
+						&.site{
+							width: 57px;
+							height: 40px;
+							background: url('../layoutImg/site.png') no-repeat center center;
+							bottom: 3px;
+							left: 3px;
+							transform-origin: 24px 15px;
+						}
+					}
+				}
+				.zone-texte-menu{
+					display: inline-block;
+					vertical-align: top;
+					margin: 0;
+					padding: 10px 0 0 0;
+					backface-visibility: hidden;
+					transform-style: preserve-3d;
+					color: @blanc;
+					.indic-menu{
+						display: inline-block;
+						vertical-align: top;
+						margin: 2px 0 0 0;
+						.lato-italic(0.75em);
+						color: @jauneFioulReduc;
+						line-height: 1.2em;
+						width: auto;
+						max-width: 132px;
+						height: 17px;
+						overflow: hidden;
+						hyphens: auto;
+						position: relative;
+						letter-spacing: 1px;
+						&.underline{
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 /* @end */

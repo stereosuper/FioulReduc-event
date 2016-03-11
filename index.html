@@ -14,6 +14,7 @@
 	  	<meta name="description" content="">
 	  	<meta name="viewport" content="width=device-width,initial-scale=1">
 	  	<link rel="stylesheet" href="css/libs/normalize.css">
+	  	<link rel="stylesheet" href="js/libs/odometer/themes/odometer-theme-train-station.css" />
 	  	<link rel="stylesheet" href="css/style.css">
 
 		<script src="js/libs/modernizr.js" type="text/javascript" charset="utf-8"></script>
@@ -35,8 +36,8 @@
 	  	<section id="content-event" class="bloc-gris-bleu">
 	  		<div class="container">
 	  			<div class="wrapper-compteurs clearfix">
-					<h2 class="compteur-participants">Déjà 5347 participants !!</h2>
-					<h2 class="decompteur-event">Plus que</h2>
+					<h2 class="wrapper-compteur-participants">Déjà <span class="compteur-participants"></span> participants !!</h2>
+					<h2 class="wrapper-decompteur-event">Plus que</h2>
 	  			</div>
 	  			<ul id="etapes-event" class="etape-1-active">
 	  				<li class="etape-1">
@@ -67,9 +68,21 @@
 	  			</div>
 	  		</div>
 	  	</section>
-	  	<footer>
+	  	<footer id="footer" class="bloc-degrade-bleu">
 	  		<div class="container">
-
+				<nav class="menu-contact">
+					<ul>
+						<li id="topbar-phone-link" class="tel">
+							<a href="tel:+33975187518"><span class="illus-menu"><span class="visu-menu mascotte"></span></span><span class="zone-texte-menu">09 75 18 75 18 <br><span class="indic-menu">Numéro non surtaxé</span></span></a>
+						</li><!--
+						--><li id="topbar-contact-link">
+							<a href="http://www.fioulreduc.com/contact"><span class="illus-menu"><span class="visu-menu adresse"></span></span><span class="zone-texte-menu">Contact e-mail<br><span class="indic-menu underline">Accéder au formulaire</span></span></a>
+						</li><!--
+						--><li id="topbar-account-link">
+							<a href="http://www.fioulreduc.com/"><span class="illus-menu"><span class="visu-menu site"></span></span><span class="zone-texte-menu">Voir le site <br><span class="indic-menu underline">Fioulreduc.com</span></span></a>
+						</li>
+					</ul>
+				</nav>
 	  		</div>
 	  	</footer>
 
@@ -78,6 +91,9 @@
 		<!-- Tweens -->
 		<script src="js/libs/greensock/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/libs/greensock/TimelineMax.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- odometer -->
+		<script src="js/libs/odometer/odometer.js"></script>
+
 		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

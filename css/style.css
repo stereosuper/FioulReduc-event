@@ -521,6 +521,15 @@ button.btn-block:focus {
   text-rendering: optimizeLegibility;
   color: #ffffff;
 }
+#etapes-event > li h4 {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  color: #fb8206;
+  margin: 0;
+  padding: 0 0 0 64px;
+}
 #etapes-event > li p {
   box-sizing: border-box;
   width: 100%;

@@ -66,3 +66,43 @@
 }
 
 /* @end */
+
+/* @group Decompteur */
+
+.decompteur-event{
+	border: none;
+	margin: 0 0 0 8px;
+	.digit-group{
+		display: inline-block;
+		vertical-align: middle;
+		height: 53px;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+	.digit{
+		display: inline-block;
+		vertical-align: middle;
+		border-radius: 10px;
+		background-image: none;
+		background-color: #041340;
+		width: 32px;
+		height: 100%;
+		margin: 0 3px;
+		padding: 0;
+		line-height: 53px;
+		text-align: center;
+		color: @orangeFioulReduc;
+		.lcd(1.44em);
+	}
+	.legend{
+		.lato(0.7em);
+		position: absolute;
+		bottom: -25px;
+		left: 0;
+		right: 0;
+	}
+}
+
+/* @end */

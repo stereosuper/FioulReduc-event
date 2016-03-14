@@ -14,9 +14,9 @@
 	  	<meta name="description" content="">
 	  	<meta name="viewport" content="width=device-width,initial-scale=1">
 	  	<link rel="stylesheet" href="css/libs/normalize.css">
+	  	<link rel="stylesheet" type="text/css" href="css/libs/jquery.countdown.css"> 
 	  	<link rel="stylesheet" href="js/libs/odometer/themes/odometer-theme-train-station.css" />
 	  	<link rel="stylesheet" href="css/style.css">
-
 		<script src="js/libs/modernizr.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	
@@ -37,7 +37,13 @@
 	  		<div class="container">
 	  			<div class="wrapper-compteurs clearfix">
 					<h2 class="wrapper-compteur-participants">Déjà <span class="compteur-participants"></span> participants !!</h2>
-					<h2 class="wrapper-decompteur-event">Plus que</h2>
+					<h2 class="wrapper-decompteur-event">Plus que 
+					<span class="decompteur-event">
+						<span class="days"></span>
+						<span class="hours"></span>
+						<span class="minutes"></span>
+						<span class="seconds"></span>
+					</span></h2>
 	  			</div>
 	  			<ul id="etapes-event" class="etape-1-active">
 	  				<li class="etape-1">
@@ -95,6 +101,9 @@
 		<script src="js/libs/greensock/TimelineMax.min.js" type="text/javascript" charset="utf-8"></script>
 		<!-- odometer -->
 		<script src="js/libs/odometer/odometer.js"></script>
+		<!-- countdown -->
+		<script type="text/javascript" src="js/libs/jquery.plugin.js"></script> 
+		<script type="text/javascript" src="js/libs/jquery.countdown.js"></script>
 
 		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 	</body>

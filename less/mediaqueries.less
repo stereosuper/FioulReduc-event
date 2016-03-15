@@ -7,11 +7,81 @@
 }
 
 @media (max-width: 979px) {
-
+    /* @group Compteurs */
+    h2{
+        font-size: 1.3em;
+    }
+    .compteur-participants.odometer-auto-theme, .odometer.odometer-theme-train-station{
+        font-size: 0.9em;
+        .odometer-digit{
+            width: 26px;
+            height: 48px;
+            line-height: 48px;
+            border-radius: 6px;
+            margin: 0 2px;
+        }
+    }
+    .decompteur-event{
+        .digit-group{
+            height: 48px;
+        }
+        .digit{
+            border-radius: 6px;
+            width: 26px;
+            line-height: 48px;
+            font-size: 1.1em;
+            margin: 0 2px;
+        }
+    }
+    /* @end */
 }
 
 @media (max-width: 767px) {
-
+    #content-event{
+        padding: 40px 0 44px 0;
+    }
+    /* @group Compteurs */
+    .wrapper-compteurs{
+        .wrapper-compteur-participants{
+            float: none;
+        }
+        .wrapper-decompteur-event{
+            float: none;
+        }
+    }
+    h2{
+        margin: 15px 0;
+        font-size: 1em;
+    }
+    .compteur-participants.odometer-auto-theme, .odometer.odometer-theme-train-station{
+        .odometer-digit{
+            width: 18px;
+            height: 34px;
+            line-height: 34px;
+            border-radius: 5px;
+            margin: 0 2px;
+        }
+    }
+    .decompteur-event{
+        .digit-group{
+            height: 34px;
+        }
+        .digit{
+            border-radius: 5px;
+            width: 18px;
+            line-height: 34px;
+            font-size: 1em;
+            margin: 0 2px;
+        }
+        .legend{
+            bottom: -15px;
+        }
+    }
+    .decompteur-event{
+        margin-left: 0;
+    }
+    /* @end */
+    
 }
 
 @media (max-width: 480px) {

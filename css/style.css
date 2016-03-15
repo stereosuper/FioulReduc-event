@@ -549,7 +549,7 @@ button.btn-block:focus {
 }
 #etapes-event > li img {
   position: absolute;
-  max-width: 100%;
+  max-width: 58%;
   display: block;
 }
 #etapes-event > li.etape-1 {
@@ -582,6 +582,7 @@ button.btn-block:focus {
 }
 #etapes-event > li.etape-4 img {
   width: 100%;
+  max-width: none;
   bottom: 0px;
   left: 0px;
 }
@@ -834,6 +835,19 @@ button.btn-block:focus {
   display: none;
 }
 /* @end */
+@media (max-width: 1200px) {
+  /* @group Etapes event */
+  #etapes-event > li h3 {
+    margin: 20px 0 0 20px;
+  }
+  #etapes-event > li h4 {
+    padding: 0 0 0 20px;
+  }
+  #etapes-event > li p {
+    font-size: 0.9em;
+  }
+  /* @end */
+}
 @media (max-width: 979px) {
   /* @group Compteurs */
   h2 {
@@ -860,6 +874,195 @@ button.btn-block:focus {
     line-height: 48px;
     font-size: 1.1em;
     margin: 0 2px;
+  }
+  /* @end */
+  /* @group Etapes event */
+  #etapes-event {
+    height: auto;
+    border-radius: 0;
+  }
+  #etapes-event.etape-1-active > li.etape-1 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-1-active > li.etape-2 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-1-active > li.etape-3 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-1-active > li.etape-4 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-2-active > li.etape-1 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-2-active > li.etape-2 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-2-active > li.etape-3 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-2-active > li.etape-4 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-3-active > li.etape-1 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-3-active > li.etape-2 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-3-active > li.etape-3 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-3-active > li.etape-4 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-4-active > li.etape-1 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-4-active > li.etape-2 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-4-active > li.etape-3 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event.etape-4-active > li.etape-4 {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #etapes-event > li {
+    height: auto;
+    width: auto;
+    position: relative;
+    top: inherit;
+    border-left: none;
+    border-bottom: 1px solid #cacaca;
+    -webkit-transition: none;
+            transition: none;
+  }
+  #etapes-event > li:last-child {
+    border-bottom: none;
+  }
+  #etapes-event > li h3 {
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+  #etapes-event > li h4 {
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    margin: 6px 0 0 10px;
+  }
+  #etapes-event > li img {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+  }
+  #etapes-event > li p {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 30px 0 30px;
+    width: 75%;
+  }
+  #etapes-event > li.etape-1 {
+    left: 0;
+    border-left: none;
+  }
+  #etapes-event > li.etape-1 img {
+    top: inherit;
+    left: inherit;
+  }
+  #etapes-event > li.etape-2 {
+    left: 0;
+  }
+  #etapes-event > li.etape-2 img {
+    top: inherit;
+    left: inherit;
+  }
+  #etapes-event > li.etape-3 {
+    left: 0;
+  }
+  #etapes-event > li.etape-3 img {
+    bottom: inherit;
+    left: inherit;
+  }
+  #etapes-event > li.etape-3 p {
+    padding-right: 25px;
+  }
+  #etapes-event > li.etape-4 {
+    left: 0;
+  }
+  #etapes-event > li.etape-4 img {
+    width: 25%;
+    bottom: inherit;
+    left: inherit;
+  }
+  #etapes-event > li .title-etape {
+    box-sizing: border-box;
+    padding: 10px 56px 10px 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  #etapes-event > li .title-etape:after {
+    content: "›";
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: block;
+    font-size: 40px;
+    line-height: 37px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin: -20px 0 0 0;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+  }
+  #etapes-event > li .content-etape {
+    display: none;
+    box-sizing: border-box;
+    padding: 10px 20px;
+  }
+  #etapes-event > li:first-child .content-etape {
+    display: block;
+  }
+  #etapes-event > li.open .title-etape:after {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   /* @end */
 }
@@ -901,6 +1104,26 @@ button.btn-block:focus {
   }
   .decompteur-event {
     margin-left: 0;
+  }
+  /* @end */
+  /* @group Etapes event */
+  #etapes-event > li h3 {
+    display: block;
+  }
+  #etapes-event > li h4 {
+    display: block;
+    margin: 0;
+  }
+  #etapes-event > li img {
+    display: block;
+    width: auto;
+    max-height: 150px;
+    margin: 0 auto 20px auto;
+  }
+  #etapes-event > li p {
+    display: block;
+    padding: 0;
+    width: 100%;
   }
   /* @end */
 }

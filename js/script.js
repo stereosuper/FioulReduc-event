@@ -46,11 +46,37 @@ function decompteur(){
 $(function(){
 	compteur();
 	decompteur();
+	// Survol des étapes
 	$("#etapes-event >li").mouseenter(function() {
-		$("#etapes-event").removeClass("etape-1-active etape-2-active etape-3-active etape-4-active").addClass($(this).attr("class")+"-active");
+		$("#etapes-event").removeClass("etape-1-active etape-2-active etape-3-active etape-4-active");
+		if($(this).hasClass("etape-1")){
+			$("#etapes-event").addClass("etape-1-active");
+		}else if($(this).hasClass("etape-2")){
+			$("#etapes-event").addClass("etape-2-active");
+		}else if($(this).hasClass("etape-3")){
+			$("#etapes-event").addClass("etape-3-active");
+		}else if($(this).hasClass("etape-4")){
+			$("#etapes-event").addClass("etape-4-active");
+		}
+	});
+	// Clic sur les étapes
+	$(".title-etape").click(function(){
+		var oldOpen = $("#etapes-event >li.open");
+		if(!($(this).parent(".etape").hasClass("open"))){
+			// Fermeture de l'ancien
+			$(".content-etape", oldOpen).slideToggle(300);
+			oldOpen.removeClass("open");
+			// Ouverture du cliqué
+			var newOpen = $(this).parent(".etape");
+			$(".content-etape", newOpen).slideToggle(300);
+			newOpen.addClass("open");
+		}
+		return false;
 	});
 });
 
 $(window).resize(function(){
-	
+	$(".content-etape").attr("style","");
+	$("#etapes-event >li.open").removeClass("open");
+	$("#etapes-event >li").first().addClass("open");
 });

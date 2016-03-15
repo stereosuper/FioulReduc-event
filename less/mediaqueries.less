@@ -1,3 +1,21 @@
+@media (max-width: 1200px) {
+    /* @group Etapes event */
+    #etapes-event{
+        > li{
+            h3{
+                margin: 20px 0 0 20px;
+            }
+            h4{
+                padding: 0 0 0 20px;
+            }
+            p{
+                font-size: 0.9em;
+            }
+        }
+    }
+    /* @end */
+}
+
 @media (max-width: 1150px) {
     
 }
@@ -31,6 +49,182 @@
             line-height: 48px;
             font-size: 1.1em;
             margin: 0 2px;
+        }
+    }
+    /* @end */
+
+    /* @group Etapes event */
+    #etapes-event{
+        height: auto;
+        border-radius: 0;
+        &.etape-1-active{
+            >li{
+                &.etape-1{
+                    transform: translateX(0%);
+                }
+                &.etape-2{
+                    transform: translateX(0%);
+                }
+                &.etape-3{
+                    transform: translateX(0%);
+                }
+                &.etape-4{
+                    transform: translateX(0%);
+                }
+            }
+        }
+        &.etape-2-active{
+            >li{
+                &.etape-1{
+                    transform: translateX(0%);
+                }
+                &.etape-2{
+                    transform: translateX(0%);
+                }
+                &.etape-3{
+                    transform: translateX(0%);
+                }
+                &.etape-4{
+                    transform: translateX(0%);
+                }
+            }
+        }
+        &.etape-3-active{
+            >li{
+                &.etape-1{
+                    transform: translateX(0%);
+                }
+                &.etape-2{
+                    transform: translateX(0%);
+                }
+                &.etape-3{
+                    transform: translateX(0%);
+                }
+                &.etape-4{
+                    transform: translateX(0%);
+                }
+            }
+        }
+        &.etape-4-active{
+            >li{
+                &.etape-1{
+                    transform: translateX(0%);
+                }
+                &.etape-2{
+                    transform: translateX(0%);
+                }
+                &.etape-3{
+                    transform: translateX(0%);
+                }
+                &.etape-4{
+                    transform: translateX(0%);
+                }
+            }
+        }
+        > li{
+            height: auto;
+            width: auto;
+            position: relative;
+            top: inherit;
+            border-left: none;
+            border-bottom: 1px solid #cacaca;
+            transition: none;
+            &:last-child{
+                border-bottom: none;
+            }
+            h3{
+                margin: 0;
+                display: inline-block;
+                vertical-align: top;
+            }
+            h4{
+                padding: 0;
+                display: inline-block;
+                vertical-align: top;
+                margin: 6px 0 0 10px;
+            }
+            img{
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                width: 25%;
+            }
+            p{
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 30px 0 30px;
+                width: 75%;
+            }
+            &.etape-1{
+                left: 0;
+                border-left: none;
+                img{
+                    top: inherit;
+                    left: inherit;
+                }
+            }
+            &.etape-2{
+                left: 0;
+                img{
+                    top: inherit;
+                    left: inherit;
+                }
+            }
+            &.etape-3{
+                left: 0;
+                img{
+                    bottom: inherit;
+                    left: inherit;
+                }
+                p{
+                    padding-right: 25px;
+                }
+            }
+            &.etape-4{
+                left: 0;
+                img{
+                    width: 25%;
+                    bottom: inherit;
+                    left: inherit;
+                }
+            }
+            .title-etape{
+                box-sizing: border-box;
+                padding: 10px 56px 10px 20px;
+                cursor: pointer;
+                position: relative;
+                &:after{
+                    content: "›";
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    display: block;
+                    font-size: 40px;
+                    line-height: 37px;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    margin: -20px 0 0 0;
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+            .content-etape{
+                display: none;
+                box-sizing: border-box;
+                padding: 10px 20px;
+            }
+            &:first-child{
+                .content-etape{
+                    display: block;
+                }
+            }
+            &.open{
+                .title-etape{
+                    &:after{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
         }
     }
     /* @end */
@@ -81,7 +275,31 @@
         margin-left: 0;
     }
     /* @end */
-    
+
+    /* @group Etapes event */
+    #etapes-event{
+        > li{
+            h3{
+                display: block;
+            }
+            h4{
+                display: block;
+                margin: 0;
+            }
+            img{
+                display: block;
+                width: auto;
+                max-height: 150px;
+                margin: 0 auto 20px auto;
+            }
+            p{
+                display: block;
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+    /* @end */
 }
 
 @media (max-width: 480px) {

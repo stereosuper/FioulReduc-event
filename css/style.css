@@ -848,6 +848,13 @@ button.btn-block:focus {
   }
   /* @end */
 }
+@media (max-width: 1150px) {
+  /* @group Footer */
+  .menu-contact ul > li {
+    margin: 0 15px;
+  }
+  /* @end */
+}
 @media (max-width: 979px) {
   /* @group Compteurs */
   h2 {
@@ -1124,6 +1131,12 @@ button.btn-block:focus {
     display: block;
     padding: 0;
     width: 100%;
+  }
+  /* @end */
+  /* @group Footer */
+  .menu-contact ul > li {
+    display: block;
+    margin: 15px 0;
   }
   /* @end */
 }

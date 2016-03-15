@@ -1,4 +1,12 @@
 @media (max-width: 1200px) {
+    /* @group Header */
+    #header{
+        .logo-fioulreduc{
+            margin: 0;
+        }
+    }
+    /* @end */
+
     /* @group Etapes event */
     #etapes-event{
         > li{
@@ -29,10 +37,44 @@
 }
 
 @media (max-width: 1024px) {
-
+    /* @group Buttons */
+    a, button{
+        &.btn-block{
+            padding: 16px 30px;
+            font-size: 0.9em;
+            &:after{
+                font-size: 18px;
+                margin: 0 0 0 14px;
+            }
+        }
+    }
+    .logo-fioulreduc{
+        width: 240px;
+        height: 30px;
+    }
+    #header{
+        .wrapper-align-middle{
+            table-layout: auto;
+        }
+    }
+    /* @end */
 }
 
 @media (max-width: 979px) {
+    h1{
+        font-size: 1.6em;
+    }
+
+    /* @group Top event */
+    #top-event{
+        p{
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    /* @end */
+
     /* @group Compteurs */
     h2{
         font-size: 1.3em;
@@ -239,11 +281,58 @@
 }
 
 @media (max-width: 767px) {
+    h1{
+        font-size: 1.4em;
+    }
+    p{
+        font-size: 0.9em;
+    }
     #content-event{
         padding: 40px 0 44px 0;
     }
+
+    /* @group Header */
+    #header{
+        background-color: @blanc;
+        box-shadow: 0 2px 0 rgba(0,0,0,.08);
+        padding: 18px 0;
+        .logo-fioulreduc{
+            background-image: url("../layoutImg/logo-responsive.png");
+            width: 124px;
+            height: 19px;
+            margin: 0 auto;
+            display: block;
+        }
+        .wrapper-align-middle{
+            display: block;
+            position: relative;
+        }
+        .content-align-middle{
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            &#wrapper-logo-header{
+                display: block;
+                width: 100%;
+            }
+            &.txt-centered{
+                position: absolute;
+                left: 0;
+                bottom: -75px;
+            }
+            &.txt-right-aligned{
+                position: absolute;
+                right: 0;
+                bottom: -82px;
+                text-align: center;
+            }
+        }
+    }
+    /* @end */
+
     /* @group Compteurs */
     .wrapper-compteurs{
+        text-align: center;
         .wrapper-compteur-participants{
             float: none;
         }
@@ -253,7 +342,6 @@
     }
     h2{
         margin: 15px 0;
-        font-size: 1em;
     }
     .compteur-participants.odometer-auto-theme, .odometer.odometer-theme-train-station{
         .odometer-digit{
@@ -315,6 +403,11 @@
             > li{
                 display: block;
                 margin: 15px 0;
+                a{
+                    .illus-menu{
+                        margin: 0 24px 0 0;
+                    }
+                }
             }
         }
     }
@@ -322,27 +415,74 @@
 }
 
 @media (max-width: 480px) {
+    h1{
+        font-size: 1.2em;
+    }
+    p{
+        font-size: 0.8em;
+    }
+    
+    /* @group Header */
+    /*#header{
+        background-color: @blanc;
+        box-shadow: 0 2px 0 rgba(0,0,0,.08);
+        padding: 18px 0;
+        .logo-fioulreduc{
+            background-image: url("../layoutImg/logo-responsive.png");
+            width: 124px;
+            height: 19px;
+            margin: 0 auto;
+            display: block;
+        }
+        .wrapper-align-middle{
+            display: block;
+            position: relative;
+        }
+        .content-align-middle{
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            &#wrapper-logo-header{
+                display: block;
+                width: 100%;
+            }
+            &.txt-centered{
+                position: absolute;
+                left: 0;
+                bottom: -75px;
+            }
+            &.txt-right-aligned{
+                position: absolute;
+                right: 0;
+                bottom: -82px;
+                text-align: center;
+            }
+        }
+    }*/
+    /* @end */
 
+    /* @group Compteurs */
+    h2{
+        font-size: 1.2em;
+    }
+    /* @end */
 }
 
 /* retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
     .logo-fioulreduc{
         background-image: url("../layoutImg/logo@2x.png");
-        background-size: 262px 32px;
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
     .logo-fioulreduc{
         background-image: url("../layoutImg/logo@2x.png");
-        background-size: 262px 32px;
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi) {
     .logo-fioulreduc{
         background-image: url("../layoutImg/logo@3x.png");
-        background-size: 262px 32px;
     }
 }

@@ -1,5 +1,22 @@
 /* @group Buttons */
 a, button{
+	background: none;
+	border: none;
+	&.btn-arrow{
+		display: inline-block;
+		vertical-align: top;
+		.lato(0.875em);
+		padding: 0 0 0 8px;
+		color: @orangeFioulReduc;
+		text-decoration: underline;
+		position: relative;
+		&:before{
+			content: "›";
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
 	&.btn-block{
 		display: inline-block;
 		vertical-align: top;
@@ -35,9 +52,27 @@ a, button{
 			box-shadow: none;
 			transition: background-color .15s ease-in-out;
 		}
-		&:focus{
-			outline: none;
+	}
+	&.btn-share{
+		display: inline-block;
+		vertical-align: top;
+		.lato-bold(1em);
+		box-sizing: border-box;
+		padding: 9px 14px;
+		border: 1px solid @blanc;
+		border-radius: 7px;
+		color: @blanc;
+		&:before{
+			.font-icon;
+			content: "\e901";
+			margin: 1px 10px 0 0;
 		}
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	&:focus{
+		outline: none;
 	}
 }
 /* @end */

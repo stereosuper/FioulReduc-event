@@ -113,6 +113,9 @@
 .icon-fleche-rond:before {
   content: "\e900";
 }
+.icon-share:before {
+  content: "\e901";
+}
 /* @end */
 /* @group Mes styles */
 /* @group General */
@@ -166,7 +169,7 @@ h1 {
   font-family: 'megalopolis', sans-serif;
   font-weight: normal;
   font-size: 2em;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
 }
 h2 {
   font-family: 'lato-bold', sans-serif;
@@ -202,6 +205,23 @@ strong {
 .txt-centered {
   text-align: center;
 }
+.txt-right-aligned {
+  text-align: right;
+}
+.wrapper-align-middle {
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.content-align-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.content-align-top {
+  display: table-cell;
+  vertical-align: top;
+}
 .logo-fioulreduc {
   display: inline-block;
   vertical-align: top;
@@ -210,6 +230,7 @@ strong {
   margin: 0;
   padding: 0;
   background: url("../layoutImg/logo.png") no-repeat 0 0;
+  background-size: 100% 100%;
 }
 .bloc-gris-bleu {
   background-color: #ebeef2;
@@ -287,12 +308,10 @@ strong {
   z-index: 2;
 }
 #header .logo-fioulreduc {
-  float: left;
-  margin: 16px 0 0 60px;
+  margin: 0 60px;
 }
-#header a.btn-block,
-#header button.btn-block {
-  float: right;
+#header .wrapper-align-middle {
+  table-layout: fixed;
 }
 /* @end */
 /* @group Top event */
@@ -312,6 +331,9 @@ strong {
   margin: 0 auto;
   max-width: 800px;
 }
+#inscription-event button.btn-block {
+  margin: 25px 0 15px 0;
+}
 /* @end */
 /* @group Footer */
 #footer {
@@ -319,6 +341,31 @@ strong {
 }
 /* @end */
 /* @group Buttons */
+a,
+button {
+  background: none;
+  border: none;
+}
+a.btn-arrow,
+button.btn-arrow {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  text-rendering: optimizeLegibility;
+  padding: 0 0 0 8px;
+  color: #fb8206;
+  text-decoration: underline;
+  position: relative;
+}
+a.btn-arrow:before,
+button.btn-arrow:before {
+  content: "›";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 a.btn-block,
 button.btn-block {
   display: inline-block;
@@ -379,8 +426,42 @@ button.btn-block:active {
   -webkit-transition: background-color 0.15s ease-in-out;
           transition: background-color 0.15s ease-in-out;
 }
-a.btn-block:focus,
-button.btn-block:focus {
+a.btn-share,
+button.btn-share {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  padding: 9px 14px;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  color: #ffffff;
+}
+a.btn-share:before,
+button.btn-share:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'FioulReducEvent' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e901";
+  margin: 1px 10px 0 0;
+}
+a.btn-share:hover,
+button.btn-share:hover {
+  opacity: 0.8;
+}
+a:focus,
+button:focus {
   outline: none;
 }
 /* @end */
@@ -836,6 +917,11 @@ button.btn-block:focus {
 }
 /* @end */
 @media (max-width: 1200px) {
+  /* @group Header */
+  #header .logo-fioulreduc {
+    margin: 0;
+  }
+  /* @end */
   /* @group Etapes event */
   #etapes-event > li h3 {
     margin: 20px 0 0 20px;
@@ -855,7 +941,38 @@ button.btn-block:focus {
   }
   /* @end */
 }
+@media (max-width: 1024px) {
+  /* @group Buttons */
+  a.btn-block,
+  button.btn-block {
+    padding: 16px 30px;
+    font-size: 0.9em;
+  }
+  a.btn-block:after,
+  button.btn-block:after {
+    font-size: 18px;
+    margin: 0 0 0 14px;
+  }
+  .logo-fioulreduc {
+    width: 240px;
+    height: 30px;
+  }
+  #header .wrapper-align-middle {
+    table-layout: auto;
+  }
+  /* @end */
+}
 @media (max-width: 979px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  /* @group Top event */
+  #top-event p {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* @end */
   /* @group Compteurs */
   h2 {
     font-size: 1.3em;
@@ -1074,10 +1191,57 @@ button.btn-block:focus {
   /* @end */
 }
 @media (max-width: 767px) {
+  h1 {
+    font-size: 1.4em;
+  }
+  p {
+    font-size: 0.9em;
+  }
   #content-event {
     padding: 40px 0 44px 0;
   }
+  /* @group Header */
+  #header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+    padding: 18px 0;
+  }
+  #header .logo-fioulreduc {
+    background-image: url("../layoutImg/logo-responsive.png");
+    width: 124px;
+    height: 19px;
+    margin: 0 auto;
+    display: block;
+  }
+  #header .wrapper-align-middle {
+    display: block;
+    position: relative;
+  }
+  #header .content-align-middle {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+  #header .content-align-middle#wrapper-logo-header {
+    display: block;
+    width: 100%;
+  }
+  #header .content-align-middle.txt-centered {
+    position: absolute;
+    left: 0;
+    bottom: -75px;
+  }
+  #header .content-align-middle.txt-right-aligned {
+    position: absolute;
+    right: 0;
+    bottom: -82px;
+    text-align: center;
+  }
+  /* @end */
   /* @group Compteurs */
+  .wrapper-compteurs {
+    text-align: center;
+  }
   .wrapper-compteurs .wrapper-compteur-participants {
     float: none;
   }
@@ -1086,7 +1250,6 @@ button.btn-block:focus {
   }
   h2 {
     margin: 15px 0;
-    font-size: 1em;
   }
   .compteur-participants.odometer-auto-theme .odometer-digit,
   .odometer.odometer-theme-train-station .odometer-digit {
@@ -1138,25 +1301,76 @@ button.btn-block:focus {
     display: block;
     margin: 15px 0;
   }
+  .menu-contact ul > li a .illus-menu {
+    margin: 0 24px 0 0;
+  }
+  /* @end */
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  /* @group Header */
+  /*#header{
+        background-color: @blanc;
+        box-shadow: 0 2px 0 rgba(0,0,0,.08);
+        padding: 18px 0;
+        .logo-fioulreduc{
+            background-image: url("../layoutImg/logo-responsive.png");
+            width: 124px;
+            height: 19px;
+            margin: 0 auto;
+            display: block;
+        }
+        .wrapper-align-middle{
+            display: block;
+            position: relative;
+        }
+        .content-align-middle{
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            &#wrapper-logo-header{
+                display: block;
+                width: 100%;
+            }
+            &.txt-centered{
+                position: absolute;
+                left: 0;
+                bottom: -75px;
+            }
+            &.txt-right-aligned{
+                position: absolute;
+                right: 0;
+                bottom: -82px;
+                text-align: center;
+            }
+        }
+    }*/
+  /* @end */
+  /* @group Compteurs */
+  h2 {
+    font-size: 1.2em;
+  }
   /* @end */
 }
 /* retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   .logo-fioulreduc {
     background-image: url("../layoutImg/logo@2x.png");
-    background-size: 262px 32px;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   .logo-fioulreduc {
     background-image: url("../layoutImg/logo@2x.png");
-    background-size: 262px 32px;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi) {
   .logo-fioulreduc {
     background-image: url("../layoutImg/logo@3x.png");
-    background-size: 262px 32px;
   }
 }
 /* @end */

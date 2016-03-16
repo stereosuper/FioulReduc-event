@@ -581,6 +581,7 @@ button:focus {
   box-sizing: border-box;
   counter-increment: counter-step-event;
   background-color: #ffffff;
+  cursor: pointer;
 }
 #etapes-event > li h3 {
   position: relative;

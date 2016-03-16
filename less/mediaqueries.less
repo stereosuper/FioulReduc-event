@@ -386,24 +386,25 @@
     }
     h2{
         margin: 15px 0;
+        font-size: 1.5em;
     }
     .compteur-participants.odometer-auto-theme, .odometer.odometer-theme-train-station{
         .odometer-digit{
-            width: 18px;
-            height: 34px;
-            line-height: 34px;
+            width: 24px;
+            height: 38px;
+            line-height: 38px;
             border-radius: 5px;
             margin: 0 2px;
         }
     }
     .decompteur-event{
         .digit-group{
-            height: 34px;
+            height: 38px;
         }
         .digit{
             border-radius: 5px;
-            width: 18px;
-            line-height: 34px;
+            width: 24px;
+            line-height: 38px;
             font-size: 1em;
             margin: 0 2px;
         }
@@ -466,7 +467,7 @@
                     background-size: 100% auto;
                 }
                 p{
-                    padding: 88px 0 0 0;
+                    padding: 150px 0 0 0;
                 }
             }
             &.etape-4{
@@ -476,7 +477,7 @@
                     background-size: 100% auto;
                 }
                 p{
-                    padding: 72px 0 0 0;
+                    padding: 114px 0 0 0;
                 }
             }
         }
@@ -511,6 +512,50 @@
     /* @group Compteurs */
     h2{
         font-size: 1.2em;
+    }
+    .compteur-participants.odometer-auto-theme, .odometer.odometer-theme-train-station{
+        .odometer-digit{
+            width: 18px;
+            height: 34px;
+            line-height: 34px;
+            border-radius: 5px;
+            margin: 0 2px;
+        }
+    }
+    .decompteur-event{
+        .digit-group{
+            height: 34px;
+        }
+        .digit{
+            border-radius: 5px;
+            width: 18px;
+            line-height: 34px;
+            font-size: 1em;
+            margin: 0 2px;
+        }
+        .legend{
+            bottom: -15px;
+        }
+    }
+    .decompteur-event{
+        margin-left: 0;
+    }
+    /* @end */
+
+    /* @group Etapes event */
+    #etapes-event{
+        > li{
+            &.etape-3{
+                p{
+                    padding: 88px 0 0 0;
+                }
+            }
+            &.etape-4{
+                p{
+                    padding: 72px 0 0 0;
+                }
+            }
+        }
     }
     /* @end */
 
@@ -552,19 +597,19 @@
             &.etape-3{
                 .content-etape{
                     background-image: url("../img/illus-offre@2x.png");
+                    @media (max-width: 767px) {
+                        background-image: url("../img/illus-offre-mobile@2x.png");
+                    }
                 }
             }
             &.etape-4{
                 .content-etape{
                     background-image: url("../img/illus-livraison@2x.png");
+                    @media (max-width: 767px) {
+                        background-image: url("../img/illus-livraison-mobile@2x.png");
+                    }
                 }
             }
         }
-    }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
-    .logo-fioulreduc{
-        background-image: url("../layoutImg/logo@2x.png");
     }
 }

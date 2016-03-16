@@ -21,6 +21,16 @@
 		box-sizing: border-box;
 		padding: 0 20px;
 		margin: 0 auto;
+		&.big{
+			max-width: 940px;
+		}
+	}
+	&#popup-partage{
+		.popup{
+			background-image: url("../layoutImg/thumb-up.png"), url("../layoutImg/megaphone.png"); 
+			background-position:0 49px, 100% 189px;
+			background-repeat: no-repeat;
+		}
 	}
 }
 .popup{
@@ -54,6 +64,28 @@
 	}
 	.content-popup{
 		text-align: left;
+		&.txt-centered{
+			text-align: center;
+		}
+	}
+	h2{
+		.lato-bold(1.625em);
+		color: #fe7b02;
+		margin: 40px 0 20px 0;
+	}
+	p{
+		color: @bleuFonceFioulReduc;
+		margin: 20px auto;
+		strong{
+			.lato-bold-italic(1.25em);
+			color: @bleuFioulReduc;
+		}
+		&.small{
+		    max-width: 600px;
+		}
+		&.very-small{
+		    max-width: 530px;
+		}
 	}
 }
 

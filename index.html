@@ -124,7 +124,7 @@
 	  		</div>
 	  	</footer>
 		
-		<div class="wrapper-popup open" data-popup="inscription">
+		<div class="wrapper-popup" data-popup="inscription">
 			<div class="container-popup">
 				<div class="popup">
 					<button class="btn-close-popup icon-cross"></button>
@@ -183,6 +183,38 @@
 				</div>
 			</div>
 		</div>
+		<div class="wrapper-popup open" data-popup="partage" id="popup-partage">
+			<div class="container-popup big">
+				<div class="popup">
+					<button class="btn-close-popup icon-cross"></button>
+					<div class="content-popup txt-centered">
+						<p class="small"><strong>Merci Barack,</strong> nous avons bien pris en compte votre inscription à notre groupement national pour 1000 litres de Fioul Ordinaire à livrer dans le 44000.</p>
+						<p class="small">Vous recevrez notre meilleure offre par email et SMS le 8 avril</p>
+						<h2>Partagez l’opération avec vos proches&nbsp;!</h2>
+						<p class="very-small">Non seulement vous ferez baisser les prix du groupement mais vous recevrez <strong>30€ de bons d’achat</strong> par participant au groupement que vous nous enverrez.</p>
+						<ul class="partage">
+							<li>
+								<a class="mail" href="#">Partager par email</a>
+							</li><!--
+							--><li>
+								<div class="ou">ou</div><!--
+								--><a class="facebook" href="#">Partager sur Facebook</a>
+							</li><!--
+							--><li>
+								<div class="ou">ou</div><!--
+								--><a class="twitter" href="#">Partager sur Twitter</a>
+							</li>
+						</ul>
+						<p>Copier ce lien et le partager où vous voulez</p>
+						<div class="ou">ou</div><!--
+						--><input type="text" id="lien-partage" value="http://www.fioulreduc.com/xxxxxxxxxxxx">
+						<button data-clipboard-target="#lien-partage">
+						    
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- jQuery -->
 		<script src="js/libs/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -194,6 +226,8 @@
 		<!-- countdown -->
 		<script type="text/javascript" src="js/libs/jquery.plugin.js"></script> 
 		<script type="text/javascript" src="js/libs/jquery.countdown.js"></script>
+		<!-- Clipboard -->
+		<script type="text/javascript" src="js/libs/clipboard.min.js"></script>
 
 		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 	</body>

@@ -110,6 +110,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-mail:before {
+  content: "\e903";
+}
 .icon-cross:before {
   content: "\e902";
 }
@@ -859,6 +868,86 @@ button:focus {
 .menu-contact ul > li a .zone-texte-menu .indic-menu.underline {
   text-decoration: underline;
 }
+.partage {
+  display: block;
+  margin: 30px 0 30px 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.partage > li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 16px;
+}
+.partage > li:first-child {
+  margin-left: 0;
+}
+.partage > li a {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 11px 29px 11px 58px;
+  position: relative;
+}
+.partage > li a:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'FioulReducEvent' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 50%;
+}
+.partage > li a.mail {
+  background-color: #fe7b02;
+}
+.partage > li a.mail:before {
+  content: "\e903";
+  font-size: 16px;
+  left: 9px;
+  margin-top: -8px;
+}
+.partage > li a.facebook {
+  background-color: #3e5c9a;
+}
+.partage > li a.facebook:before {
+  content: "\f09a";
+  font-size: 22px;
+  left: 12px;
+  margin-top: -11px;
+}
+.partage > li a.twitter {
+  background-color: #21aded;
+}
+.partage > li a.twitter:before {
+  content: "\f099";
+  font-size: 18px;
+  left: 13px;
+  margin-top: -9px;
+}
+.ou {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 16px;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  text-rendering: optimizeLegibility;
+  color: #c2c2c2;
+  text-transform: uppercase;
+}
 /* @end */
 /* @group Form */
 fieldset {
@@ -917,6 +1006,20 @@ input[type="tel"] {
   color: #2947a0;
   box-sizing: border-box;
   padding: 8px 7px;
+}
+input[type="text"]#lien-partage,
+input[type="email"]#lien-partage,
+input[type="tel"]#lien-partage {
+  border: 1px solid #c0c2cc;
+  border-radius: 0;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  text-rendering: optimizeLegibility;
+  color: #0c1a4c;
+  padding: 10px 20px 10px 42px;
+  width: 100%;
+  max-width: 330px;
 }
 .size1 {
   width: 100px;
@@ -1121,6 +1224,14 @@ input[type="tel"] {
   padding: 0 20px;
   margin: 0 auto;
 }
+.wrapper-popup .container-popup.big {
+  max-width: 940px;
+}
+.wrapper-popup#popup-partage .popup {
+  background-image: url("../layoutImg/thumb-up.png"), url("../layoutImg/megaphone.png");
+  background-position: 0 49px, 100% 189px;
+  background-repeat: no-repeat;
+}
 .popup {
   display: block;
   width: 100%;
@@ -1156,6 +1267,34 @@ input[type="tel"] {
 }
 .popup .content-popup {
   text-align: left;
+}
+.popup .content-popup.txt-centered {
+  text-align: center;
+}
+.popup h2 {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.625em;
+  text-rendering: optimizeLegibility;
+  color: #fe7b02;
+  margin: 40px 0 20px 0;
+}
+.popup p {
+  color: #0c1a4c;
+  margin: 20px auto;
+}
+.popup p strong {
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+}
+.popup p.small {
+  max-width: 600px;
+}
+.popup p.very-small {
+  max-width: 530px;
 }
 /* @end */
 /* @group States */

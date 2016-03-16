@@ -1,3 +1,100 @@
 /* @group Form */
-
+fieldset{
+    display: block;
+    margin: 12px 0;
+}
+label, .equi-label{
+    display: inline-block;
+    vertical-align: middle;
+    width: 172px;
+    text-align: right;
+    padding: 0 7px 0 0;
+    box-sizing: border-box;
+    .lato-italic(1em);
+    color: @bleuFonceFioulReduc;
+    &.radio{
+        width: auto;
+        border-radius: 3px;
+        padding: 8px 6px;
+        margin: 0 8px 0 0;
+        border: 2px solid #cccdd3;
+        &:last-child{
+            margin: 0;
+        }
+        &.active{
+            background-color: #eeeeee;
+            border: none;
+        }
+        input[type="radio"]{
+            margin-right: 6px;
+        }
+    }
+}
+input{
+    &:focus{
+        outline: none;
+    }
+}
+input[type="text"], input[type="email"], input[type="tel"]{
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid #cccdd3;
+    border-radius: 5px;
+    .lato(1em);
+    color: @bleuFioulReduc;
+    box-sizing: border-box;
+    padding: 8px 7px;
+}
+.size1{
+    width: 100px;
+}
+.size2{
+    width: 203px;
+}
+.size3{
+    width: 134px;
+}
+.indic-form{
+    display: inline-block;
+    vertical-align: middle;
+    .lato(1em);
+    color: @bleuFonceFioulReduc;
+    margin: 0 0 0 4px;
+    &.facultatif{
+        color: #cccdd3;
+        margin-left: 10px;
+    }
+}
+.head-form{
+    position: relative;
+    padding: 0 0 0 78px;
+    margin: 0 0 10px 0;
+    box-sizing: border-box;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    p{
+        margin: 4px 0 0 0;
+        padding: 0;
+        .lato-italic(1em);
+        color: #9399ad;
+    }
+    &#head-coordonnees{
+        margin-top: 20px;
+    }
+}
+.zone-btn-form{
+    display: block;
+    box-sizing: border-box;
+    padding: 0 0 0 172px;
+    margin: 12px 0 0 0;
+    a, button{
+        &.btn-block, &.btn-block.small{
+            width: 100%;
+            max-width: 340px;
+        }
+    }
+}
 /* @end */

@@ -110,6 +110,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-cross:before {
+  content: "\e902";
+}
 .icon-fleche-rond:before {
   content: "\e900";
 }
@@ -179,6 +182,22 @@ h2 {
   margin: 0;
   padding: 0;
 }
+h3 {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.375em;
+  text-rendering: optimizeLegibility;
+}
+h4 {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+  margin: 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #c0c2cc;
+}
 p {
   font-family: 'lato', sans-serif;
   font-weight: normal;
@@ -197,7 +216,7 @@ strong {
   font-weight: normal;
 }
 .container {
-  max-width: 1220px;
+  max-width: 1240px;
   box-sizing: border-box;
   padding: 0 20px;
   margin: 0 auto;
@@ -442,6 +461,11 @@ button.btn-block:active {
   box-shadow: none;
   -webkit-transition: background-color 0.15s ease-in-out;
           transition: background-color 0.15s ease-in-out;
+}
+a.btn-block.small,
+button.btn-block.small {
+  font-size: 0.938em;
+  padding: 16px 69px;
 }
 a.btn-share,
 button.btn-share {
@@ -837,6 +861,122 @@ button:focus {
 }
 /* @end */
 /* @group Form */
+fieldset {
+  display: block;
+  margin: 12px 0;
+}
+label,
+.equi-label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 172px;
+  text-align: right;
+  padding: 0 7px 0 0;
+  box-sizing: border-box;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  color: #0c1a4c;
+}
+label.radio,
+.equi-label.radio {
+  width: auto;
+  border-radius: 3px;
+  padding: 8px 6px;
+  margin: 0 8px 0 0;
+  border: 2px solid #cccdd3;
+}
+label.radio:last-child,
+.equi-label.radio:last-child {
+  margin: 0;
+}
+label.radio.active,
+.equi-label.radio.active {
+  background-color: #eeeeee;
+  border: none;
+}
+label.radio input[type="radio"],
+.equi-label.radio input[type="radio"] {
+  margin-right: 6px;
+}
+input:focus {
+  outline: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid #cccdd3;
+  border-radius: 5px;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+  box-sizing: border-box;
+  padding: 8px 7px;
+}
+.size1 {
+  width: 100px;
+}
+.size2 {
+  width: 203px;
+}
+.size3 {
+  width: 134px;
+}
+.indic-form {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  color: #0c1a4c;
+  margin: 0 0 0 4px;
+}
+.indic-form.facultatif {
+  color: #cccdd3;
+  margin-left: 10px;
+}
+.head-form {
+  position: relative;
+  padding: 0 0 0 78px;
+  margin: 0 0 10px 0;
+  box-sizing: border-box;
+}
+.head-form img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.head-form p {
+  margin: 4px 0 0 0;
+  padding: 0;
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  color: #9399ad;
+}
+.head-form#head-coordonnees {
+  margin-top: 20px;
+}
+.zone-btn-form {
+  display: block;
+  box-sizing: border-box;
+  padding: 0 0 0 172px;
+  margin: 12px 0 0 0;
+}
+.zone-btn-form a.btn-block,
+.zone-btn-form button.btn-block,
+.zone-btn-form a.btn-block.small,
+.zone-btn-form button.btn-block.small {
+  width: 100%;
+  max-width: 340px;
+}
 /* @end */
 /* @group odometer */
 .compteur-participants.odometer-auto-theme,
@@ -957,6 +1097,66 @@ button:focus {
 }
 /* @end */
 /* @group Popup */
+.wrapper-popup {
+  display: none;
+  z-index: 160;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.wrapper-popup.open {
+  display: block;
+}
+.wrapper-popup .container-popup {
+  display: block;
+  max-width: 660px;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.popup {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 90%;
+  padding: 23px 40px 23px 30px;
+  box-sizing: border-box;
+  vertical-align: top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  background: #ffffff;
+  overflow: auto;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 6px;
+  text-align: right;
+}
+.popup .btn-close-popup {
+  position: fixed;
+  display: inline-block;
+  vertical-align: top;
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+  color: #cccccc;
+  margin: -10px 0 0 10px;
+  padding: 0;
+}
+.popup .content-popup {
+  text-align: left;
+}
 /* @end */
 /* @group States */
 .hide-text {

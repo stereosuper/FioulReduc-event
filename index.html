@@ -123,6 +123,66 @@
 				</nav>
 	  		</div>
 	  	</footer>
+		
+		<div class="wrapper-popup open" data-popup="inscription">
+			<div class="container-popup">
+				<div class="popup">
+					<button class="btn-close-popup icon-cross"></button>
+					<div class="content-popup">
+						<form>
+							<div class="head-form">
+								<img src="img/livraison.png" srcset="img/livraison.png 1x, img/livraison@2x.png 2x" alt="Livraison">
+								<h4>Votre besoin</h4>
+								<p>Votre inscription ne vous engage pas à passer commande</p>
+							</div>
+							<fieldset>
+								<label for="code-postal">Code postal :</label><!--
+								--><input type="text" class="size1" id="code-postal" name="code-postal">
+							</fieldset>
+							<fieldset>
+								<label for="quantite">Quantité :</label><!--
+								--><input type="text" class="size1" id="quantite" name="quantite"><!--
+								--><div class="indic-form">litres</div>
+							</fieldset>
+							<fieldset>
+								<div class="equi-label">Fioul :</div><!--
+								--><label class="radio active" for="ordinaire">
+									<input type="radio" id="ordinaire" name="fioul" value="ordinaire" checked="checked"> Ordinaire
+								</label><!-- 
+								--><label class="radio" for="superieur">
+									<input type="radio" id="superieur" name="fioul" value="superieur"> Supérieur
+								</label>
+							</fieldset>
+							<div class="head-form" id="head-coordonnees">
+								<img src="img/commande.png" srcset="img/commande.png 1x, img/commande@2x.png 2x" alt="Commande">
+								<h4>Vos coordonnées</h4>
+								<p>Nous vous enverrons votre offre par email et SMS</p>
+							</div>
+							<fieldset>
+								<label for="email">Email :</label><!--
+								--><input type="email" class="size2" id="email" name="email">
+							</fieldset>
+							<fieldset>
+								<label for="prenom">Prénom :</label><!--
+								--><input type="text" class="size2" id="prenom" name="prenom">
+							</fieldset>
+							<fieldset>
+								<label for="nom">Nom :</label><!--
+								--><input type="text" class="size2" id="nom" name="nom">
+							</fieldset>
+							<fieldset>
+								<label for="tel">Téléphone portable :</label><!--
+								--><input type="tel" class="size3" id="tel" name="tel"><!--
+								--><div class="indic-form facultatif">Facultatif</div>
+							</fieldset>
+							<div class="zone-btn-form">
+								<button class="btn-block small">Je m'inscris</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- jQuery -->
 		<script src="js/libs/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>

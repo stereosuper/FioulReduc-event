@@ -217,10 +217,12 @@ strong {
 .content-align-middle {
   display: table-cell;
   vertical-align: middle;
+  box-sizing: border-box;
 }
 .content-align-top {
   display: table-cell;
   vertical-align: top;
+  box-sizing: border-box;
 }
 .logo-fioulreduc {
   display: inline-block;
@@ -312,6 +314,12 @@ strong {
 }
 #header .wrapper-align-middle {
   table-layout: fixed;
+}
+#header #wrapper-logo-header {
+  width: 325px;
+}
+#header #wrapper-btn-inscription {
+  width: 325px;
 }
 /* @end */
 /* @group Top event */
@@ -989,6 +997,12 @@ button:focus {
   #header .wrapper-align-middle {
     table-layout: auto;
   }
+  #header #wrapper-logo-header {
+    width: auto;
+  }
+  #header #wrapper-btn-inscription {
+    width: auto;
+  }
   /* @end */
 }
 @media (max-width: 979px) {
@@ -1003,6 +1017,9 @@ button:focus {
   }
   /* @end */
   /* @group Compteurs */
+  #content-event {
+    padding: 60px 0 44px 0;
+  }
   h2 {
     font-size: 1.3em;
   }
@@ -1033,6 +1050,7 @@ button:focus {
   #etapes-event {
     height: auto;
     border-radius: 0;
+    margin: 40px auto 40px auto;
   }
   #etapes-event.etape-1-active > li.etape-1 {
     -webkit-transform: translateX(0%);
@@ -1239,13 +1257,27 @@ button:focus {
     font-size: 0.9em;
   }
   #content-event {
-    padding: 40px 0 44px 0;
+    padding: 30px 0 44px 0;
   }
+  /* @group Buttons */
+  a.btn-share,
+  button.btn-share {
+    font-size: 0.9em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  a.btn-share:before,
+  button.btn-share:before {
+    margin-right: 5px;
+  }
+  /* @end */
   /* @group Header */
   #header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
-    padding: 18px 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  #header .container {
+    padding: 0;
   }
   #header .logo-fioulreduc {
     background-image: url("../layoutImg/logo-responsive.png");
@@ -1254,28 +1286,33 @@ button:focus {
     margin: 0 auto;
     display: block;
   }
-  #header .wrapper-align-middle {
-    display: block;
-    position: relative;
-  }
-  #header .content-align-middle {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-  }
   #header .content-align-middle#wrapper-logo-header {
     display: block;
     width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+    padding: 18px 20px;
+    box-sizing: border-box;
   }
-  #header .content-align-middle.txt-centered {
-    position: absolute;
-    left: 0;
-    bottom: -75px;
+  #header .content-align-middle#wrapper-right-header {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 15px 0 0 0;
+  }
+  #header .content-align-middle#wrapper-right-header .content-align-middle {
+    padding: 0 10px;
+  }
+  #header .content-align-middle#wrapper-right-header .content-align-middle#wrapper-btn-inscription {
+    min-width: 185px;
+  }
+  #header .content-align-middle#wrapper-right-header a.btn-block,
+  #header .content-align-middle#wrapper-right-header button.btn-block {
+    font-size: 0.8em;
+    padding: 16px 20px;
   }
   #header .content-align-middle.txt-right-aligned {
-    position: absolute;
-    right: 0;
-    bottom: -82px;
     text-align: center;
   }
   /* @end */
@@ -1388,47 +1425,19 @@ button:focus {
   p {
     font-size: 0.8em;
   }
-  /* @group Header */
-  /*#header{
-        background-color: @blanc;
-        box-shadow: 0 2px 0 rgba(0,0,0,.08);
-        padding: 18px 0;
-        .logo-fioulreduc{
-            background-image: url("../layoutImg/logo-responsive.png");
-            width: 124px;
-            height: 19px;
-            margin: 0 auto;
-            display: block;
-        }
-        .wrapper-align-middle{
-            display: block;
-            position: relative;
-        }
-        .content-align-middle{
-            display: inline-block;
-            vertical-align: top;
-            width: 50%;
-            &#wrapper-logo-header{
-                display: block;
-                width: 100%;
-            }
-            &.txt-centered{
-                position: absolute;
-                left: 0;
-                bottom: -75px;
-            }
-            &.txt-right-aligned{
-                position: absolute;
-                right: 0;
-                bottom: -82px;
-                text-align: center;
-            }
-        }
-    }*/
-  /* @end */
   /* @group Compteurs */
   h2 {
     font-size: 1.2em;
+  }
+  /* @end */
+  /* @group Header */
+  #header .content-align-middle#wrapper-right-header a.btn-block,
+  #header .content-align-middle#wrapper-right-header button.btn-block {
+    padding: 16px 12px;
+  }
+  #header .content-align-middle#wrapper-right-header a.btn-block:after,
+  #header .content-align-middle#wrapper-right-header button.btn-block:after {
+    margin: 0 0 0 8px;
   }
   /* @end */
 }

@@ -56,6 +56,12 @@
         .wrapper-align-middle{
             table-layout: auto;
         }
+        #wrapper-logo-header{
+            width: auto;
+        }
+        #wrapper-btn-inscription{
+            width: auto;
+        }
     }
     /* @end */
 }
@@ -76,6 +82,9 @@
     /* @end */
 
     /* @group Compteurs */
+    #content-event{
+        padding: 60px 0 44px 0;
+    }
     h2{
         font-size: 1.3em;
     }
@@ -107,6 +116,7 @@
     #etapes-event{
         height: auto;
         border-radius: 0;
+        margin: 40px auto 40px auto;
         &.etape-1-active{
             >li{
                 &.etape-1{
@@ -300,14 +310,28 @@
         font-size: 0.9em;
     }
     #content-event{
-        padding: 40px 0 44px 0;
+        padding: 30px 0 44px 0;
     }
+    /* @group Buttons */
+    a, button{
+        &.btn-share{
+            font-size: 0.9em;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            &:before{
+                margin-right: 5px;
+            }
+        }
+    }
+    /* @end */
 
     /* @group Header */
     #header{
-        background-color: @blanc;
-        box-shadow: 0 2px 0 rgba(0,0,0,.08);
-        padding: 18px 0;
+        padding: 0;
+        overflow: hidden;
+        .container{
+            padding: 0;
+        }
         .logo-fioulreduc{
             background-image: url("../layoutImg/logo-responsive.png");
             width: 124px;
@@ -315,27 +339,35 @@
             margin: 0 auto;
             display: block;
         }
-        .wrapper-align-middle{
-            display: block;
-            position: relative;
-        }
         .content-align-middle{
-            display: inline-block;
-            vertical-align: top;
-            width: 50%;
             &#wrapper-logo-header{
                 display: block;
                 width: 100%;
+                background-color: @blanc;
+                box-shadow: 0 2px 0 rgba(0,0,0,.08);
+                padding: 18px 20px;
+                box-sizing: border-box;
             }
-            &.txt-centered{
-                position: absolute;
-                left: 0;
-                bottom: -75px;
+            &#wrapper-right-header{
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0 10px;
+                margin: 15px 0 0 0;
+                .content-align-middle{
+                    padding: 0 10px;
+                    &#wrapper-btn-inscription{
+                        min-width: 185px;
+                    }
+                }
+                a, button{
+                    &.btn-block{
+                        font-size: 0.8em;
+                        padding: 16px 20px;
+                    }
+                }
             }
             &.txt-right-aligned{
-                position: absolute;
-                right: 0;
-                bottom: -82px;
                 text-align: center;
             }
         }
@@ -475,49 +507,27 @@
     p{
         font-size: 0.8em;
     }
-    
-    /* @group Header */
-    /*#header{
-        background-color: @blanc;
-        box-shadow: 0 2px 0 rgba(0,0,0,.08);
-        padding: 18px 0;
-        .logo-fioulreduc{
-            background-image: url("../layoutImg/logo-responsive.png");
-            width: 124px;
-            height: 19px;
-            margin: 0 auto;
-            display: block;
-        }
-        .wrapper-align-middle{
-            display: block;
-            position: relative;
-        }
-        .content-align-middle{
-            display: inline-block;
-            vertical-align: top;
-            width: 50%;
-            &#wrapper-logo-header{
-                display: block;
-                width: 100%;
-            }
-            &.txt-centered{
-                position: absolute;
-                left: 0;
-                bottom: -75px;
-            }
-            &.txt-right-aligned{
-                position: absolute;
-                right: 0;
-                bottom: -82px;
-                text-align: center;
-            }
-        }
-    }*/
-    /* @end */
 
     /* @group Compteurs */
     h2{
         font-size: 1.2em;
+    }
+    /* @end */
+
+    /* @group Header */
+    #header{
+        .content-align-middle{
+            &#wrapper-right-header{
+                a, button{
+                    &.btn-block{
+                        padding: 16px 12px;
+                        &:after{
+                            margin: 0 0 0 8px;
+                        }
+                    }
+                }
+            }
+        }
     }
     /* @end */
 }

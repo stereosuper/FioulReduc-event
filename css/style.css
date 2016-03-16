@@ -633,6 +633,9 @@ button:focus {
   max-width: 58%;
   display: block;
 }
+#etapes-event > li .content-etape {
+  height: 348px;
+}
 #etapes-event > li.etape-1 {
   left: 0;
   border-left: none;
@@ -641,12 +644,26 @@ button:focus {
   top: 107px;
   left: 3px;
 }
+#etapes-event > li.etape-1 .content-etape {
+  background: #ffffff url("../img/illus-inscription.gif") no-repeat 3px 37px;
+  background-size: 253px 259px;
+}
+#etapes-event > li.etape-1 p {
+  padding-left: 270px;
+}
 #etapes-event > li.etape-2 {
   left: 20%;
 }
 #etapes-event > li.etape-2 img {
   top: 91px;
   left: 0px;
+}
+#etapes-event > li.etape-2 .content-etape {
+  background: #ffffff url("../img/illus-nego.png") no-repeat 0 44px;
+  background-size: 220px 268px;
+}
+#etapes-event > li.etape-2 p {
+  padding-left: 270px;
 }
 #etapes-event > li.etape-3 {
   left: 40%;
@@ -655,8 +672,13 @@ button:focus {
   bottom: 0px;
   left: 0px;
 }
+#etapes-event > li.etape-3 .content-etape {
+  background: #ffffff url("../img/illus-offre.png") no-repeat 0 100%;
+  background-size: 278px 340px;
+}
 #etapes-event > li.etape-3 p {
   padding-right: 25px;
+  padding-left: 280px;
 }
 #etapes-event > li.etape-4 {
   left: 60%;
@@ -666,6 +688,13 @@ button:focus {
   max-width: none;
   bottom: 0px;
   left: 0px;
+}
+#etapes-event > li.etape-4 .content-etape {
+  background: #ffffff url("../img/illus-livraison.png") no-repeat 0 100%;
+  background-size: 480px 327px;
+}
+#etapes-event > li.etape-4 p {
+  padding-left: 280px;
 }
 .menu-contact {
   text-align: center;
@@ -1118,16 +1147,20 @@ button:focus {
   #etapes-event > li p {
     display: inline-block;
     vertical-align: top;
-    padding: 0 30px 0 30px;
-    width: 75%;
+    padding: 0;
+    width: 100%;
   }
   #etapes-event > li.etape-1 {
     left: 0;
     border-left: none;
+    background-position: 3px 45px;
   }
   #etapes-event > li.etape-1 img {
     top: inherit;
     left: inherit;
+  }
+  #etapes-event > li.etape-1 p {
+    padding-left: 260px;
   }
   #etapes-event > li.etape-2 {
     left: 0;
@@ -1135,6 +1168,9 @@ button:focus {
   #etapes-event > li.etape-2 img {
     top: inherit;
     left: inherit;
+  }
+  #etapes-event > li.etape-2 p {
+    padding-left: 260px;
   }
   #etapes-event > li.etape-3 {
     left: 0;
@@ -1145,6 +1181,7 @@ button:focus {
   }
   #etapes-event > li.etape-3 p {
     padding-right: 25px;
+    padding-left: 260px;
   }
   #etapes-event > li.etape-4 {
     left: 0;
@@ -1153,6 +1190,9 @@ button:focus {
     width: 25%;
     bottom: inherit;
     left: inherit;
+  }
+  #etapes-event > li.etape-4 p {
+    padding-left: 260px;
   }
   #etapes-event > li .title-etape {
     box-sizing: border-box;
@@ -1179,6 +1219,7 @@ button:focus {
     display: none;
     box-sizing: border-box;
     padding: 10px 20px;
+    min-height: none;
   }
   #etapes-event > li:first-child .content-etape {
     display: block;
@@ -1292,8 +1333,42 @@ button:focus {
   }
   #etapes-event > li p {
     display: block;
-    padding: 0;
+    padding: 150px 0 0 0;
     width: 100%;
+    margin: 0;
+  }
+  #etapes-event > li .content-etape {
+    height: auto;
+  }
+  #etapes-event > li.etape-1 .content-etape {
+    background-position: 50% 3px;
+    background-size: 150px auto;
+  }
+  #etapes-event > li.etape-1 p {
+    padding-left: 0;
+  }
+  #etapes-event > li.etape-2 .content-etape {
+    background-position: 50% 3px;
+    background-size: 125px auto;
+  }
+  #etapes-event > li.etape-2 p {
+    padding-left: 0;
+  }
+  #etapes-event > li.etape-3 .content-etape {
+    background-image: url("../img/illus-offre-mobile.png");
+    background-position: 50% 18px;
+    background-size: 100% auto;
+  }
+  #etapes-event > li.etape-3 p {
+    padding: 88px 0 0 0;
+  }
+  #etapes-event > li.etape-4 .content-etape {
+    background-image: url("../img/illus-livraison-mobile.png");
+    background-position: 50% 14px;
+    background-size: 100% auto;
+  }
+  #etapes-event > li.etape-4 p {
+    padding: 72px 0 0 0;
   }
   /* @end */
   /* @group Footer */
@@ -1362,15 +1437,22 @@ button:focus {
   .logo-fioulreduc {
     background-image: url("../layoutImg/logo@2x.png");
   }
+  #etapes-event > li.etape-1 .content-etape {
+    background-image: url("../img/illus-inscription@2x.gif");
+  }
+  #etapes-event > li.etape-2 .content-etape {
+    background-image: url("../img/illus-nego@2x.png");
+  }
+  #etapes-event > li.etape-3 .content-etape {
+    background-image: url("../img/illus-offre@2x.png");
+  }
+  #etapes-event > li.etape-4 .content-etape {
+    background-image: url("../img/illus-livraison@2x.png");
+  }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   .logo-fioulreduc {
     background-image: url("../layoutImg/logo@2x.png");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi) {
-  .logo-fioulreduc {
-    background-image: url("../layoutImg/logo@3x.png");
   }
 }
 /* @end */

@@ -202,15 +202,19 @@
             p{
                 display: inline-block;
                 vertical-align: top;
-                padding: 0 30px 0 30px;
-                width: 75%;
+                padding: 0;
+                width: 100%;
             }
             &.etape-1{
                 left: 0;
                 border-left: none;
+                background-position: 3px 45px;
                 img{
                     top: inherit;
                     left: inherit;
+                }
+                p{
+                    padding-left: 260px;
                 }
             }
             &.etape-2{
@@ -218,6 +222,9 @@
                 img{
                     top: inherit;
                     left: inherit;
+                }
+                p{
+                    padding-left: 260px;
                 }
             }
             &.etape-3{
@@ -228,6 +235,7 @@
                 }
                 p{
                     padding-right: 25px;
+                    padding-left: 260px;
                 }
             }
             &.etape-4{
@@ -236,6 +244,9 @@
                     width: 25%;
                     bottom: inherit;
                     left: inherit;
+                }
+                p{
+                    padding-left: 260px;
                 }
             }
             .title-etape{
@@ -262,6 +273,7 @@
                 display: none;
                 box-sizing: border-box;
                 padding: 10px 20px;
+                min-height: none;
             }
             &:first-child{
                 .content-etape{
@@ -390,8 +402,50 @@
             }
             p{
                 display: block;
-                padding: 0;
+                padding: 150px 0 0 0;
                 width: 100%;
+                margin: 0;
+            }
+            .content-etape{
+                height: auto;
+            }
+            &.etape-1{
+                .content-etape{
+                    background-position: 50% 3px;
+                    background-size: 150px auto;
+                }
+                p{
+                    padding-left: 0;
+                }
+            }
+            &.etape-2{
+                .content-etape{
+                    background-position: 50% 3px;
+                    background-size: 125px auto;
+                }
+                p{
+                    padding-left: 0;
+                }
+            }
+            &.etape-3{
+                .content-etape{
+                    background-image: url("../img/illus-offre-mobile.png");
+                    background-position: 50% 18px;
+                    background-size: 100% auto;
+                }
+                p{
+                    padding: 88px 0 0 0;
+                }
+            }
+            &.etape-4{
+                .content-etape{
+                    background-image: url("../img/illus-livraison-mobile.png");
+                    background-position: 50% 14px;
+                    background-size: 100% auto;
+                }
+                p{
+                    padding: 72px 0 0 0;
+                }
             }
         }
     }
@@ -473,16 +527,34 @@
     .logo-fioulreduc{
         background-image: url("../layoutImg/logo@2x.png");
     }
+    #etapes-event{
+        > li{
+            &.etape-1{
+                .content-etape{
+                    background-image: url("../img/illus-inscription@2x.gif");
+                }
+            }
+            &.etape-2{
+                .content-etape{
+                    background-image: url("../img/illus-nego@2x.png");
+                }
+            }
+            &.etape-3{
+                .content-etape{
+                    background-image: url("../img/illus-offre@2x.png");
+                }
+            }
+            &.etape-4{
+                .content-etape{
+                    background-image: url("../img/illus-livraison@2x.png");
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
     .logo-fioulreduc{
         background-image: url("../layoutImg/logo@2x.png");
-    }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi) {
-    .logo-fioulreduc{
-        background-image: url("../layoutImg/logo@3x.png");
     }
 }

@@ -474,7 +474,7 @@ button.btn-block:active {
 a.btn-block.small,
 button.btn-block.small {
   font-size: 0.938em;
-  padding: 16px 69px;
+  padding: 16px 16px;
 }
 a.btn-block.small:after,
 button.btn-block.small:after {
@@ -665,6 +665,7 @@ button:focus {
   color: #fb8206;
   margin: 0;
   padding: 0 0 0 64px;
+  border: none;
 }
 #etapes-event > li p {
   box-sizing: border-box;
@@ -1201,6 +1202,7 @@ label.radio,
   padding: 8px 6px;
   margin: 0 8px 0 0;
   border: 2px solid #cccdd3;
+  cursor: pointer;
 }
 label.radio:last-child,
 .equi-label.radio:last-child {
@@ -1209,7 +1211,7 @@ label.radio:last-child,
 label.radio.active,
 .equi-label.radio.active {
   background-color: #eeeeee;
-  border: none;
+  border-color: #fff;
 }
 label.radio input[type="radio"],
 .equi-label.radio input[type="radio"] {
@@ -1424,6 +1426,10 @@ input[type="tel"]#lien-partage {
   button.btn-block:after {
     font-size: 18px;
     margin: 0 0 0 14px;
+  }
+  a.btn-block.small:after,
+  button.btn-block.small:after {
+    margin-top: 0;
   }
   .logo-fioulreduc {
     width: 240px;
@@ -1879,6 +1885,55 @@ input[type="tel"]#lien-partage {
   }
   .menu-contact ul > li a .illus-menu {
     margin: 0 24px 0 0;
+  }
+  /* @end */
+  /* @group Popup */
+  .wrapper-popup {
+    position: relative;
+    background-color: #ffffff;
+  }
+  .popup {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+  .popup .btn-close-popup {
+    position: absolute;
+  }
+  /* @end */
+}
+@media (max-width: 660px) {
+  /* @group Form */
+  label,
+  .equi-label {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 8px 0;
+  }
+  label.radio,
+  .equi-label.radio {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  .head-form {
+    padding: 0;
+  }
+  .head-form img {
+    position: relative;
+    margin: 0 0 5px 0;
+  }
+  .head-form h4 {
+    font-size: 1.1em;
+  }
+  .head-form p {
+    font-size: 0.9em;
+  }
+  .zone-btn-form {
+    padding: 0;
   }
   /* @end */
 }

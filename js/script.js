@@ -43,6 +43,19 @@ function decompteur(){
 	});
 }
 
+// Positionner les popup sans transform
+function posiPopup(){
+	$(".popup").each(function(index){
+		if($(window).width()<=767){
+			TweenMax.set($(this), {"margin-top": "0px", "margin-left": "0px"});
+			TweenMax.set($(this), {className:"+=no-transform"});
+		}else{
+			TweenMax.set($(this), {"margin-top": -($(this).outerHeight())/2+"px", "margin-left": -($(this).outerWidth())/2+"px"});
+			TweenMax.set($(this), {className:"+=no-transform"});
+		}
+	});
+}
+
 $(function(){
 	compteur();
 	decompteur();
@@ -85,13 +98,7 @@ $(function(){
 	});
 
 	// Popup
-	// Positionner les popup sans transform
-	function posiPopup(){
-		$(".popup").each(function(index){
-			TweenMax.set($(this), {"margin-top": -($(this).outerHeight())/2+"px", "margin-left": -($(this).outerWidth())/2+"px"});
-			TweenMax.set($(this), {className:"+=no-transform"});
-		});
-	}
+	
 	// Ouverture popup
 	$(".has-popup").click(function(){
 		var contentDataPopup = $(this).data('ref-popup');
@@ -99,8 +106,12 @@ $(function(){
 		if(!selectedPopup.hasClass("open")){
 			$(".wrapper-popup").removeClass("open");
 			selectedPopup.addClass("open");
+			// Sur mobile on fait un scroll jusqu'au popup
+			if($(window).width()<=767){
+				$('html, body').stop().animate( { scrollTop: selectedPopup.offset().top }, 800 );
+			}
 		}
-		//posiPopup();
+		posiPopup();
 		return false;
 	});
 	// Clic sur le bouton pour fermer le popup
@@ -126,8 +137,15 @@ $(function(){
 	});
 });
 
+$(window).load(function() {
+	// Positionnement des popup
+	posiPopup();
+});
+
 $(window).resize(function(){
 	$(".content-etape").attr("style","");
 	$("#etapes-event >li.open").removeClass("open");
 	$("#etapes-event >li").first().addClass("open");
+	// Positionnement des popup
+	posiPopup();
 });

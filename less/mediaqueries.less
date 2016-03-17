@@ -82,6 +82,11 @@
                 font-size: 18px;
                 margin: 0 0 0 14px;
             }
+            &.small{
+                &:after{
+                    margin-top: 0;
+                }
+            }
         }
     }
     .logo-fioulreduc{
@@ -558,6 +563,53 @@
                 }
             }
         }
+    }
+    /* @end */
+
+    /* @group Popup */
+    .wrapper-popup{
+        position: relative;
+        background-color: @blanc;
+    }
+    .popup{
+        position: relative;
+        top: inherit;
+        left: inherit;
+        transform: none;
+        .btn-close-popup{
+            position: absolute;
+        }
+    }
+    /* @end */
+}
+
+@media (max-width: 660px) {
+    /* @group Form */
+    label, .equi-label{
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0 0 8px 0;
+        &.radio{
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    }
+    .head-form{
+        padding: 0;
+        img{
+            position: relative;
+            margin: 0 0 5px 0;
+        }
+        h4{
+            font-size: 1.1em;
+        }
+        p{
+            font-size: 0.9em;
+        }
+    }
+    .zone-btn-form{
+        padding: 0;
     }
     /* @end */
 }

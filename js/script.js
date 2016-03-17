@@ -59,6 +59,7 @@ $(function(){
 			$("#etapes-event").addClass("etape-4-active");
 		}
 	});
+
 	// Clic sur les étapes
 	$(".title-etape").click(function(){
 		var oldOpen = $("#etapes-event >li.open");
@@ -73,6 +74,7 @@ $(function(){
 		}
 		return false;
 	});
+
 	// Form
 	$(".radio").click(function(){
 		if(!$(this).hasClass("active")){
@@ -80,6 +82,24 @@ $(function(){
 			$(".radio.active", fieldsetParent).removeClass("active");
 			$(this).addClass("active");
 		}
+	});
+
+	// Popup
+	// Ouverture popup
+	$(".has-popup").click(function(){
+		var contentDataPopup = $(this).data('ref-popup');
+		var selectedPopup = $(".wrapper-popup[data-popup='"+contentDataPopup+"']");
+		if(!selectedPopup.hasClass("open")){
+			$(".wrapper-popup").removeClass("open");
+			selectedPopup.addClass("open");
+		}
+		//posiPopup();
+		return false;
+	});
+	// Clic sur le bouton pour fermer le popup
+	$(".btn-close-popup").click(function(){
+		$(this).parents(".wrapper-popup").removeClass("open");
+		return false;
 	});
 });
 

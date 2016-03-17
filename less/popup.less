@@ -8,21 +8,22 @@
 	right: 0;
 	bottom: 0;
 	margin-left: 0;
-	padding: 0;
+	box-sizing: border-box;
+	padding: 0 20px;
 	background-color: rgba(0, 0, 0, 0.8);
 	&.open{
 		display: block;
 	}
 	.container-popup{
 		display: block;
-		max-width: 660px;
+		max-width: 620px;
 		height: 100%;
 		position: relative;
 		box-sizing: border-box;
-		padding: 0 20px;
+		padding: 0;
 		margin: 0 auto;
 		&.big{
-			max-width: 940px;
+			max-width: 900px;
 		}
 	}
 	&#popup-partage{
@@ -67,6 +68,9 @@
 		&.txt-centered{
 			text-align: center;
 		}
+	}
+	&.no-transform{
+		transform: none;
 	}
 	h2{
 		.lato-bold(1.625em);

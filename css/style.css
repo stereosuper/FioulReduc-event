@@ -476,6 +476,10 @@ button.btn-block.small {
   font-size: 0.938em;
   padding: 16px 69px;
 }
+a.btn-block.small:after,
+button.btn-block.small:after {
+  margin-top: -2px;
+}
 a.btn-share,
 button.btn-share {
   display: inline-block;
@@ -949,6 +953,228 @@ button:focus {
   text-transform: uppercase;
 }
 /* @end */
+/* @group odometer */
+.compteur-participants.odometer-auto-theme,
+.odometer.odometer-theme-train-station {
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  margin-top: -4px;
+}
+.odometer-formatting-mark {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 28px 0 0 0;
+  height: 10px;
+  line-height: 10px;
+  font-size: 1.3em;
+  color: #102462;
+}
+.compteur-participants.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-train-station .odometer-digit {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  border-radius: 10px;
+  background-image: none;
+  background-color: #041340;
+  width: 32px;
+  height: 53px;
+  margin: 0 3px;
+  padding: 0;
+  line-height: 53px;
+  text-align: center;
+  color: white;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  text-rendering: optimizeLegibility;
+}
+.compteur-participants.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.compteur-participants.odometer-theme-train-station .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  text-align: center;
+}
+.compteur-participants.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.compteur-participants.odometer-theme-train-station .odometer-digit .odometer-digit-spacer {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.compteur-participants.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.compteur-participants.odometer-theme-train-station .odometer-digit .odometer-value.odometer-last-value {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+/* @end */
+/* @group Decompteur */
+.decompteur-event {
+  border: none;
+  margin: 0 0 0 8px;
+}
+.decompteur-event .digit-group {
+  display: inline-block;
+  vertical-align: middle;
+  height: 53px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.decompteur-event .digit {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+  background-image: none;
+  background-color: #041340;
+  width: 32px;
+  height: 100%;
+  margin: 0 3px;
+  padding: 0;
+  line-height: 53px;
+  text-align: center;
+  color: #fb8206;
+  font-family: 'LCDNormal', sans-serif;
+  font-weight: normal;
+  font-size: 1.44em;
+  text-rendering: optimizeLegibility;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.decompteur-event .legend {
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.7em;
+  text-rendering: optimizeLegibility;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+}
+/* @end */
+/* @group Popup */
+.wrapper-popup {
+  display: none;
+  z-index: 160;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: 0;
+  box-sizing: border-box;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.wrapper-popup.open {
+  display: block;
+}
+.wrapper-popup .container-popup {
+  display: block;
+  max-width: 620px;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+.wrapper-popup .container-popup.big {
+  max-width: 900px;
+}
+.wrapper-popup#popup-partage .popup {
+  background-image: url("../layoutImg/thumb-up.png"), url("../layoutImg/megaphone.png");
+  background-position: 0 49px, 100% 189px;
+  background-repeat: no-repeat;
+}
+.popup {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 90%;
+  padding: 23px 40px 23px 30px;
+  box-sizing: border-box;
+  vertical-align: top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  background: #ffffff;
+  overflow: auto;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 6px;
+  text-align: right;
+}
+.popup .btn-close-popup {
+  position: fixed;
+  display: inline-block;
+  vertical-align: top;
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+  color: #cccccc;
+  margin: -10px 0 0 10px;
+  padding: 0;
+}
+.popup .content-popup {
+  text-align: left;
+}
+.popup .content-popup.txt-centered {
+  text-align: center;
+}
+.popup.no-transform {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+.popup h2 {
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.625em;
+  text-rendering: optimizeLegibility;
+  color: #fe7b02;
+  margin: 40px 0 20px 0;
+}
+.popup p {
+  color: #0c1a4c;
+  margin: 20px auto;
+}
+.popup p strong {
+  font-family: 'lato-bold-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+  text-rendering: optimizeLegibility;
+  color: #2947a0;
+}
+.popup p.small {
+  max-width: 600px;
+}
+.popup p.very-small {
+  max-width: 530px;
+}
+/* @end */
 /* @group Form */
 fieldset {
   display: block;
@@ -958,7 +1184,7 @@ label,
 .equi-label {
   display: inline-block;
   vertical-align: middle;
-  width: 172px;
+  width: 140px;
   text-align: right;
   padding: 0 7px 0 0;
   box-sizing: border-box;
@@ -1122,7 +1348,7 @@ input[type="tel"]#lien-partage {
 .zone-btn-form {
   display: block;
   box-sizing: border-box;
-  padding: 0 0 0 172px;
+  padding: 0 0 0 140px;
   margin: 12px 0 0 0;
 }
 .zone-btn-form a.btn-block,
@@ -1131,222 +1357,6 @@ input[type="tel"]#lien-partage {
 .zone-btn-form button.btn-block.small {
   width: 100%;
   max-width: 340px;
-}
-/* @end */
-/* @group odometer */
-.compteur-participants.odometer-auto-theme,
-.odometer.odometer-theme-train-station {
-  font-family: 'lato', sans-serif;
-  font-weight: normal;
-  font-size: 1em;
-  text-rendering: optimizeLegibility;
-  margin-top: -4px;
-}
-.odometer-formatting-mark {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 28px 0 0 0;
-  height: 10px;
-  line-height: 10px;
-  font-size: 1.3em;
-  color: #102462;
-}
-.compteur-participants.odometer-auto-theme .odometer-digit,
-.odometer.odometer-theme-train-station .odometer-digit {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  border-radius: 10px;
-  background-image: none;
-  background-color: #041340;
-  width: 32px;
-  height: 53px;
-  margin: 0 3px;
-  padding: 0;
-  line-height: 53px;
-  text-align: center;
-  color: white;
-  font-family: 'lato', sans-serif;
-  font-weight: normal;
-  font-size: 1.2em;
-  text-rendering: optimizeLegibility;
-}
-.compteur-participants.odometer-auto-theme .odometer-digit .odometer-digit-inner,
-.compteur-participants.odometer-theme-train-station .odometer-digit .odometer-digit-inner {
-  text-align: left;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  text-align: center;
-}
-.compteur-participants.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
-.compteur-participants.odometer-theme-train-station .odometer-digit .odometer-digit-spacer {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  visibility: hidden;
-  width: 100%;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-.compteur-participants.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
-.compteur-participants.odometer-theme-train-station .odometer-digit .odometer-value.odometer-last-value {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-}
-/* @end */
-/* @group Decompteur */
-.decompteur-event {
-  border: none;
-  margin: 0 0 0 8px;
-}
-.decompteur-event .digit-group {
-  display: inline-block;
-  vertical-align: middle;
-  height: 53px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-.decompteur-event .digit {
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 10px;
-  background-image: none;
-  background-color: #041340;
-  width: 32px;
-  height: 100%;
-  margin: 0 3px;
-  padding: 0;
-  line-height: 53px;
-  text-align: center;
-  color: #fb8206;
-  font-family: 'LCDNormal', sans-serif;
-  font-weight: normal;
-  font-size: 1.44em;
-  text-rendering: optimizeLegibility;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.decompteur-event .legend {
-  font-family: 'lato', sans-serif;
-  font-weight: normal;
-  font-size: 0.7em;
-  text-rendering: optimizeLegibility;
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  right: 0;
-}
-/* @end */
-/* @group Popup */
-.wrapper-popup {
-  display: none;
-  z-index: 160;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin-left: 0;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.wrapper-popup.open {
-  display: block;
-}
-.wrapper-popup .container-popup {
-  display: block;
-  max-width: 660px;
-  height: 100%;
-  position: relative;
-  box-sizing: border-box;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-.wrapper-popup .container-popup.big {
-  max-width: 940px;
-}
-.wrapper-popup#popup-partage .popup {
-  background-image: url("../layoutImg/thumb-up.png"), url("../layoutImg/megaphone.png");
-  background-position: 0 49px, 100% 189px;
-  background-repeat: no-repeat;
-}
-.popup {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 90%;
-  padding: 23px 40px 23px 30px;
-  box-sizing: border-box;
-  vertical-align: top;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: auto;
-  background: #ffffff;
-  overflow: auto;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 6px;
-  text-align: right;
-}
-.popup .btn-close-popup {
-  position: fixed;
-  display: inline-block;
-  vertical-align: top;
-  width: 15px;
-  height: 15px;
-  font-size: 15px;
-  color: #cccccc;
-  margin: -10px 0 0 10px;
-  padding: 0;
-}
-.popup .content-popup {
-  text-align: left;
-}
-.popup .content-popup.txt-centered {
-  text-align: center;
-}
-.popup h2 {
-  font-family: 'lato-bold', sans-serif;
-  font-weight: normal;
-  font-size: 1.625em;
-  text-rendering: optimizeLegibility;
-  color: #fe7b02;
-  margin: 40px 0 20px 0;
-}
-.popup p {
-  color: #0c1a4c;
-  margin: 20px auto;
-}
-.popup p strong {
-  font-family: 'lato-bold-italic', sans-serif;
-  font-weight: normal;
-  font-size: 1.25em;
-  text-rendering: optimizeLegibility;
-  color: #2947a0;
-}
-.popup p.small {
-  max-width: 600px;
-}
-.popup p.very-small {
-  max-width: 530px;
 }
 /* @end */
 /* @group States */

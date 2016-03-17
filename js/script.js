@@ -85,6 +85,13 @@ $(function(){
 	});
 
 	// Popup
+	// Positionner les popup sans transform
+	function posiPopup(){
+		$(".popup").each(function(index){
+			TweenMax.set($(this), {"margin-top": -($(this).outerHeight())/2+"px", "margin-left": -($(this).outerWidth())/2+"px"});
+			TweenMax.set($(this), {className:"+=no-transform"});
+		});
+	}
 	// Ouverture popup
 	$(".has-popup").click(function(){
 		var contentDataPopup = $(this).data('ref-popup');
@@ -100,6 +107,22 @@ $(function(){
 	$(".btn-close-popup").click(function(){
 		$(this).parents(".wrapper-popup").removeClass("open");
 		return false;
+	});
+	// Vérifier la Quantité de fioul entrée
+	var elem = $("#quantite");
+	elem.data('oldVal', elem.val());
+	elem.bind("propertychange change click keyup input paste", function(event){
+		// Si il y a un changement dans l'input
+		if (elem.data('oldVal') != elem.val()) {
+			// Mise à jour de l'input
+			elem.data('oldVal', elem.val());
+			// Test de la valeur de l'input
+			if(elem.val()>=50){
+				$(this)[0].setCustomValidity('');
+			}else{
+				$(this)[0].setCustomValidity('Minimum 50 litres');
+			}
+		}
 	});
 });
 

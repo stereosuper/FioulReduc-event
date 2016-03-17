@@ -1021,6 +1021,58 @@ input[type="tel"]#lien-partage {
   width: 100%;
   max-width: 330px;
 }
+.obli input[type="text"]:invalid:focus,
+.obli input[type="email"]:invalid:focus,
+.obli input[type="tel"]:invalid:focus {
+  border-color: #da000a;
+}
+.obli input[type="text"]:invalid:focus ~ .error-message,
+.obli input[type="email"]:invalid:focus ~ .error-message,
+.obli input[type="tel"]:invalid:focus ~ .error-message {
+  display: inline-block;
+}
+.obli input[type="text"]:invalid:focus ~ .bg-zone-form,
+.obli input[type="email"]:invalid:focus ~ .bg-zone-form,
+.obli input[type="tel"]:invalid:focus ~ .bg-zone-form {
+  display: block;
+  background-color: #fbe5e6;
+}
+.obli input[type="text"]:valid,
+.obli input[type="email"]:valid,
+.obli input[type="tel"]:valid {
+  border-color: #44b34e;
+}
+.obli input[type="text"]:valid ~ .bg-zone-form,
+.obli input[type="email"]:valid ~ .bg-zone-form,
+.obli input[type="tel"]:valid ~ .bg-zone-form {
+  display: block;
+}
+.zone-form {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.bg-zone-form {
+  display: none;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background-color: #ecf7ed;
+  z-index: -1;
+  border-radius: 6px;
+}
+.error-message {
+  display: none;
+  vertical-align: middle;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  text-rendering: optimizeLegibility;
+  color: #da000a;
+  padding: 0 10px 0 10px;
+}
 .size1 {
   width: 100px;
 }
@@ -1035,7 +1087,7 @@ input[type="tel"]#lien-partage {
   vertical-align: middle;
   font-family: 'lato', sans-serif;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 0.875em;
   text-rendering: optimizeLegibility;
   color: #0c1a4c;
   margin: 0 0 0 4px;

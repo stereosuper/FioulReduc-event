@@ -53,6 +53,49 @@ input[type="text"], input[type="email"], input[type="tel"]{
         width: 100%;
         max-width: 330px;
     }
+    .obli &{
+        &:invalid{
+            &:focus{
+                border-color: @rougeErreur;
+                &~ .error-message{
+                    display: inline-block;
+                }
+                &~ .bg-zone-form{
+                    display: block;
+                    background-color: #fbe5e6;
+                }
+            }
+        }
+        &:valid{
+            border-color: @vertValid;
+            &~ .bg-zone-form{
+                display: block;
+            }
+        }
+    }
+}
+.zone-form{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+.bg-zone-form{
+    display: none;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background-color: #ecf7ed;
+    z-index: -1;
+    border-radius: 6px;
+}
+.error-message{
+    display: none;
+    vertical-align: middle;
+    .lato-bold(0.875em);
+    color: @rougeErreur;
+    padding: 0 10px 0 10px;
 }
 .size1{
     width: 100px;
@@ -66,7 +109,7 @@ input[type="text"], input[type="email"], input[type="tel"]{
 .indic-form{
     display: inline-block;
     vertical-align: middle;
-    .lato(1em);
+    .lato(0.875em);
     color: @bleuFonceFioulReduc;
     margin: 0 0 0 4px;
     &.facultatif{

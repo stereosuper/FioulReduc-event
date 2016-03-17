@@ -124,7 +124,7 @@
 	  		</div>
 	  	</footer>
 		
-		<div class="wrapper-popup" data-popup="inscription">
+		<div class="wrapper-popup open" data-popup="inscription">
 			<div class="container-popup">
 				<div class="popup">
 					<button class="btn-close-popup icon-cross"></button>
@@ -135,16 +135,28 @@
 								<h4>Votre besoin</h4>
 								<p>Votre inscription ne vous engage pas à passer commande</p>
 							</div>
-							<fieldset>
+							<fieldset class="obli">
 								<label for="code-postal">Code postal :</label><!--
-								--><input type="text" class="size1" id="code-postal" name="code-postal">
+								--><div class="zone-form">
+									<input type="text" class="size1" id="code-postal" name="code-postal" pattern= "[0-9]+" required><!--
+									--><div class="error-message">
+										Vérifier votre code postal
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
 							</fieldset>
-							<fieldset>
+							<fieldset class="obli">
 								<label for="quantite">Quantité :</label><!--
-								--><input type="text" class="size1" id="quantite" name="quantite"><!--
-								--><div class="indic-form">litres</div>
+								--><div class="zone-form">
+									<input type="text" class="size1" id="quantite" name="quantite" pattern= "[0-9]+" required><!--
+									--><div class="indic-form">litres</div><!--
+									--><div class="error-message">
+										Minimum 50 litres
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
 							</fieldset>
-							<fieldset>
+							<fieldset class="obli">
 								<div class="equi-label">Fioul :</div><!--
 								--><label class="radio active" for="ordinaire">
 									<input type="radio" id="ordinaire" name="fioul" value="ordinaire" checked="checked"> Ordinaire
@@ -158,17 +170,35 @@
 								<h4>Vos coordonnées</h4>
 								<p>Nous vous enverrons votre offre par email et SMS</p>
 							</div>
-							<fieldset>
+							<fieldset class="obli">
 								<label for="email">Email :</label><!--
-								--><input type="email" class="size2" id="email" name="email">
+								--><div class="zone-form">
+									<input type="email" class="size2" id="email" name="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required><!--
+									--><div class="error-message">
+										Vérifier votre adresse email
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
 							</fieldset>
-							<fieldset>
+							<fieldset class="obli">
 								<label for="prenom">Prénom :</label><!--
-								--><input type="text" class="size2" id="prenom" name="prenom">
+								--><div class="zone-form">
+									<input type="text" class="size2" id="prenom" name="prenom" required><!--
+									--><div class="error-message">
+										Indiquer un prénom
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
 							</fieldset>
-							<fieldset>
+							<fieldset class="obli">
 								<label for="nom">Nom :</label><!--
-								--><input type="text" class="size2" id="nom" name="nom">
+								--><div class="zone-form">
+									<input type="text" class="size2" id="nom" name="nom" required><!--
+									--><div class="error-message">
+										Indiquer un nom
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
 							</fieldset>
 							<fieldset>
 								<label for="tel">Téléphone portable :</label><!--
@@ -183,7 +213,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="wrapper-popup open" data-popup="partage" id="popup-partage">
+		<div class="wrapper-popup" data-popup="partage" id="popup-partage">
 			<div class="container-popup big">
 				<div class="popup">
 					<button class="btn-close-popup icon-cross"></button>
@@ -208,9 +238,7 @@
 						<p>Copier ce lien et le partager où vous voulez</p>
 						<div class="ou">ou</div><!--
 						--><input type="text" id="lien-partage" value="http://www.fioulreduc.com/xxxxxxxxxxxx">
-						<button data-clipboard-target="#lien-partage">
-						    
-						</button>
+						<button data-clipboard-target="#lien-partage"></button>
 					</div>
 				</div>
 			</div>

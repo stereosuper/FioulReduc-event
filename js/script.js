@@ -73,6 +73,14 @@ $(function(){
 		}
 		return false;
 	});
+	// Form
+	$(".radio").click(function(){
+		if(!$(this).hasClass("active")){
+			var fieldsetParent = $(this).parent("fieldset");
+			$(".radio.active", fieldsetParent).removeClass("active");
+			$(this).addClass("active");
+		}
+	});
 });
 
 $(window).resize(function(){

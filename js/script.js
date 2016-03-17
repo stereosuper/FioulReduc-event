@@ -117,10 +117,10 @@ $(function(){
 			// Mise à jour de l'input
 			elem.data('oldVal', elem.val());
 			// Test de la valeur de l'input
-			if(elem.val()>=50){
+			if(elem.val()>=500){
 				$(this)[0].setCustomValidity('');
 			}else{
-				$(this)[0].setCustomValidity('Minimum 50 litres');
+				$(this)[0].setCustomValidity('Minimum 500 litres');
 			}
 		}
 	});

@@ -151,6 +151,9 @@ $(function(){
 			}
 		}
 	});
+
+	// Clipboard
+	new Clipboard('.btn-clipboard');
 });
 
 $(window).load(function() {

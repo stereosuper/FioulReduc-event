@@ -52,7 +52,6 @@ input[type="text"], input[type="email"], input[type="tel"]{
         color: @bleuFonceFioulReduc;
         padding: 10px 20px 10px 42px;
         width: 100%;
-        max-width: 330px;
     }
     .obli &{
         &:invalid{
@@ -147,6 +146,23 @@ input[type="text"], input[type="email"], input[type="tel"]{
         &.btn-block, &.btn-block.small{
             width: 100%;
             max-width: 340px;
+        }
+    }
+}
+.zone-partage{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    max-width: 330px;
+    a, button{
+        &#btn-partage{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 33px;
+            height: 100%;
+            background: url("../layoutImg/copy.png") no-repeat 50% 50%;
         }
     }
 }

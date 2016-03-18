@@ -1318,7 +1318,6 @@ input[type="tel"]#lien-partage {
   color: #0c1a4c;
   padding: 10px 20px 10px 42px;
   width: 100%;
-  max-width: 330px;
 }
 .obli input[type="text"]:invalid:focus,
 .obli input[type="email"]:invalid:focus,
@@ -1430,6 +1429,22 @@ input[type="tel"]#lien-partage {
 .zone-btn-form button.btn-block.small {
   width: 100%;
   max-width: 340px;
+}
+.zone-partage {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+}
+.zone-partage a#btn-partage,
+.zone-partage button#btn-partage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33px;
+  height: 100%;
+  background: url("../layoutImg/copy.png") no-repeat 50% 50%;
 }
 /* @end */
 /* @group States */
@@ -2171,6 +2186,11 @@ input[type="tel"]#lien-partage {
   }
   #etapes-event > li.etape-4 .content-etape:after {
     background-image: url("../img/illus-livraison@2x.png");
+  }
+  .zone-partage a#btn-partage,
+  .zone-partage button#btn-partage {
+    background-image: url("../layoutImg/copy@2x.png");
+    background-size: 12px 15px;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 979px), only screen and (min-resolution: 144dpi) and (max-width: 979px) {

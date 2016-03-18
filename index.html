@@ -213,7 +213,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="wrapper-popup" data-popup="partage" id="popup-partage">
+		<div class="wrapper-popup open" data-popup="partage" id="popup-partage">
 			<div class="container-popup big">
 				<div class="popup">
 					<button class="btn-close-popup icon-cross"></button>
@@ -237,8 +237,10 @@
 						</ul>
 						<p>Copier ce lien et le partager où vous voulez</p>
 						<div class="ou">ou</div><!--
-						--><input type="text" id="lien-partage" value="http://www.fioulreduc.com/xxxxxxxxxxxx">
-						<button data-clipboard-target="#lien-partage"></button>
+						--><div class="zone-partage">
+							<input type="text" id="lien-partage" value="http://www.fioulreduc.com/xxxxxxxxxxxx">
+							<button data-clipboard-target="#lien-partage" id="btn-partage" class="btn-clipboard"></button>
+						</div>
 					</div>
 				</div>
 			</div>

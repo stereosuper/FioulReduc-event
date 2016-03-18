@@ -540,6 +540,12 @@ button:focus {
       -ms-transform: translateX(0%);
           transform: translateX(0%);
 }
+#etapes-event.etape-1-active > li.etape-1 .content-etape:before {
+  opacity: 1;
+}
+#etapes-event.etape-1-active > li.etape-1 .content-etape:after {
+  opacity: 0;
+}
 #etapes-event.etape-1-active > li.etape-2 {
   -webkit-transform: translateX(50%);
       -ms-transform: translateX(50%);
@@ -564,6 +570,12 @@ button:focus {
   -webkit-transform: translateX(0%);
       -ms-transform: translateX(0%);
           transform: translateX(0%);
+}
+#etapes-event.etape-2-active > li.etape-2 .content-etape:before {
+  opacity: 1;
+}
+#etapes-event.etape-2-active > li.etape-2 .content-etape:after {
+  opacity: 0;
 }
 #etapes-event.etape-2-active > li.etape-3 {
   -webkit-transform: translateX(50%);
@@ -590,6 +602,12 @@ button:focus {
       -ms-transform: translateX(0%);
           transform: translateX(0%);
 }
+#etapes-event.etape-3-active > li.etape-3 .content-etape:before {
+  opacity: 1;
+}
+#etapes-event.etape-3-active > li.etape-3 .content-etape:after {
+  opacity: 0;
+}
 #etapes-event.etape-3-active > li.etape-4 {
   -webkit-transform: translateX(50%);
       -ms-transform: translateX(50%);
@@ -614,6 +632,12 @@ button:focus {
   -webkit-transform: translateX(0%);
       -ms-transform: translateX(0%);
           transform: translateX(0%);
+}
+#etapes-event.etape-4-active > li.etape-4 .content-etape:before {
+  opacity: 1;
+}
+#etapes-event.etape-4-active > li.etape-4 .content-etape:after {
+  opacity: 0;
 }
 #etapes-event > li {
   display: block;
@@ -691,6 +715,31 @@ button:focus {
 }
 #etapes-event > li .content-etape {
   height: 348px;
+  position: relative;
+}
+#etapes-event > li .content-etape:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+          transition: opacity 0.4s ease-in-out;
+}
+#etapes-event > li .content-etape:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in-out;
+          transition: opacity 0.4s ease-in-out;
 }
 #etapes-event > li.etape-1 {
   left: 0;
@@ -700,8 +749,12 @@ button:focus {
   top: 107px;
   left: 3px;
 }
-#etapes-event > li.etape-1 .content-etape {
+#etapes-event > li.etape-1 .content-etape:before {
   background: #ffffff url("../img/illus-inscription.gif") no-repeat 3px 37px;
+  background-size: 253px 259px;
+}
+#etapes-event > li.etape-1 .content-etape:after {
+  background: url("../img/illus-inscription.png") no-repeat 3px 37px;
   background-size: 253px 259px;
 }
 #etapes-event > li.etape-1 p {
@@ -714,8 +767,12 @@ button:focus {
   top: 91px;
   left: 0px;
 }
-#etapes-event > li.etape-2 .content-etape {
-  background: #ffffff url("../img/illus-nego.png") no-repeat 0 44px;
+#etapes-event > li.etape-2 .content-etape:before {
+  background: #ffffff url("../img/illus-nego.gif") no-repeat 0 44px;
+  background-size: 220px 268px;
+}
+#etapes-event > li.etape-2 .content-etape:after {
+  background: url("../img/illus-nego.png") no-repeat 0 44px;
   background-size: 220px 268px;
 }
 #etapes-event > li.etape-2 p {
@@ -728,8 +785,12 @@ button:focus {
   bottom: 0px;
   left: 0px;
 }
-#etapes-event > li.etape-3 .content-etape {
-  background: #ffffff url("../img/illus-offre.png") no-repeat 0 100%;
+#etapes-event > li.etape-3 .content-etape:before {
+  background: #ffffff url("../img/illus-offre.gif") no-repeat 0 100%;
+  background-size: 278px 340px;
+}
+#etapes-event > li.etape-3 .content-etape:after {
+  background: url("../img/illus-offre.png") no-repeat 0 100%;
   background-size: 278px 340px;
 }
 #etapes-event > li.etape-3 p {
@@ -745,8 +806,13 @@ button:focus {
   bottom: 0px;
   left: 0px;
 }
-#etapes-event > li.etape-4 .content-etape {
-  background: #ffffff url("../img/illus-livraison.png") no-repeat 0 100%;
+#etapes-event > li.etape-4 .content-etape:before {
+  background: #ffffff url("../img/illus-livraison.gif") no-repeat 0 100%;
+  background-size: 480px 327px;
+  background-size: 100% auto;
+}
+#etapes-event > li.etape-4 .content-etape:after {
+  background: url("../img/illus-livraison.png") no-repeat 0 100%;
   background-size: 480px 327px;
   background-size: 100% auto;
 }
@@ -1819,6 +1885,18 @@ input[type="tel"]#lien-partage {
   }
   /* @end */
   /* @group Etapes event */
+  #etapes-event.etape-1-active > li.etape-1 .content-etape:after {
+    opacity: 1;
+  }
+  #etapes-event.etape-2-active > li.etape-2 .content-etape:after {
+    opacity: 1;
+  }
+  #etapes-event.etape-3-active > li.etape-3 .content-etape:after {
+    opacity: 1;
+  }
+  #etapes-event.etape-4-active > li.etape-4 .content-etape:after {
+    opacity: 1;
+  }
   #etapes-event > li h3 {
     display: block;
   }
@@ -1847,32 +1925,48 @@ input[type="tel"]#lien-partage {
   #etapes-event > li .content-etape {
     height: auto;
   }
-  #etapes-event > li.etape-1 .content-etape {
+  #etapes-event > li.etape-1 .content-etape:before {
+    background: #ffffff;
+  }
+  #etapes-event > li.etape-1 .content-etape:after {
     background-position: 50% 3px;
     background-size: 150px auto;
+    opacity: 1;
   }
   #etapes-event > li.etape-1 p {
     padding-left: 0;
   }
-  #etapes-event > li.etape-2 .content-etape {
+  #etapes-event > li.etape-2 .content-etape:before {
+    background: #ffffff;
+  }
+  #etapes-event > li.etape-2 .content-etape:after {
     background-position: 50% 3px;
     background-size: 125px auto;
+    opacity: 1;
   }
   #etapes-event > li.etape-2 p {
     padding-left: 0;
   }
-  #etapes-event > li.etape-3 .content-etape {
+  #etapes-event > li.etape-3 .content-etape:before {
+    background: #ffffff;
+  }
+  #etapes-event > li.etape-3 .content-etape:after {
     background-image: url("../img/illus-offre-mobile.png");
     background-position: 50% 18px;
     background-size: 100% auto;
+    opacity: 1;
   }
   #etapes-event > li.etape-3 p {
     padding: 150px 0 0 0;
   }
-  #etapes-event > li.etape-4 .content-etape {
+  #etapes-event > li.etape-4 .content-etape:before {
+    background: #ffffff;
+  }
+  #etapes-event > li.etape-4 .content-etape:after {
     background-image: url("../img/illus-livraison-mobile.png");
     background-position: 50% 14px;
     background-size: 100% auto;
+    opacity: 1;
   }
   #etapes-event > li.etape-4 p {
     padding: 114px 0 0 0;
@@ -2004,26 +2098,38 @@ input[type="tel"]#lien-partage {
   .logo-fioulreduc {
     background-image: url("../layoutImg/logo@2x.png");
   }
-  #etapes-event > li.etape-1 .content-etape {
+  #etapes-event > li.etape-1 .content-etape:before {
     background-image: url("../img/illus-inscription@2x.gif");
   }
-  #etapes-event > li.etape-2 .content-etape {
+  #etapes-event > li.etape-1 .content-etape:after {
+    background-image: url("../img/illus-inscription@2x.png");
+  }
+  #etapes-event > li.etape-2 .content-etape:before {
+    background-image: url("../img/illus-nego@2x.gif");
+  }
+  #etapes-event > li.etape-2 .content-etape:after {
     background-image: url("../img/illus-nego@2x.png");
   }
-  #etapes-event > li.etape-3 .content-etape {
+  #etapes-event > li.etape-3 .content-etape:before {
+    background-image: url("../img/illus-offre@2x.gif");
+  }
+  #etapes-event > li.etape-3 .content-etape:after {
     background-image: url("../img/illus-offre@2x.png");
   }
-  #etapes-event > li.etape-4 .content-etape {
+  #etapes-event > li.etape-4 .content-etape:before {
+    background-image: url("../img/illus-livraison@2x.gif");
+  }
+  #etapes-event > li.etape-4 .content-etape:after {
     background-image: url("../img/illus-livraison@2x.png");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), only screen and (min-resolution: 144dpi) and (max-width: 767px) {
-  #etapes-event > li.etape-3 .content-etape {
+  #etapes-event > li.etape-3 .content-etape:after {
     background-image: url("../img/illus-offre-mobile@2x.png");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), only screen and (min-resolution: 144dpi) and (max-width: 767px) {
-  #etapes-event > li.etape-4 .content-etape {
+  #etapes-event > li.etape-4 .content-etape:after {
     background-image: url("../img/illus-livraison-mobile@2x.png");
   }
 }

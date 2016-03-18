@@ -481,6 +481,50 @@
 
     /* @group Etapes event */
     #etapes-event{
+        &.etape-1-active{
+            > li{
+                &.etape-1{
+                    .content-etape{
+                        &:after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        &.etape-2-active{
+            > li{
+                &.etape-2{
+                    .content-etape{
+                        &:after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        &.etape-3-active{
+            > li{
+                &.etape-3{
+                    .content-etape{
+                        &:after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        &.etape-4-active{
+            > li{
+                &.etape-4{
+                    .content-etape{
+                        &:after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
         > li{
             h3{
                 display: block;
@@ -510,8 +554,14 @@
             }
             &.etape-1{
                 .content-etape{
-                    background-position: 50% 3px;
-                    background-size: 150px auto;
+                    &:before{
+                        background: @blanc;
+                    }
+                    &:after{
+                        background-position: 50% 3px;
+                        background-size: 150px auto;
+                        opacity: 1;
+                    }
                 }
                 p{
                     padding-left: 0;
@@ -519,8 +569,14 @@
             }
             &.etape-2{
                 .content-etape{
-                    background-position: 50% 3px;
-                    background-size: 125px auto;
+                    &:before{
+                        background: @blanc;
+                    }
+                    &:after{
+                        background-position: 50% 3px;
+                        background-size: 125px auto;
+                        opacity: 1;
+                    }
                 }
                 p{
                     padding-left: 0;
@@ -528,9 +584,15 @@
             }
             &.etape-3{
                 .content-etape{
-                    background-image: url("../img/illus-offre-mobile.png");
-                    background-position: 50% 18px;
-                    background-size: 100% auto;
+                    &:before{
+                        background: @blanc;
+                    }
+                    &:after{
+                        background-image: url("../img/illus-offre-mobile.png");
+                        background-position: 50% 18px;
+                        background-size: 100% auto;
+                        opacity: 1;
+                    }
                 }
                 p{
                     padding: 150px 0 0 0;
@@ -538,9 +600,15 @@
             }
             &.etape-4{
                 .content-etape{
-                    background-image: url("../img/illus-livraison-mobile.png");
-                    background-position: 50% 14px;
-                    background-size: 100% auto;
+                    &:before{
+                        background: @blanc;
+                    }
+                    &:after{
+                        background-image: url("../img/illus-livraison-mobile.png");
+                        background-position: 50% 14px;
+                        background-size: 100% auto;
+                        opacity: 1;
+                    }
                 }
                 p{
                     padding: 114px 0 0 0;
@@ -705,27 +773,47 @@
         > li{
             &.etape-1{
                 .content-etape{
-                    background-image: url("../img/illus-inscription@2x.gif");
+                    &:before{
+                        background-image: url("../img/illus-inscription@2x.gif");
+                    }
+                    &:after{
+                        background-image: url("../img/illus-inscription@2x.png");
+                    }
                 }
             }
             &.etape-2{
                 .content-etape{
-                    background-image: url("../img/illus-nego@2x.png");
+                    &:before{
+                        background-image: url("../img/illus-nego@2x.gif");
+                    }
+                    &:after{
+                        background-image: url("../img/illus-nego@2x.png");
+                    }
                 }
             }
             &.etape-3{
                 .content-etape{
-                    background-image: url("../img/illus-offre@2x.png");
-                    @media (max-width: 767px) {
-                        background-image: url("../img/illus-offre-mobile@2x.png");
+                    &:before{
+                        background-image: url("../img/illus-offre@2x.gif");
+                    }
+                    &:after{
+                        background-image: url("../img/illus-offre@2x.png");
+                        @media (max-width: 767px) {
+                            background-image: url("../img/illus-offre-mobile@2x.png");
+                        }
                     }
                 }
             }
             &.etape-4{
                 .content-etape{
-                    background-image: url("../img/illus-livraison@2x.png");
-                    @media (max-width: 767px) {
-                        background-image: url("../img/illus-livraison-mobile@2x.png");
+                    &:before{
+                        background-image: url("../img/illus-livraison@2x.gif");
+                    }
+                    &:after{
+                        background-image: url("../img/illus-livraison@2x.png");
+                        @media (max-width: 767px) {
+                            background-image: url("../img/illus-livraison-mobile@2x.png");
+                        }
                     }
                 }
             }

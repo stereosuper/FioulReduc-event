@@ -127,16 +127,16 @@
 			&:before{
 				content: counter(counter-step-event);
 				display: block;
-				width: 24px;
-				height: 24px;
-				line-height: 24px;
+				width: 28px;
+				height: 28px;
+				line-height: 28px;
 				text-align: center;
 				background-color: #fa6f06;
 				border-radius: 50%;
 				position: absolute;
 				top: 50%;
 				left: 0;
-				margin: -12px 0 0 0;
+				margin: -14px 0 0 0;
 				.lato-bold-italic(0.727em);
 				color: @blanc;
 			}
@@ -304,7 +304,7 @@
 			a{
 				display: block;
 				text-decoration: none;
-				.lato-bold(1em);
+				.lato-bold(1.375em);
 				&:hover{
 					.visu-menu{
 						transform: rotate(-10deg) translate3d(0,0,0);
@@ -360,11 +360,12 @@
 					backface-visibility: hidden;
 					transform-style: preserve-3d;
 					color: @blanc;
+					line-height: 1em;
 					.indic-menu{
 						display: inline-block;
 						vertical-align: top;
-						margin: 2px 0 0 0;
-						.lato-italic(0.75em);
+						margin: 0;
+						.lato-italic(0.66em);
 						color: @jauneFioulReduc;
 						line-height: 1.2em;
 						width: auto;
@@ -373,7 +374,6 @@
 						overflow: hidden;
 						hyphens: auto;
 						position: relative;
-						letter-spacing: 1px;
 						&.underline{
 							text-decoration: underline;
 						}

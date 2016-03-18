@@ -180,8 +180,8 @@ body {
 h1 {
   font-family: 'megalopolis', sans-serif;
   font-weight: normal;
-  font-size: 2em;
-  margin: 0 0 10px 0;
+  font-size: 3.5em;
+  margin: 0 0 5px 0;
 }
 h2 {
   font-family: 'lato-bold', sans-serif;
@@ -359,6 +359,9 @@ strong {
 }
 #top-event .container {
   position: relative;
+}
+#top-event p {
+  margin-top: 5px;
 }
 #illus {
   display: block;
@@ -665,16 +668,16 @@ button:focus {
 #etapes-event > li h3:before {
   content: counter(counter-step-event);
   display: block;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   text-align: center;
   background-color: #fa6f06;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 0;
-  margin: -12px 0 0 0;
+  margin: -14px 0 0 0;
   font-family: 'lato-bold-italic', sans-serif;
   font-weight: normal;
   font-size: 0.727em;
@@ -846,7 +849,7 @@ button:focus {
   text-decoration: none;
   font-family: 'lato-bold', sans-serif;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 1.375em;
   text-rendering: optimizeLegibility;
 }
 .menu-contact ul > li a:hover .visu-menu {
@@ -914,14 +917,15 @@ button:focus {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   color: #ffffff;
+  line-height: 1em;
 }
 .menu-contact ul > li a .zone-texte-menu .indic-menu {
   display: inline-block;
   vertical-align: top;
-  margin: 2px 0 0 0;
+  margin: 0;
   font-family: 'lato-italic', sans-serif;
   font-weight: normal;
-  font-size: 0.75em;
+  font-size: 0.66em;
   text-rendering: optimizeLegibility;
   color: #ffcb00;
   line-height: 1.2em;
@@ -934,7 +938,6 @@ button:focus {
       -ms-hyphens: auto;
           hyphens: auto;
   position: relative;
-  letter-spacing: 1px;
 }
 .menu-contact ul > li a .zone-texte-menu .indic-menu.underline {
   text-decoration: underline;
@@ -1111,7 +1114,7 @@ button:focus {
   vertical-align: middle;
   border-radius: 10px;
   background-image: none;
-  background-color: #041340;
+  background-color: #ffffff;
   width: 32px;
   height: 100%;
   margin: 0 3px;
@@ -1517,7 +1520,7 @@ input[type="tel"]#lien-partage {
 }
 @media (max-width: 979px) {
   h1 {
-    font-size: 1.6em;
+    font-size: 2.8em;
   }
   /* @group Top event */
   #top-event p {
@@ -1560,7 +1563,7 @@ input[type="tel"]#lien-partage {
   #etapes-event {
     height: auto;
     border-radius: 0;
-    margin: 40px auto 40px auto;
+    margin: 30px auto 40px auto;
   }
   #etapes-event.etape-1-active > li.etape-1 {
     -webkit-transform: translateX(0%);
@@ -1805,7 +1808,7 @@ input[type="tel"]#lien-partage {
     display: none;
     box-sizing: border-box;
     padding: 10px 20px;
-    min-height: none;
+    min-height: auto;
   }
   #etapes-event > li:first-child .content-etape {
     display: block;
@@ -1819,13 +1822,13 @@ input[type="tel"]#lien-partage {
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 1.4em;
+    font-size: 2em;
   }
   p {
     font-size: 0.9em;
   }
   #content-event {
-    padding: 30px 0 44px 0;
+    padding: 25px 0 44px 0;
   }
   /* @group Buttons */
   a.btn-share,
@@ -1895,7 +1898,7 @@ input[type="tel"]#lien-partage {
     float: none;
   }
   h2 {
-    margin: 15px 0;
+    margin: 24px 0;
     font-size: 1.5em;
   }
   .compteur-participants.odometer-auto-theme .odometer-digit,
@@ -2067,7 +2070,7 @@ input[type="tel"]#lien-partage {
 }
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   p {
     font-size: 0.8em;
@@ -2150,9 +2153,29 @@ input[type="tel"]#lien-partage {
     background-image: url("../img/illus-livraison@2x.png");
   }
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 979px), only screen and (min-resolution: 144dpi) and (max-width: 979px) {
+  #etapes-event > li.etape-1 .content-etape:before {
+    background: #ffffff;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 979px), only screen and (min-resolution: 144dpi) and (max-width: 979px) {
+  #etapes-event > li.etape-2 .content-etape:before {
+    background: #ffffff;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 979px), only screen and (min-resolution: 144dpi) and (max-width: 979px) {
+  #etapes-event > li.etape-3 .content-etape:before {
+    background: #ffffff;
+  }
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), only screen and (min-resolution: 144dpi) and (max-width: 767px) {
   #etapes-event > li.etape-3 .content-etape:after {
     background-image: url("../img/illus-offre-mobile@2x.png");
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 979px), only screen and (min-resolution: 144dpi) and (max-width: 979px) {
+  #etapes-event > li.etape-4 .content-etape:before {
+    background: #ffffff;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), only screen and (min-resolution: 144dpi) and (max-width: 767px) {

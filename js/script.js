@@ -97,6 +97,9 @@ $(function(){
 			var newOpen = $(this).parent(".etape");
 			$(".content-etape", newOpen).slideToggle(300);
 			newOpen.addClass("open");
+		}else{
+			$(".content-etape", oldOpen).slideToggle(300);
+			oldOpen.removeClass("open");
 		}
 		return false;
 	});
@@ -155,10 +158,16 @@ $(window).load(function() {
 	posiPopup();
 });
 
+var h = $(window).height(), w = $(window).width();
 $(window).resize(function(){
-	$(".content-etape").attr("style","");
-	$("#etapes-event >li.open").removeClass("open");
-	$("#etapes-event >li").first().addClass("open");
 	// Positionnement des popup
 	posiPopup();
+
+	var nh = $(window).height(), nw = $(window).width();
+	if (nw != w){
+		$(".content-etape").attr("style","");
+		$("#etapes-event >li.open").removeClass("open");
+		$("#etapes-event >li").first().addClass("open");
+	}
+	h = nh; w = nw;
 });

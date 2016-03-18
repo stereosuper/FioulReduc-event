@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js gt-ie9"> <!--<![endif]-->
+	<head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+	  	<meta charset="utf-8">
+	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	  	<title>FioulReduc</title>
+	  	<meta name="description" content="">
+	  	<meta name="viewport" content="width=device-width,initial-scale=1">
+	  	<link rel="stylesheet" href="css/libs/normalize.css">
+	  	<link rel="stylesheet" type="text/css" href="css/libs/jquery.countdown.css"> 
+	  	<link rel="stylesheet" href="js/libs/odometer/themes/odometer-theme-train-station.css" />
+	  	<link rel="stylesheet" href="css/style.css">
+		<script src="js/libs/modernizr.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	
+	<body>
+	  	<header id="header">
+	  		<div class="container">
+				<div class="wrapper-align-middle">
+					<div class="content-align-middle" id="wrapper-logo-header">
+						<a href="/" class="logo-fioulreduc"></a>
+					</div><!--
+					--><div class="content-align-middle" id="wrapper-right-header">
+						<div class="wrapper-align-middle">
+							<div class="content-align-middle txt-centered">
+								<button class="btn-share">Partager cette offre</button>
+							</div><!--
+							--><div class="content-align-middle txt-right-aligned" id="wrapper-btn-inscription">
+								<button class="btn-block has-popup" data-ref-popup="inscription">Je m'inscris</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	  	</header>
+	  	<section class="txt-centered grid" id="top-event">
+	  		<div class="container">
+	  			<h1>Opération PowerFioul</h1>
+	  			<p>L’union fait la force : plus vous êtes nombreux à rejoindre le groupement, plus le prix baisse&nbsp;!</p>
+	  			<img id="illus" src="img/illus.png">
+	  		</div>
+	  	</section>
+	  	<section id="content-event" class="bloc-gris-bleu">
+	  		<div class="container">
+	  			<div class="wrapper-compteurs clearfix">
+					<h2 class="wrapper-compteur-participants">Déjà <span class="compteur-participants"></span> participants !!</h2>
+					<h2 class="wrapper-decompteur-event">Plus que 
+					<span class="decompteur-event">
+						<span class="days"></span>
+						<span class="hours"></span>
+						<span class="minutes"></span>
+						<span class="seconds"></span>
+					</span></h2>
+	  			</div>
+	  			<ul id="etapes-event" class="etape-1-active">
+	  				<li class="etape etape-1 open">
+	  					<div class="title-etape">
+	  						<h3>Inscription</h3><!--
+	  						--><h4>Jusqu’au 7 avril minuit</h4>
+	  					</div>
+	  					<div class="content-etape">
+		  					<p>Remplissez le formulaire d’inscription au groupement <strong>avant le jeudi 7 avril minuit.</strong> C’est gratuit et sans engagement !</p>
+		  				</div>
+	  				</li><!--
+	  				--><li class="etape etape-2">
+	  					<div class="title-etape">
+	  						<h3>Négociation</h3><!--
+	  						--><h4>8 avril</h4>
+	  					</div>
+	  					<div class="content-etape">
+		  					<p>En fonction du nombre d’inscrits par département, nous négocions vos offres de groupement <strong>avec plus de 150 distributeurs locaux.</strong></p>
+		  				</div>
+	  				</li><!--
+	  				--><li class="etape etape-3">
+	  					<div class="title-etape">
+	  						<h3>Offre</h3><!--
+	  						--><h4>Jusqu’au 11 avril minuit</h4>
+	  					</div>
+	  					<div class="content-etape">
+		  					<p>Vous recevez le <strong>vendredi 8 avril à 12h</strong> votre offre personnalisée par email et SMS. Cette offre reste valable jusqu’au lundi 11 avril minuit.</p>
+		  				</div>
+	  				</li><!--
+	  				--><li class="etape etape-4">
+	  					<div class="title-etape">
+	  						<h3>Livraison</h3><!--
+	  						--><h4>Sous 5 jours maximum</h4>
+	  					</div>
+	  					<div class="content-etape">
+		  					<p>Vous choisissez votre mode de règlement (à la livraison ou à la commande en 1 à 10 fois) et vous êtes <strong>livré sous 5 jours</strong> au créneau convenu par téléphone.</p>
+		  				</div>
+	  				</li>
+	  			</ul>
+	  			<div id="inscription-event" class="txt-centered">
+	  				<p>Plus besoin de vous organiser pour grouper votre commande, FioulReduc le fait pour vous ! Inscrivez-vous à notre 1ère campagne nationale de groupement avant le jeudi 7 avril minuit. Nous regroupons les demandes, négocions avec 150 distributeurs locaux et vous envoyons votre offre par email et SMS le vendredi 8 avril. Si l’offre vous intéresse, vous n’avez plus qu’à choisir votre mode de paiement, votre créneau de livraison et accueillir votre chauffeur avec le sourire.</p>
+	  				<button class="btn-block has-popup" data-ref-popup="inscription">Je m'inscris</button>
+	  				<div>
+						<a class="btn-arrow" href="#">Encore une question ?</a>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</section>
+	  	<footer id="footer" class="bloc-degrade-bleu">
+	  		<div class="container">
+				<nav class="menu-contact">
+					<ul>
+						<li id="topbar-phone-link" class="tel">
+							<a href="tel:+33975187518"><span class="illus-menu"><span class="visu-menu mascotte"></span></span><span class="zone-texte-menu">09 75 18 75 18 <br><span class="indic-menu">Numéro non surtaxé</span></span></a>
+						</li><!--
+						--><li id="topbar-contact-link">
+							<a href="http://www.fioulreduc.com/contact"><span class="illus-menu"><span class="visu-menu adresse"></span></span><span class="zone-texte-menu">Nous contacter<br><span class="indic-menu underline">Envoyer un message</span></span></a>
+						</li><!--
+						--><li id="topbar-account-link">
+							<a href="http://www.fioulreduc.com/"><span class="illus-menu"><span class="visu-menu site"></span></span><span class="zone-texte-menu">Voir le site <br><span class="indic-menu underline">Fioulreduc.com</span></span></a>
+						</li>
+					</ul>
+				</nav>
+	  		</div>
+	  	</footer>
+		
+		<div class="wrapper-popup open" data-popup="inscription">
+			<div class="container-popup">
+				<div class="popup">
+					<button class="btn-close-popup icon-cross"></button>
+					<div class="content-popup">
+						<form>
+							<div class="head-form">
+								<img src="img/livraison.png" srcset="img/livraison.png 1x, img/livraison@2x.png 2x" alt="Livraison">
+								<h4>Votre besoin</h4>
+								<p>Votre inscription ne vous engage pas à passer commande</p>
+							</div>
+							<fieldset class="obli">
+								<label for="code-postal">Code postal :</label><!--
+								--><div class="zone-form">
+									<input type="text" class="size1" id="code-postal" name="code-postal" pattern= "[0-9]+" required><!--
+									--><div class="error-message">
+										Vérifier votre code postal
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
+							</fieldset>
+							<fieldset class="obli">
+								<label for="quantite">Quantité :</label><!--
+								--><div class="zone-form">
+									<input type="text" class="size1" id="quantite" name="quantite" pattern= "[0-9]+" required><!--
+									--><div class="indic-form">litres</div><!--
+									--><div class="error-message">
+										Minimum 500 litres
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
+							</fieldset>
+							<fieldset class="obli">
+								<div class="equi-label">Fioul :</div><!--
+								--><label class="radio active" for="ordinaire">
+									<input type="radio" id="ordinaire" name="fioul" value="ordinaire" checked="checked"> Ordinaire
+								</label><!-- 
+								--><label class="radio" for="superieur">
+									<input type="radio" id="superieur" name="fioul" value="superieur"> Supérieur
+								</label>
+							</fieldset>
+							<div class="head-form" id="head-coordonnees">
+								<img src="img/commande.png" srcset="img/commande.png 1x, img/commande@2x.png 2x" alt="Commande">
+								<h4>Vos coordonnées</h4>
+								<p>Nous vous enverrons votre offre par email et SMS</p>
+							</div>
+							<fieldset class="obli">
+								<label for="email">Email :</label><!--
+								--><div class="zone-form">
+									<input type="email" class="size2" id="email" name="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required><!--
+									--><div class="error-message">
+										Vérifier votre adresse email
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
+							</fieldset>
+							<fieldset class="obli">
+								<label for="prenom">Prénom :</label><!--
+								--><div class="zone-form">
+									<input type="text" class="size2" id="prenom" name="prenom" required><!--
+									--><div class="error-message">
+										Indiquer un prénom
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
+							</fieldset>
+							<fieldset class="obli">
+								<label for="nom">Nom :</label><!--
+								--><div class="zone-form">
+									<input type="text" class="size2" id="nom" name="nom" required><!--
+									--><div class="error-message">
+										Indiquer un nom
+									</div><!--
+									--><div class="bg-zone-form"></div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<label for="tel">Téléphone portable :</label><!--
+								--><input type="tel" class="size3" id="tel" name="tel"><!--
+								--><div class="indic-form facultatif">Facultatif</div>
+							</fieldset>
+							<div class="zone-btn-form">
+								<button class="btn-block small">Je m'inscris</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper-popup" data-popup="partage" id="popup-partage">
+			<div class="container-popup big">
+				<div class="popup">
+					<button class="btn-close-popup icon-cross"></button>
+					<div class="content-popup txt-centered">
+						<p class="small"><strong>Merci Barack,</strong> nous avons bien pris en compte votre inscription à notre groupement national pour 1000 litres de Fioul Ordinaire à livrer dans le 44000.</p>
+						<p class="small">Vous recevrez notre meilleure offre par email et SMS le 8&nbsp;avril</p>
+						<h2>Partagez l’opération avec vos&nbsp;proches&nbsp;!</h2>
+						<p class="very-small">Non seulement vous ferez baisser les prix du groupement mais vous recevrez <strong>30€ de bons d’achat</strong> par participant au groupement que vous nous enverrez.</p>
+						<ul class="partage">
+							<li>
+								<a class="mail" href="#">Partager par email</a>
+							</li><!--
+							--><li>
+								<div class="ou">ou</div><!--
+								--><a class="facebook" href="#">Partager sur Facebook</a>
+							</li><!--
+							--><li>
+								<div class="ou">ou</div><!--
+								--><a class="twitter" href="#">Partager sur Twitter</a>
+							</li>
+						</ul>
+						<p class="small-margin">Copier ce lien et le partager où vous voulez</p>
+						<div class="zone-partage">
+							<input type="text" id="lien-partage" value="http://www.fioulreduc.com/xxxxxxxxxxxx">
+							<button data-clipboard-target="#lien-partage" id="btn-partage" class="btn-clipboard"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/libs/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- Tweens -->
+		<script src="js/libs/greensock/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/greensock/TimelineMax.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- odometer -->
+		<script src="js/libs/odometer/odometer.js"></script>
+		<!-- countdown -->
+		<script type="text/javascript" src="js/libs/jquery.plugin.js"></script> 
+		<script type="text/javascript" src="js/libs/jquery.countdown.js"></script>
+		<!-- Clipboard -->
+		<script type="text/javascript" src="js/libs/clipboard.min.js"></script>
+
+		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -538,16 +538,34 @@ button:focus {
           backface-visibility: hidden;
   counter-reset: counter-step-event;
 }
+#etapes-event:hover.etape-1-active > li.etape-1 .content-etape:before {
+  opacity: 1;
+}
+#etapes-event:hover.etape-1-active > li.etape-1 .content-etape:after {
+  opacity: 0;
+}
+#etapes-event:hover.etape-2-active > li.etape-2 .content-etape:before {
+  opacity: 1;
+}
+#etapes-event:hover.etape-2-active > li.etape-2 .content-etape:after {
+  opacity: 0;
+}
+#etapes-event:hover.etape-3-active > li.etape-3 .content-etape:before {
+  opacity: 1;
+}
+#etapes-event:hover.etape-3-active > li.etape-3 .content-etape:after {
+  opacity: 0;
+}
+#etapes-event:hover.etape-4-active > li.etape-4 .content-etape:before {
+  opacity: 1;
+}
+#etapes-event:hover.etape-4-active > li.etape-4 .content-etape:after {
+  opacity: 0;
+}
 #etapes-event.etape-1-active > li.etape-1 {
   -webkit-transform: translateX(0%);
       -ms-transform: translateX(0%);
           transform: translateX(0%);
-}
-#etapes-event.etape-1-active > li.etape-1 .content-etape:before {
-  opacity: 1;
-}
-#etapes-event.etape-1-active > li.etape-1 .content-etape:after {
-  opacity: 0;
 }
 #etapes-event.etape-1-active > li.etape-2 {
   -webkit-transform: translateX(50%);
@@ -574,12 +592,6 @@ button:focus {
       -ms-transform: translateX(0%);
           transform: translateX(0%);
 }
-#etapes-event.etape-2-active > li.etape-2 .content-etape:before {
-  opacity: 1;
-}
-#etapes-event.etape-2-active > li.etape-2 .content-etape:after {
-  opacity: 0;
-}
 #etapes-event.etape-2-active > li.etape-3 {
   -webkit-transform: translateX(50%);
       -ms-transform: translateX(50%);
@@ -605,12 +617,6 @@ button:focus {
       -ms-transform: translateX(0%);
           transform: translateX(0%);
 }
-#etapes-event.etape-3-active > li.etape-3 .content-etape:before {
-  opacity: 1;
-}
-#etapes-event.etape-3-active > li.etape-3 .content-etape:after {
-  opacity: 0;
-}
 #etapes-event.etape-3-active > li.etape-4 {
   -webkit-transform: translateX(50%);
       -ms-transform: translateX(50%);
@@ -635,12 +641,6 @@ button:focus {
   -webkit-transform: translateX(0%);
       -ms-transform: translateX(0%);
           transform: translateX(0%);
-}
-#etapes-event.etape-4-active > li.etape-4 .content-etape:before {
-  opacity: 1;
-}
-#etapes-event.etape-4-active > li.etape-4 .content-etape:after {
-  opacity: 0;
 }
 #etapes-event > li {
   display: block;
@@ -1114,10 +1114,8 @@ button:focus {
   vertical-align: middle;
   border-radius: 10px;
   background-image: none;
-  background-color: #ffffff;
-  width: 32px;
+  width: 30px;
   height: 100%;
-  margin: 0 3px;
   padding: 0;
   line-height: 53px;
   text-align: center;
@@ -1136,7 +1134,7 @@ button:focus {
   font-size: 0.7em;
   text-rendering: optimizeLegibility;
   position: absolute;
-  bottom: -25px;
+  bottom: -15px;
   left: 0;
   right: 0;
 }
@@ -1548,15 +1546,21 @@ input[type="tel"]#lien-partage {
     border-radius: 6px;
     margin: 0 2px;
   }
+  .decompteur-event {
+    height: 48px;
+  }
   .decompteur-event .digit-group {
     height: 48px;
   }
   .decompteur-event .digit {
     border-radius: 6px;
-    width: 26px;
+    width: 28px;
     line-height: 48px;
-    font-size: 1.1em;
-    margin: 0 2px;
+    font-size: 1.4em;
+    margin: 0;
+  }
+  .decompteur-event .legend {
+    bottom: -12px;
   }
   /* @end */
   /* @group Etapes event */
@@ -1564,6 +1568,18 @@ input[type="tel"]#lien-partage {
     height: auto;
     border-radius: 0;
     margin: 30px auto 40px auto;
+  }
+  #etapes-event:hover.etape-1-active > li.etape-1 .content-etape:after {
+    opacity: 1;
+  }
+  #etapes-event:hover.etape-2-active > li.etape-2 .content-etape:after {
+    opacity: 1;
+  }
+  #etapes-event:hover.etape-3-active > li.etape-3 .content-etape:after {
+    opacity: 1;
+  }
+  #etapes-event:hover.etape-4-active > li.etape-4 .content-etape:after {
+    opacity: 1;
   }
   #etapes-event.etape-1-active > li.etape-1 {
     -webkit-transform: translateX(0%);
@@ -1909,6 +1925,9 @@ input[type="tel"]#lien-partage {
     border-radius: 5px;
     margin: 0 2px;
   }
+  .decompteur-event {
+    height: 38px;
+  }
   .decompteur-event .digit-group {
     height: 38px;
   }
@@ -1916,14 +1935,13 @@ input[type="tel"]#lien-partage {
     border-radius: 5px;
     width: 24px;
     line-height: 38px;
-    font-size: 1em;
-    margin: 0 2px;
+    font-size: 1.2em;
   }
   .decompteur-event .legend {
-    bottom: -22px;
+    bottom: -18px;
   }
   .decompteur-event {
-    margin-left: 0;
+    margin-left: 4px;
   }
   /* @end */
   /* @group Etapes event */
@@ -2087,6 +2105,9 @@ input[type="tel"]#lien-partage {
     border-radius: 5px;
     margin: 0 2px;
   }
+  .decompteur-event {
+    height: 34px;
+  }
   .decompteur-event .digit-group {
     height: 34px;
   }
@@ -2094,14 +2115,9 @@ input[type="tel"]#lien-partage {
     border-radius: 5px;
     width: 18px;
     line-height: 34px;
-    font-size: 1em;
-    margin: 0 2px;
   }
   .decompteur-event .legend {
-    bottom: -15px;
-  }
-  .decompteur-event {
-    margin-left: 0;
+    bottom: -12px;
   }
   /* @end */
   /* @group Etapes event */

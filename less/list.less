@@ -11,18 +11,68 @@
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
 	counter-reset: counter-step-event;
+	&:hover{
+		&.etape-1-active{
+			>li{
+				&.etape-1{
+					.content-etape{
+						&:before{
+							opacity: 1;
+						}
+						&:after{
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+		&.etape-2-active{
+			>li{
+				&.etape-2{
+					.content-etape{
+						&:before{
+							opacity: 1;
+						}
+						&:after{
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+		&.etape-3-active{
+			>li{
+				&.etape-3{
+					.content-etape{
+						&:before{
+							opacity: 1;
+						}
+						&:after{
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+		&.etape-4-active{
+			>li{
+				&.etape-4{
+					.content-etape{
+						&:before{
+							opacity: 1;
+						}
+						&:after{
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+	}
 	&.etape-1-active{
 		>li{
 			&.etape-1{
 				transform: translateX(0%);
-				.content-etape{
-					&:before{
-						opacity: 1;
-					}
-					&:after{
-						opacity: 0;
-					}
-				}
 			}
 			&.etape-2{
 				transform: translateX(50%);
@@ -42,14 +92,6 @@
 			}
 			&.etape-2{
 				transform: translateX(0%);
-				.content-etape{
-					&:before{
-						opacity: 1;
-					}
-					&:after{
-						opacity: 0;
-					}
-				}
 			}
 			&.etape-3{
 				transform: translateX(50%);
@@ -69,14 +111,6 @@
 			}
 			&.etape-3{
 				transform: translateX(0%);
-				.content-etape{
-					&:before{
-						opacity: 1;
-					}
-					&:after{
-						opacity: 0;
-					}
-				}
 			}
 			&.etape-4{
 				transform: translateX(50%);
@@ -96,14 +130,6 @@
 			}
 			&.etape-4{
 				transform: translateX(0%);
-				.content-etape{
-					&:before{
-						opacity: 1;
-					}
-					&:after{
-						opacity: 0;
-					}
-				}
 			}
 		}
 	}

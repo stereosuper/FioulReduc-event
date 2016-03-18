@@ -146,15 +146,21 @@
         }
     }
     .decompteur-event{
+        height: 48px;
         .digit-group{
             height: 48px;
         }
         .digit{
             border-radius: 6px;
-            width: 26px;
+            width: 28px;
             line-height: 48px;
-            font-size: 1.1em;
-            margin: 0 2px;
+            //font-size: 1.1em;
+            //margin: 0 2px;
+            font-size: 1.4em;
+            margin: 0;
+        }
+        .legend{
+            bottom: -12px;
         }
     }
     /* @end */
@@ -164,6 +170,52 @@
         height: auto;
         border-radius: 0;
         margin: 30px auto 40px auto;
+        &:hover{
+            &.etape-1-active{
+                >li{
+                    &.etape-1{
+                        .content-etape{
+                            &:after{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            &.etape-2-active{
+                >li{
+                    &.etape-2{
+                        .content-etape{
+                            &:after{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            &.etape-3-active{
+                >li{
+                    &.etape-3{
+                        .content-etape{
+                            &:after{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            &.etape-4-active{
+                >li{
+                    &.etape-4{
+                        .content-etape{
+                            &:after{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         &.etape-1-active{
             >li{
                 &.etape-1{
@@ -514,6 +566,7 @@
         }
     }
     .decompteur-event{
+        height: 38px;
         .digit-group{
             height: 38px;
         }
@@ -521,15 +574,15 @@
             border-radius: 5px;
             width: 24px;
             line-height: 38px;
-            font-size: 1em;
-            margin: 0 2px;
+            font-size: 1.2em;
+            //margin: 0 2px;
         }
         .legend{
-            bottom: -22px;
+            bottom: -18px;
         }
     }
     .decompteur-event{
-        margin-left: 0;
+        margin-left: 4px;
     }
     /* @end */
 
@@ -720,6 +773,7 @@
         }
     }
     .decompteur-event{
+        height: 34px;
         .digit-group{
             height: 34px;
         }
@@ -727,15 +781,12 @@
             border-radius: 5px;
             width: 18px;
             line-height: 34px;
-            font-size: 1em;
-            margin: 0 2px;
+            //font-size: 1em;
+            //margin: 0 2px;
         }
         .legend{
-            bottom: -15px;
+            bottom: -12px;
         }
-    }
-    .decompteur-event{
-        margin-left: 0;
     }
     /* @end */
 

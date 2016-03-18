@@ -414,6 +414,10 @@ button.btn-arrow:before {
   top: 0;
   left: 0;
 }
+a.btn-arrow:hover,
+button.btn-arrow:hover {
+  color: #f86708;
+}
 a.btn-block,
 button.btn-block {
   display: inline-block;

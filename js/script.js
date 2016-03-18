@@ -10,6 +10,18 @@ window.requestAnimFrame = (function(){
 
 // Request anim frame
 function scrollPage(){
+	myScroll = $(document).scrollTop();
+
+	// Positionnement du btn close popup
+	if($(window).width()<=767){
+		var topPopup = $(".wrapper-popup").offset().top;
+		if (myScroll>topPopup){
+			TweenMax.set($(".btn-close-popup"), {className:"+=fixed"});
+		}else{
+			TweenMax.set($(".btn-close-popup"), {className:"-=fixed"});
+		}
+	}
+
 	requestAnimFrame(scrollPage);
 }
 
@@ -59,6 +71,7 @@ function posiPopup(){
 $(function(){
 	compteur();
 	decompteur();
+	scrollPage();
 	// Survol des étapes
 	$("#etapes-event >li").mouseenter(function() {
 		$("#etapes-event").removeClass("etape-1-active etape-2-active etape-3-active etape-4-active");

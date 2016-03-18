@@ -1902,6 +1902,13 @@ input[type="tel"]#lien-partage {
   }
   .popup .btn-close-popup {
     position: absolute;
+    top: 11px;
+    margin: 0 0 0 10px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+  }
+  .popup .btn-close-popup.fixed {
+    position: fixed;
   }
   /* @end */
 }

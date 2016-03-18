@@ -948,7 +948,7 @@ button:focus {
 }
 .partage {
   display: block;
-  margin: 30px 0 30px 0;
+  margin: 30px 0 20px 0;
   padding: 0;
   list-style-type: none;
   text-align: center;
@@ -956,7 +956,7 @@ button:focus {
 .partage > li {
   display: inline-block;
   vertical-align: top;
-  margin: 0 0 0 16px;
+  margin: 0 0 10px 16px;
 }
 .partage > li:first-child {
   margin-left: 0;
@@ -1014,6 +1014,9 @@ button:focus {
   font-size: 18px;
   left: 13px;
   margin-top: -9px;
+}
+.partage > li a:hover {
+  opacity: 0.8;
 }
 .ou {
   display: inline-block;
@@ -1245,6 +1248,9 @@ button:focus {
 }
 .popup p.very-small {
   max-width: 530px;
+}
+.popup p.small-margin {
+  margin: 10px 0;
 }
 /* @end */
 /* @group Form */
@@ -1854,6 +1860,11 @@ input[type="tel"]#lien-partage {
             transform: rotate(90deg);
   }
   /* @end */
+  /* @group Partage */
+  .wrapper-popup#popup-partage .popup {
+    background-position: 0 100px, 100% 150px;
+  }
+  /* @end */
 }
 @media (max-width: 767px) {
   h1 {
@@ -2072,6 +2083,17 @@ input[type="tel"]#lien-partage {
     position: fixed;
   }
   /* @end */
+  /* @group Partage */
+  .wrapper-popup#popup-partage .popup {
+    background: none;
+  }
+  .popup h2 {
+    font-size: 1.3em;
+  }
+  .popup p strong {
+    font-size: 1.1em;
+  }
+  /* @end */
 }
 @media (max-width: 660px) {
   /* @group Form */
@@ -2102,6 +2124,19 @@ input[type="tel"]#lien-partage {
   }
   .zone-btn-form {
     padding: 0;
+  }
+  /* @end */
+  /* @group Partage */
+  .partage > li {
+    display: block;
+    margin: 0 0 5px 0;
+  }
+  .partage > li .ou {
+    display: block;
+    margin: 0 0 5px 0;
+  }
+  .partage > li a {
+    padding: 11px 24px 11px 40px;
   }
   /* @end */
 }
@@ -2155,6 +2190,15 @@ input[type="tel"]#lien-partage {
   #header .content-align-middle#wrapper-right-header a.btn-block:after,
   #header .content-align-middle#wrapper-right-header button.btn-block:after {
     margin: 0 0 0 8px;
+  }
+  /* @end */
+  /* @group Partage */
+  .popup p {
+    margin: 10px auto;
+  }
+  .popup h2 {
+    font-size: 1.1em;
+    margin: 20px 0 20px 0;
   }
   /* @end */
 }

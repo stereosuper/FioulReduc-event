@@ -16,11 +16,11 @@
 			>li{
 				&.etape-1{
 					.content-etape{
-						&:before{
+						&:after{
 							opacity: 1;
 						}
-						&:after{
-							opacity: 0;
+						&:before{
+							//opacity: 0;
 						}
 					}
 				}
@@ -30,11 +30,11 @@
 			>li{
 				&.etape-2{
 					.content-etape{
-						&:before{
+						&:after{
 							opacity: 1;
 						}
-						&:after{
-							opacity: 0;
+						&:before{
+							//opacity: 0;
 						}
 					}
 				}
@@ -44,11 +44,11 @@
 			>li{
 				&.etape-3{
 					.content-etape{
-						&:before{
+						&:after{
 							opacity: 1;
 						}
-						&:after{
-							opacity: 0;
+						&:before{
+							//opacity: 0;
 						}
 					}
 				}
@@ -58,11 +58,11 @@
 			>li{
 				&.etape-4{
 					.content-etape{
-						&:before{
+						&:after{
 							opacity: 1;
 						}
-						&:after{
-							opacity: 0;
+						&:before{
+							//opacity: 0;
 						}
 					}
 				}
@@ -181,6 +181,7 @@
 			.lato-italic(1em);
 			position: relative;
 			line-height: 1.4em;
+			z-index: 2;
 			strong{
 			    .lato-bold-italic(1em);
 			}
@@ -193,7 +194,7 @@
 		.content-etape{
 			height: 348px;
 			position: relative;
-			&:before{
+			&:after{
 				content: "";
 				display: block;
 				position: absolute;
@@ -204,7 +205,7 @@
 				opacity: 0;
 				transition: opacity 0.4s ease-in-out;
 			}
-			&:after{
+			&:before{
 				content: "";
 				display: block;
 				position: absolute;
@@ -224,11 +225,11 @@
 				left: 3px;
 			}
 			.content-etape{
-				&:before{
+				&:after{
 					background: @blanc url("../img/illus-inscription.gif") no-repeat 3px 37px;
 					background-size: 253px 259px;
 				}
-				&:after{
+				&:before{
 					background: url("../img/illus-inscription.png") no-repeat 3px 37px;
 					background-size: 253px 259px;
 				}
@@ -244,11 +245,11 @@
 				left: 0px;
 			}
 			.content-etape{
-				&:before{
+				&:after{
 					background: @blanc url("../img/illus-nego.gif") no-repeat 0 44px;
 					background-size: 220px 268px;
 				}
-				&:after{
+				&:before{
 					background: url("../img/illus-nego.png") no-repeat 0 44px;
 					background-size: 220px 268px;
 				}
@@ -264,11 +265,11 @@
 				left: 0px;
 			}
 			.content-etape{
-				&:before{
+				&:after{
 					background: @blanc url("../img/illus-offre.gif") no-repeat 0 100%;
 					background-size: 278px 340px;
 				}
-				&:after{
+				&:before{
 					background: url("../img/illus-offre.png") no-repeat 0 100%;
 					background-size: 278px 340px;
 				}
@@ -287,12 +288,12 @@
 				left: 0px;
 			}
 			.content-etape{
-				&:before{
+				&:after{
 					background: @blanc url("../img/illus-livraison.gif") no-repeat 0 100%;
 					background-size: 480px 327px;
 					background-size: 100% auto;
 				}
-				&:after{
+				&:before{
 					background: url("../img/illus-livraison.png") no-repeat 0 100%;
 					background-size: 480px 327px;
 					background-size: 100% auto;

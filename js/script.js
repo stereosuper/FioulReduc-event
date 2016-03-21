@@ -135,6 +135,15 @@ $(function(){
 		$(this).parents(".wrapper-popup").removeClass("open");
 		return false;
 	});
+	// Fermeture du popup au clic en dehors du popup
+	$(document).mouseup(function (e) {
+		if($(window).width()>767){
+		    var popup = $(".wrapper-popup.open .popup");
+		    if (!popup.is(e.target) && popup.has(e.target).length == 0) {
+		        $(".wrapper-popup.open").removeClass("open");
+		    }
+		}
+	});
 	// Vérifier la Quantité de fioul entrée
 	var elem = $("#quantite");
 	elem.data('oldVal', elem.val());

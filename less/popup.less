@@ -11,6 +11,7 @@
 	box-sizing: border-box;
 	padding: 0 20px;
 	background-color: rgba(0, 0, 0, 0.8);
+	cursor: pointer;
 	&.open{
 		display: block;
 	}
@@ -29,7 +30,7 @@
 	&#popup-partage{
 		.popup{
 			background-image: url("../layoutImg/thumb-up.png"), url("../layoutImg/megaphone.png"); 
-			background-position:0 49px, 100% 189px;
+			background-position:0 49px, 100% 165px;
 			background-repeat: no-repeat;
 		}
 	}
@@ -52,6 +53,7 @@
 	transform: translate(-50%, -50%);
 	border-radius: 6px;
 	text-align: right;
+	cursor: auto;
 	.btn-close-popup{
 		position: fixed;
 		display: inline-block;
@@ -62,6 +64,9 @@
 		color: #cccccc;
 		margin: -10px 0 0 10px;
 		padding: 0;
+		&:hover{
+			opacity: 0.8;
+		}
 	}
 	.content-popup{
 		text-align: left;

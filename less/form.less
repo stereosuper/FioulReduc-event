@@ -52,6 +52,7 @@ input[type="text"], input[type="email"], input[type="tel"]{
         color: @bleuFonceFioulReduc;
         padding: 10px 20px 10px 42px;
         width: 100%;
+        background-color: @blanc;
     }
     .obli &{
         &:invalid{
@@ -73,6 +74,18 @@ input[type="text"], input[type="email"], input[type="tel"]{
             }
         }
     }
+}
+::-webkit-input-placeholder{
+    .lato-italic(1em);
+}
+:-moz-placeholder{
+    .lato-italic(1em);
+}
+::-moz-placeholder{
+    .lato-italic(1em);
+}
+:-ms-input-placeholder{
+    .lato-italic(1em);
 }
 .zone-form{
     display: inline-block;

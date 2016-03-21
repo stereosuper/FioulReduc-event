@@ -207,6 +207,19 @@ h4 {
   padding: 0 0 5px 0;
   border-bottom: 1px solid #c0c2cc;
 }
+h5 {
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  color: #0c1a4c;
+}
+h5 .icon-mail {
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 8px 0 0;
+}
 p {
   font-family: 'lato', sans-serif;
   font-weight: normal;
@@ -418,6 +431,30 @@ a.btn-arrow:hover,
 button.btn-arrow:hover {
   color: #f86708;
 }
+a.btn-arrow-left,
+button.btn-arrow-left {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  text-rendering: optimizeLegibility;
+  padding: 0 0 0 8px;
+  color: #fb8206;
+  text-decoration: underline;
+  position: relative;
+}
+a.btn-arrow-left:before,
+button.btn-arrow-left:before {
+  content: "‹";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+a.btn-arrow-left:hover,
+button.btn-arrow-left:hover {
+  color: #f86708;
+}
 a.btn-block,
 button.btn-block {
   display: inline-block;
@@ -487,6 +524,26 @@ a.btn-block.small:after,
 button.btn-block.small:after {
   margin-top: -2px;
 }
+a.btn-block-arrow,
+button.btn-block-arrow {
+  display: inline-block;
+  vertical-align: top;
+  padding: 12px 20px 12px 18px;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  text-rendering: optimizeLegibility;
+  border: none;
+  background: #fb8206;
+  color: #ffffff;
+  -webkit-transition: background-color 0.15s ease-in-out;
+          transition: background-color 0.15s ease-in-out;
+}
+a.btn-block-arrow:before,
+button.btn-block-arrow:before {
+  content: "›";
+  margin: 0 4px 0 0;
+}
 a.btn-share,
 button.btn-share {
   display: inline-block;
@@ -521,9 +578,36 @@ a.btn-share:hover,
 button.btn-share:hover {
   opacity: 0.8;
 }
+a.btn-plus,
+button.btn-plus {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 3px solid #f97005;
+  font-family: 'lato-bold', sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  text-rendering: optimizeLegibility;
+  color: #f97005;
+}
+a.btn-plus:before,
+button.btn-plus:before {
+  content: "+";
+  margin-left: -1px;
+}
 a:focus,
 button:focus {
   outline: none;
+}
+a.no-underline,
+button.no-underline {
+  text-decoration: none;
 }
 /* @end */
 /* @group List */
@@ -1252,6 +1336,50 @@ button:focus {
 .popup p.small-margin {
   margin: 10px 0;
 }
+.popup.email-open #zone-btn-partage {
+  display: none;
+}
+.popup.email-open #partage-email {
+  display: block;
+}
+#zone-btn-partage {
+  display: block;
+}
+#partage-email {
+  display: none;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 38px 0 30px 0;
+  max-width: 434px;
+  text-align: left;
+}
+#partage-email ul {
+  display: block;
+  list-style-type: none;
+  width: 100%;
+  margin: 14px 0;
+  padding: 0;
+}
+#partage-email ul > li {
+  display: block;
+  margin: 14px 0;
+  padding: 0;
+}
+#partage-email .btn-arrow-left {
+  margin: 2px 20px 0 12px;
+}
+#partage-email h5 {
+  display: inline-block;
+  vertical-align: top;
+}
+#partage-email input[type="email"] {
+  width: 100%;
+  max-width: 385px;
+}
+#partage-email .btn-plus {
+  vertical-align: middle;
+  margin: 0 0 0 17px;
+}
 /* @end */
 /* @group Form */
 fieldset {
@@ -1324,6 +1452,7 @@ input[type="tel"]#lien-partage {
   color: #0c1a4c;
   padding: 10px 20px 10px 42px;
   width: 100%;
+  background-color: #ffffff;
 }
 .obli input[type="text"]:invalid:focus,
 .obli input[type="email"]:invalid:focus,
@@ -1350,6 +1479,30 @@ input[type="tel"]#lien-partage {
 .obli input[type="email"]:valid ~ .bg-zone-form,
 .obli input[type="tel"]:valid ~ .bg-zone-form {
   display: block;
+}
+::-webkit-input-placeholder {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+:-moz-placeholder {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+::-moz-placeholder {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+:-ms-input-placeholder {
+  font-family: 'lato-italic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
 }
 .zone-form {
   display: inline-block;
@@ -2063,6 +2216,7 @@ input[type="tel"]#lien-partage {
   .wrapper-popup {
     position: relative;
     background-color: #ffffff;
+    padding: 0;
   }
   .popup {
     position: relative;
@@ -2137,6 +2291,30 @@ input[type="tel"]#lien-partage {
   }
   .partage > li a {
     padding: 11px 24px 11px 40px;
+  }
+  /* @end */
+  /* @group Popup */
+  #partage-email ul > li {
+    box-sizing: border-box;
+    padding: 0 44px 0 0;
+    position: relative;
+  }
+  #partage-email input[type="email"] {
+    width: 100%;
+    max-width: auto;
+  }
+  #partage-email .btn-plus {
+    margin: 0;
+    position: absolute;
+    top: 4px;
+    right: 0;
+  }
+  #partage-email .btn-arrow-left {
+    margin: 0 0 4px 0;
+  }
+  #partage-email h5 {
+    display: block;
+    margin: 2px 0 0 0;
   }
   /* @end */
 }

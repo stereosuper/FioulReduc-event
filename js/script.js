@@ -154,6 +154,25 @@ $(function(){
 
 	// Clipboard
 	new Clipboard('.btn-clipboard');
+
+	// Ajout d'une ligne d'invition par email
+	$(document).delegate('#partage-email .btn-plus', 'click', function(){
+	    $("#partage-email ul").append('<li><input type="email" placeholder="Saisir l\'email de votre choix"><button class="btn-plus"></button></li>');
+	    posiPopup();
+	    return false;
+	});
+
+	// Clic sur le bouton "Partager par email"
+	$("#btn-partage-email").click(function(){
+		$(this).closest(".popup").addClass("email-open");
+		posiPopup();
+		return false;
+	});
+	$("#btn-close-partage-email").click(function(){
+		$(this).closest(".popup").removeClass("email-open");
+		posiPopup();
+		return false;
+	});
 });
 
 $(window).load(function() {

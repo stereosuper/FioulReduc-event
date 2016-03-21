@@ -20,6 +20,24 @@ a, button{
 			color: @orange2FioulReduc;
 		}
 	}
+	&.btn-arrow-left{
+		display: inline-block;
+		vertical-align: top;
+		.lato(0.875em);
+		padding: 0 0 0 8px;
+		color: @orangeFioulReduc;
+		text-decoration: underline;
+		position: relative;
+		&:before{
+			content: "‹";
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&:hover{
+			color: @orange2FioulReduc;
+		}
+	}
 	&.btn-block{
 		display: inline-block;
 		vertical-align: top;
@@ -63,6 +81,21 @@ a, button{
 			}
 		}
 	}
+	&.btn-block-arrow{
+		display: inline-block;
+		vertical-align: top;
+		padding: 12px 20px 12px 18px;
+		border: none;
+		.lato-bold(0.875em);
+		border: none;
+		background: @orangeFioulReduc;
+		color: @blanc;
+		transition: background-color .15s ease-in-out;
+		&:before{
+			content: "›";
+			margin: 0 4px 0 0;
+		}
+	}
 	&.btn-share{
 		display: inline-block;
 		vertical-align: top;
@@ -81,8 +114,29 @@ a, button{
 			opacity: 0.8;
 		}
 	}
+	&.btn-plus{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		width: 30px;
+		height: 30px;
+		line-height: 20px;
+		text-align: center;
+		box-sizing: border-box;
+		border-radius: 50%;
+		border: 3px solid #f97005;
+		.lato-bold(24px);
+		color: #f97005;
+		&:before{
+			content: "+";
+			margin-left: -1px;
+		}
+	}
 	&:focus{
 		outline: none;
+	}
+	&.no-underline{
+		text-decoration: none;
 	}
 }
 /* @end */

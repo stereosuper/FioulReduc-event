@@ -213,7 +213,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="wrapper-popup open" data-popup="partage" id="popup-partage">
+		<div class="wrapper-popup open" data-popup="partage-etape" id="popup-partage-etape">
 			<div class="container-popup big">
 				<div class="popup">
 					<button class="btn-close-popup icon-cross"></button>
@@ -245,13 +245,59 @@
 						<div id="partage-email">
 							<button id="btn-close-partage-email" class="btn-arrow-left no-underline">Retour</button><!--
 							--><h5><span class="icon-mail"></span>Inviter vos proches par email</h5>
-							<ul>
+							<form>
+								<ul>
+									<li>
+										<input type="email" placeholder="Saisir l'email de votre choix"></input><!--
+										--><button class="btn-plus"></button>
+									</li>
+								</ul>
+								<button class="btn-block-arrow">Envoyer ces invitations</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper-popup" data-popup="partage" id="popup-partage">
+			<div class="container-popup big">
+				<div class="popup">
+					<button class="btn-close-popup icon-cross"></button>
+					<div class="content-popup txt-centered">
+						<h2>Partagez l’opération avec vos&nbsp;proches&nbsp;!</h2>
+						<p class="very-small">Non seulement vous ferez baisser les prix du groupement mais vous recevrez <strong>30€ de bons d’achat</strong> par participant au groupement que vous nous enverrez.</p>
+						<div id="zone-btn-partage">
+							<ul class="partage">
 								<li>
-									<input type="email" placeholder="Saisir l'email de votre choix"></input><!--
-									--><button class="btn-plus"></button>
+									<a class="mail" id="btn-partage-email" href="#">Partager par email</a>
+								</li><!--
+								--><li>
+									<div class="ou">ou</div><!--
+									--><a class="facebook" href="https://www.facebook.com/dialog/feed?app_id=184683071273&link=http%3A%2F%2Fwww.fioulreduc.com%2Fxxxxxxxxxxxx&picture=http%3A%2F%2Fwww.insert-image-share-url-here.jpg&name=Op%C3%A9ration%20Powerfioul&caption=%20&description=Description%20de%20l'op%C3%A9ration%20Powerfioul&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F" target="blank">Partager sur Facebook</a>
+								</li><!--
+								--><li>
+									<div class="ou">ou</div><!--
+									--><a class="twitter" href="http://twitter.com/intent/tweet?text=Participez%20%C3%A0%20l'op%C3%A9ration%20Powerfioul%20en%20cliquant%20sur%20ce%20lien%20http%3A%2F%2Fwww.fioulreduc.com%2Fxxxxxxxxxxxx">Partager sur Twitter</a>
 								</li>
 							</ul>
-							<button class="btn-block-arrow">Envoyer ces invitations</button>
+							<p class="small-margin">Copier ce lien et le partager où vous voulez</p>
+							<div class="zone-partage">
+								<input type="text" id="lien-partage" value="http://www.fioulreduc.com/xxxxxxxxxxxx">
+								<button data-clipboard-target="#lien-partage" id="btn-partage" class="btn-clipboard"></button>
+							</div>
+						</div>
+						<div id="partage-email">
+							<button id="btn-close-partage-email" class="btn-arrow-left no-underline">Retour</button><!--
+							--><h5><span class="icon-mail"></span>Inviter vos proches par email</h5>
+							<form>
+								<ul>
+									<li>
+										<input type="email" placeholder="Saisir l'email de votre choix"></input><!--
+										--><button class="btn-plus"></button>
+									</li>
+								</ul>
+								<button class="btn-block-arrow">Envoyer ces invitations</button>
+							</form>
 						</div>
 					</div>
 				</div>

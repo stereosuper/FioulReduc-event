@@ -366,7 +366,7 @@ strong {
 /* @group Top event */
 #top-event {
   box-sizing: border-box;
-  height: auto;
+  height: 650px;
   padding: 155px 0 0 0;
   position: relative;
 }
@@ -376,10 +376,26 @@ strong {
 #top-event p {
   margin-top: 5px;
 }
-#illus {
+/* @end */
+/* @group Visu */
+#wrapper-illus {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 1200px;
+  height: 447px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 0 -600px;
+}
+#wrapper-illus #glow {
+  display: block;
+  width: 635px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0 0 0 -317px;
+  background: url("../layoutImg/illus/glow.png") no-repeat 0 0;
 }
 /* @end */
 /* @group Content event */
@@ -1249,9 +1265,14 @@ button.no-underline {
 .wrapper-popup .container-popup.big {
   max-width: 900px;
 }
-.wrapper-popup#popup-partage .popup {
+.wrapper-popup#popup-partage-etape .popup {
   background-image: url("../layoutImg/thumb-up.png"), url("../layoutImg/megaphone.png");
   background-position: 0 49px, 100% 165px;
+  background-repeat: no-repeat;
+}
+.wrapper-popup#popup-partage .popup {
+  background-image: url("../layoutImg/megaphone.png");
+  background-position: 100% 25px;
   background-repeat: no-repeat;
 }
 .popup {
@@ -1276,6 +1297,13 @@ button.no-underline {
   border-radius: 6px;
   text-align: right;
   cursor: auto;
+}
+.container-popup.big .popup {
+  padding-top: 43px;
+  padding-bottom: 43px;
+}
+.container-popup.big .popup .btn-close-popup {
+  margin-top: -30px;
 }
 .popup .btn-close-popup {
   position: fixed;
@@ -1309,6 +1337,9 @@ button.no-underline {
   text-rendering: optimizeLegibility;
   color: #fe7b02;
   margin: 40px 0 20px 0;
+}
+.popup .content-popup > h2 {
+  margin-top: 0;
 }
 .popup p {
   color: #0c1a4c;
@@ -2020,8 +2051,8 @@ input[type="tel"]#lien-partage {
   }
   /* @end */
   /* @group Partage */
-  .wrapper-popup#popup-partage .popup {
-    background-position: 0 100px, 100% 150px;
+  .wrapper-popup#popup-partage-etape .popup {
+    background-position: 0 100px, 100% 117px;
   }
   /* @end */
 }
@@ -2233,6 +2264,10 @@ input[type="tel"]#lien-partage {
         -ms-transform: none;
             transform: none;
   }
+  .container-popup.big .popup {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
   .popup .btn-close-popup {
     position: absolute;
     top: 11px;
@@ -2243,8 +2278,12 @@ input[type="tel"]#lien-partage {
   .popup .btn-close-popup.fixed {
     position: fixed;
   }
+  .container-popup.big .popup .btn-close-popup {
+    margin-top: 0;
+  }
   /* @end */
   /* @group Partage */
+  .wrapper-popup#popup-partage-etape .popup,
   .wrapper-popup#popup-partage .popup {
     background: none;
   }

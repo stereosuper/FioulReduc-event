@@ -27,10 +27,17 @@
 			max-width: 900px;
 		}
 	}
-	&#popup-partage{
+	&#popup-partage-etape{
 		.popup{
 			background-image: url("../layoutImg/thumb-up.png"), url("../layoutImg/megaphone.png"); 
 			background-position:0 49px, 100% 165px;
+			background-repeat: no-repeat;
+		}
+	}
+	&#popup-partage{
+		.popup{
+			background-image: url("../layoutImg/megaphone.png"); 
+			background-position: 100% 25px;
 			background-repeat: no-repeat;
 		}
 	}
@@ -54,6 +61,13 @@
 	border-radius: 6px;
 	text-align: right;
 	cursor: auto;
+	.container-popup.big &{
+		padding-top: 43px;
+		padding-bottom: 43px;
+		.btn-close-popup{
+			margin-top: -30px;
+		}
+	}
 	.btn-close-popup{
 		position: fixed;
 		display: inline-block;
@@ -81,6 +95,11 @@
 		.lato-bold(1.625em);
 		color: #fe7b02;
 		margin: 40px 0 20px 0;
+	}
+	.content-popup{
+		> h2{
+			margin-top: 0;
+		}
 	}
 	p{
 		color: @bleuFonceFioulReduc;

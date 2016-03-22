@@ -483,9 +483,9 @@
 
     /* @group Partage */
     .wrapper-popup{
-        &#popup-partage{
+        &#popup-partage-etape{
             .popup{
-                background-position: 0 100px, 100% 150px;
+                background-position: 0 100px, 100% 117px;
             }
         }
     }
@@ -731,6 +731,10 @@
         top: inherit;
         left: inherit;
         transform: none;
+        .container-popup.big &{
+            padding-top: 23px;
+            padding-bottom: 23px;
+        }
         .btn-close-popup{
             position: absolute;
             top: 11px;
@@ -741,11 +745,14 @@
             }
         }
     }
+    .container-popup.big .popup .btn-close-popup{
+        margin-top: 0;
+    }
     /* @end */
 
     /* @group Partage */
     .wrapper-popup{
-        &#popup-partage{
+        &#popup-partage-etape, &#popup-partage{
             .popup{
                 background: none;
             }

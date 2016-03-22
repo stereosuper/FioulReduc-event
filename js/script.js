@@ -1,3 +1,6 @@
+// Variables
+var i;
+
 window.requestAnimFrame = (function(){
 	return  window.requestAnimationFrame   || 
 			window.webkitRequestAnimationFrame || 
@@ -23,6 +26,16 @@ function scrollPage(){
 	}
 
 	requestAnimFrame(scrollPage);
+}
+
+// Fonction d'animation de sprites
+function animSprites(sprite, frameWidth, frameHeight, numCols, numRows){
+	i = 0;
+	var steppedEase = new SteppedEase(numCols-1);
+	spritesTab = new TimelineMax({repeat: -1});
+	for(i; i<numRows; i++){
+	    spritesTab.add(TweenMax.fromTo(sprite, 0.2, {backgroundPosition: '0 -'+(frameHeight*i)+'px'}, {backgroundPosition: '-'+(frameWidth*(numCols-1))+'px -'+(frameHeight*i)+'px', ease: steppedEase}));
+	}
 }
 
 // Fonction pour animer le compteur
@@ -68,10 +81,16 @@ function posiPopup(){
 	});
 }
 
+// Animation de l'illustration
+function illus(){
+	animSprites($("#glow"), 635, 200, 5, 5);
+}
+
 $(function(){
 	compteur();
 	decompteur();
 	scrollPage();
+	illus();
 	// Survol des étapes
 	$("#etapes-event >li").mouseenter(function() {
 		$("#etapes-event").removeClass("etape-1-active etape-2-active etape-3-active etape-4-active");
@@ -104,7 +123,7 @@ $(function(){
 		return false;
 	});
 
-	// Form
+	// Form //
 	$(".radio").click(function(){
 		if(!$(this).hasClass("active")){
 			var fieldsetParent = $(this).parent("fieldset");
@@ -113,7 +132,7 @@ $(function(){
 		}
 	});
 
-	// Popup
+	// Popup //
 	
 	// Ouverture popup
 	$(".has-popup").click(function(){

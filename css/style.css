@@ -369,6 +369,7 @@ strong {
   height: 650px;
   padding: 155px 0 0 0;
   position: relative;
+  overflow: hidden;
 }
 #top-event .container {
   position: relative;
@@ -396,6 +397,26 @@ strong {
   left: 50%;
   margin: 0 0 0 -317px;
   background: url("../layoutImg/illus/glow.png") no-repeat 0 0;
+}
+#wrapper-illus #ombre-socle {
+  display: block;
+  width: 1200px;
+  height: 33px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin: 0 0 0 -600px;
+  background: url("../layoutImg/illus/ombre-socle.png") no-repeat 0 0;
+}
+#wrapper-illus #socle {
+  display: block;
+  width: 783px;
+  height: 26px;
+  position: absolute;
+  bottom: 102px;
+  left: 50%;
+  margin: 0 0 0 -391px;
+  background: url("../layoutImg/illus/socle.png") no-repeat 0 0;
 }
 /* @end */
 /* @group Content event */
@@ -2307,6 +2328,7 @@ input[type="tel"]#lien-partage {
   label.radio,
   .equi-label.radio {
     display: inline-block;
+    vertical-align: top;
     margin-bottom: 5px;
   }
   .head-form {

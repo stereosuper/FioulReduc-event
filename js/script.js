@@ -84,6 +84,7 @@ function posiPopup(){
 // Animation de l'illustration
 function illus(){
 	animSprites($("#glow"), 635, 200, 5, 5);
+	
 	animSprites($("#cape"), 96, 58, 2,3)
 	
 	//animation d'intro

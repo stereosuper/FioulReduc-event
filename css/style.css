@@ -2405,7 +2405,9 @@ input[type="tel"]#lien-partage {
   #wrapper-illus #personnages #cape {
     width: 72px;
     height: 44px;
-    background-color: red;
+    background-image: url("../layoutImg/illus/anim-cape-r1.png");
+    bottom: 229px;
+    margin-left: 38px;
   }
   /* @end */
 }

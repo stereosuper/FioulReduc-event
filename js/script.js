@@ -81,12 +81,18 @@ function posiPopup(){
 	});
 }
 
+function posiSprites(){
+	animSprites($("#glow"), 635, 200, 5, 5);
+	if($(window).width()>767){
+		animSprites($("#cape"), 96, 58, 2, 3);
+	}else{
+		animSprites($("#cape"), 72, 44, 2, 3);
+	}
+}
+
 // Animation de l'illustration
 function illus(){
-	animSprites($("#glow"), 635, 200, 5, 5);
-	
-	animSprites($("#cape"), 96, 58, 2,3)
-	
+	posiSprites();
 	//animation d'intro
 	var tl = new TimelineMax({});
 	
@@ -233,6 +239,7 @@ $(window).load(function() {
 
 var h = $(window).height(), w = $(window).width();
 $(window).resize(function(){
+	posiSprites();
 	// Positionnement des popup
 	posiPopup();
 
@@ -246,50 +253,34 @@ $(window).resize(function(){
 });
 
 $(document).on("scroll", function(){
-myScroll = $(document).scrollTop();
-console.log(myScroll)
-//le prix rappetisse en header.
-if(myScroll<59){
-
-	TweenMax.to($("#prix"), 0.3, {bottom:"7%",scaleY:"1"});
-	//TweenMax.to($("#ombre-prix"), 0.3, {opacity:1});
-	TweenMax.to($("#ensemble-crew"), 1, { bottom:"11%", ease: Elastic.easeOut.config(2, 0.5) });
-	$("#prix").removeClass("aplat")
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"+=first-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
-	
-}else if(myScroll> 60 && myScroll<249){
-	
-	$("#prix").removeClass("aplat")
-	TweenMax.to($("#prix"), 0.6, { bottom:"3%", scaleX:"0.9" ,scaleY:"0.4", ease: Elastic.easeOut.config(2, 0.5) });
-	TweenMax.to($("#ensemble-crew"), 1, { bottom:"3%", ease: Elastic.easeOut });
-	TweenMax.to($("#ombre-prix"), 0.2, { opacity:1});
-	$("#ombre-socle").removeClass("first-step");
-	$("#ombre-socle").removeClass("third-step");
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"+=second-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
-
-}else if (myScroll> 250 && myScroll<600){
-	TweenMax.to($("#ensemble-crew"), 0.6, { bottom:"-4%", ease:Power1.easeInOut });
-	$("#prix").addClass("aplat");
-	TweenMax.to($("#prix"), 0.6, { scaleX:"1" ,scaleY:"1",bottom:"-8%",  ease:Power1.easeInOut });
-	TweenMax.to($("#ombre-prix"), 0.2, { opacity:0});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"+=third-step"});
-		
-	
-//TweenMax.to($("#prix"), 0.2, {scaleY:"0.3"});
-
-//TweenMax.to($("#prix"), 1, { scaleX:"0.9" ,scaleY:"0.4", ease: Elastic.easeOut.config(2, 0.5), y: 0 });
-
-}
-
-
-
-
+	myScroll = $(document).scrollTop();
+	//le prix rappetisse en header.
+	if(myScroll<59){
+		TweenMax.to($("#prix"), 0.3, {bottom:"7%",scaleY:"1"});
+		TweenMax.to($("#ensemble-crew"), 1, { bottom:"11%", ease: Elastic.easeOut.config(2, 0.5) });
+		$("#prix").removeClass("aplat")
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=first-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
+	}else if(myScroll> 60 && myScroll<249){
+		$("#prix").removeClass("aplat")
+		TweenMax.to($("#prix"), 0.6, { bottom:"3%", scaleX:"0.9" ,scaleY:"0.4", ease: Elastic.easeOut.config(2, 0.5) });
+		TweenMax.to($("#ensemble-crew"), 1, { bottom:"3%", ease: Elastic.easeOut });
+		TweenMax.to($("#ombre-prix"), 0.2, { opacity:1});
+		$("#ombre-socle").removeClass("first-step");
+		$("#ombre-socle").removeClass("third-step");
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=second-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
+	}else if (myScroll> 250 && myScroll<600){
+		TweenMax.to($("#ensemble-crew"), 0.6, { bottom:"-4%", ease:Power1.easeInOut });
+		$("#prix").addClass("aplat");
+		TweenMax.to($("#prix"), 0.6, { scaleX:"1" ,scaleY:"1",bottom:"-8%",  ease:Power1.easeInOut });
+		TweenMax.to($("#ombre-prix"), 0.2, { opacity:0});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=third-step"});
+	}
 })
 
 

@@ -446,7 +446,7 @@ strong {
   bottom: 50%;
   left: 50%;
   margin: 0 0 0 -200px;
-  background: url("../layoutImg/illus/prix.png") no-repeat 0 0;
+  background: url("../layoutImg/illus/prix.png") no-repeat 50% 0;
 }
 #wrapper-illus #prix.aplat {
   background: url("../layoutImg/illus/prix-aplat.png") no-repeat 0 0;
@@ -460,8 +460,7 @@ strong {
   bottom: 0%;
   left: 50%;
   opacity: 0;
-  background-size: 90%;
-  margin: 0 0 0 -166px;
+  margin: 0 0 0 -170px;
 }
 #wrapper-illus #ensemble-crew {
   display: block;

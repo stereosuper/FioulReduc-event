@@ -413,20 +413,25 @@ strong {
   background: url("../layoutImg/illus/ombre-socle.png") no-repeat 0 0;
   background-size: 100%;
   opacity: 0;
+  /*&.fourth-step{
+			width: 869px;
+			opacity: 1;
+			bottom: 1%;
+		}*/
 }
 #wrapper-illus #ombre-socle.first-step {
   bottom: 4%;
   opacity: 0.3;
 }
 #wrapper-illus #ombre-socle.second-step {
+  width: 1000px;
+  opacity: 0.8;
+  bottom: 5%;
+}
+#wrapper-illus #ombre-socle.third-step {
   width: 950px;
   opacity: 0.8;
   bottom: 3%;
-}
-#wrapper-illus #ombre-socle.third-step {
-  width: 869px;
-  opacity: 1;
-  bottom: 1%;
 }
 #wrapper-illus #socle {
   display: block;
@@ -450,6 +455,9 @@ strong {
 }
 #wrapper-illus #prix.aplat {
   background: url("../layoutImg/illus/prix-aplat.png") no-repeat 0 0;
+}
+#wrapper-illus #prix.break {
+  background-image: url("../layoutImg/illus/prix-break.png");
 }
 #wrapper-illus #ombre-prix {
   background: url("../layoutImg/illus/ombre-prix.png") no-repeat 0 0;
@@ -2495,16 +2503,24 @@ input[type="tel"]#lien-partage {
   #wrapper-illus #personnages {
     background-size: 420px 181px;
   }
+  #wrapper-illus #personnages #cape {
+    width: 52px;
+    height: 31px;
+    background-image: url("../layoutImg/illus/anim-cape-r2.png");
+    bottom: 162px;
+    margin-left: 28px;
+  }
   #wrapper-illus #prix {
-    width: 250px;
+    width: 168px;
     height: 45px;
     background-size: 100% 100%;
-    margin: 0 0 0 -125px;
+    margin: 0 0 0 -84px;
   }
   #wrapper-illus #ombre-prix {
-    width: 208px;
-    height: 43px;
-    margin: 0 0 0 -104px;
+    width: 212px;
+    height: 45px;
+    margin: 0 0 0 -107px;
+    background-size: 100% 100%;
   }
   /* @end */
 }
@@ -2577,6 +2593,15 @@ input[type="tel"]#lien-partage {
 }
 @media (max-width: 374px) {
   /* @group Illus */
+  #top-event {
+    height: 406px;
+  }
+  #wrapper-illus {
+    height: 345px;
+  }
+  #wrapper-illus #ensemble-crew {
+    height: 196px;
+  }
   #wrapper-illus #personnages {
     background-size: 360px 155px;
   }

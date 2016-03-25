@@ -84,7 +84,7 @@ function posiPopup(){
 }
 
 function posiSprites(){
-	animSprites($("#glow"), spritesGlow, 635, 200, 5, 5);
+	animSprites($("#glow"), spritesGlow, 635, 200, 7, 7);
 	if($(window).width()>767){
 		animSprites($("#cape"), spritesCape, 96, 58, 2, 3);
 	}else if($(window).width()>530){

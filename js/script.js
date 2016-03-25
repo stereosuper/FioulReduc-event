@@ -88,8 +88,10 @@ function posiSprites(){
 		animSprites($("#cape"), 96, 58, 2, 3);
 	}else if($(window).width()>530){
 		animSprites($("#cape"), 72, 44, 2, 3);
-	}else{
+	}else if($(window).width()>374){
 		animSprites($("#cape"), 52, 31, 2, 3);
+	}else{
+		animSprites($("#cape"), 44, 27, 2, 3);
 	}
 }
 

@@ -1,6 +1,9 @@
 // Variables
-var i;
-var	myScroll ;
+var i,
+	myScroll,
+	spritesTab,
+	spritesCape = new TimelineMax({repeat: -1}),
+	spritesGlow = new TimelineMax({repeat: -1});
 
 window.requestAnimFrame = (function(){
 	return  window.requestAnimationFrame   || 
@@ -29,12 +32,11 @@ function scrollPage(){
 }
 
 // Fonction d'animation de sprites
-function animSprites(sprite, frameWidth, frameHeight, numCols, numRows){
+function animSprites(sprite, timelineName, frameWidth, frameHeight, numCols, numRows){
 	i = 0;
 	var steppedEase = new SteppedEase(numCols-1);
-	spritesTab = new TimelineMax({repeat: -1});
 	for(i; i<numRows; i++){
-	    spritesTab.add(TweenMax.fromTo(sprite, 0.2, {backgroundPosition: '0 -'+(frameHeight*i)+'px'}, {backgroundPosition: '-'+(frameWidth*(numCols-1))+'px -'+(frameHeight*i)+'px', ease: steppedEase}));
+	    timelineName.add(TweenMax.fromTo(sprite, 0.2, {backgroundPosition: '0 -'+(frameHeight*i)+'px'}, {backgroundPosition: '-'+(frameWidth*(numCols-1))+'px -'+(frameHeight*i)+'px', ease: steppedEase}));
 	}
 }
 
@@ -81,32 +83,32 @@ function posiPopup(){
 	});
 }
 
+function posiSprites(){
+	animSprites($("#glow"), spritesGlow, 635, 200, 5, 5);
+	if($(window).width()>767){
+		animSprites($("#cape"), spritesCape, 96, 58, 2, 3);
+	}else if($(window).width()>530){
+		animSprites($("#cape"), spritesCape, 72, 44, 2, 3);
+	}else if($(window).width()>374){
+		animSprites($("#cape"), spritesCape, 52, 31, 2, 3);
+	}else{
+		animSprites($("#cape"), spritesCape, 44, 27, 2, 3);
+	}
+}
+
 // Animation de l'illustration
 function illus(){
-	animSprites($("#glow"), 635, 200, 5, 5);
-	
-	animSprites($("#cape"), 96, 58, 2,3)
-	
+	posiSprites();
 	//animation d'intro
 	var tl = new TimelineMax({});
-	
-	
 	tl.set($("#ensemble-crew"), {opacity:0,bottom:"70%"})
 		.from($("#prix"), 1.5, {scale:0.1, alpha:0,ease:Elastic.easeInOut})
-		
 		.insert(
 			TweenMax.to($("#ensemble-crew"), 0.7, {delay:1.7,alpha:1, bottom:"11%",ease:Back.easeOut}),
 			TweenMax.to($("#prix"), 0.7, {delay:1.7,scaleX:1,scaleY:1, bottom:"7%", ease:Back.easeOut}),
 			TweenMax.to($("#ombre-prix"), 0.3, {delay:2.2,opacity:1}),
 			TweenMax.to($("#ombre-socle"), 0.2, { delay:1.7, className:"+=first-step"})
-			
-		);
-		
-			
-
-
-
-
+	);
 }
 
 $(function(){
@@ -235,64 +237,50 @@ var h = $(window).height(), w = $(window).width();
 $(window).resize(function(){
 	// Positionnement des popup
 	posiPopup();
-
 	var nh = $(window).height(), nw = $(window).width();
 	if (nw != w){
 		$(".content-etape").attr("style","");
 		$("#etapes-event >li.open").removeClass("open");
 		$("#etapes-event >li").first().addClass("open");
+		spritesCape.clear();
+		posiSprites();
 	}
 	h = nh; w = nw;
 });
 
 $(document).on("scroll", function(){
-myScroll = $(document).scrollTop();
-console.log(myScroll)
-//le prix rappetisse en header.
-if(myScroll<59){
-
-	TweenMax.to($("#prix"), 0.3, {bottom:"7%",scaleY:"1"});
-	//TweenMax.to($("#ombre-prix"), 0.3, {opacity:1});
-	TweenMax.to($("#ensemble-crew"), 1, { bottom:"11%", ease: Elastic.easeOut.config(2, 0.5) });
-	$("#prix").removeClass("aplat")
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"+=first-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
-	
-}else if(myScroll> 60 && myScroll<249){
-	
-	$("#prix").removeClass("aplat")
-	TweenMax.to($("#prix"), 0.6, { bottom:"3%", scaleX:"0.9" ,scaleY:"0.4", ease: Elastic.easeOut.config(2, 0.5) });
-	TweenMax.to($("#ensemble-crew"), 1, { bottom:"3%", ease: Elastic.easeOut });
-	TweenMax.to($("#ombre-prix"), 0.2, { opacity:1});
-	$("#ombre-socle").removeClass("first-step");
-	$("#ombre-socle").removeClass("third-step");
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"+=second-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
-
-}else if (myScroll> 250 && myScroll<600){
-	TweenMax.to($("#ensemble-crew"), 0.6, { bottom:"-4%", ease:Power1.easeInOut });
-	$("#prix").addClass("aplat");
-	TweenMax.to($("#prix"), 0.6, { scaleX:"1" ,scaleY:"1",bottom:"-8%",  ease:Power1.easeInOut });
-	TweenMax.to($("#ombre-prix"), 0.2, { opacity:0});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
-	TweenMax.to($("#ombre-socle"), 0.2, { className:"+=third-step"});
-		
-	
-//TweenMax.to($("#prix"), 0.2, {scaleY:"0.3"});
-
-//TweenMax.to($("#prix"), 1, { scaleX:"0.9" ,scaleY:"0.4", ease: Elastic.easeOut.config(2, 0.5), y: 0 });
-
-}
-
-
-
-
-})
-
-
-
-
-
+	myScroll = $(document).scrollTop();
+	if(myScroll<19){
+		$("#prix").removeClass("break");
+		TweenMax.to($("#prix"), 0.3, {bottom:"7%", scaleX:"1", scaleY:"1"});
+		TweenMax.to($("#ombre-prix"), 0.2, {scaleX:"1"});
+		TweenMax.to($("#ensemble-crew"), 1, { bottom:"11%", ease: Elastic.easeOut.config(2, 0.5) });
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=first-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
+	}else if(myScroll>=20 && myScroll<59){
+		$("#prix").addClass("break");
+		TweenMax.to($("#prix"), 0.3, {bottom:"7%", scaleX:"1", scaleY:"1"});
+		TweenMax.to($("#ombre-prix"), 0.2, {scaleX:"1"});
+		TweenMax.fromTo($("#ensemble-crew"), 0.3, {bottom:"10%"}, {bottom:"11%",ease: Elastic.easeOut.config(2, 0.5)});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=first-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
+	}else if(myScroll>= 60 && myScroll<249){
+		TweenMax.to($("#prix"), 0.3, {bottom:"5%", scaleX:"0.95", scaleY:"0.75"});
+		TweenMax.to($("#ombre-prix"), 0.2, {scaleX:"0.95"});
+		TweenMax.to($("#ensemble-crew"), 1, { bottom:"7%", ease: Elastic.easeOut.config(2, 0.5) });
+		$("#prix").addClass("break");
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=second-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
+	}else if (myScroll>= 250 && myScroll<600){
+		$("#prix").addClass("break");
+		TweenMax.to($("#prix"), 0.6, { bottom:"3%", scaleX:"0.9" ,scaleY:"0.4", ease: Elastic.easeOut.config(2, 0.5) });
+		TweenMax.to($("#ombre-prix"), 0.2, {scaleX:"0.9"});
+		TweenMax.to($("#ensemble-crew"), 1, { bottom:"3%", ease: Elastic.easeOut });
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=third-step"});
+	}
+});

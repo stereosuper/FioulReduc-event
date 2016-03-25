@@ -778,15 +778,23 @@
         #ensemble-crew{
             height: 312px;
         }
+        #ombre-socle{
+            //transform: scaleX(0.8) translate(-50%, 0);
+        }
         #personnages{
             background-size: 600px 258px;
             background-position: 50% 0;
             #cape{
                 width: 72px;
                 height: 44px;
-                //background-size: 72px 44px;
-                background-color: red;
+                background-image: url("../layoutImg/illus/anim-cape-r1.png");
+                bottom: 229px;
+                margin-left: 38px;
             }
+        }
+        #glow{
+            top: -30px;
+            left: 46%;
         }
     }
     /* @end */
@@ -881,17 +889,25 @@
         }
         #personnages{
             background-size: 420px 181px;
+            #cape{
+                width: 52px;
+                height: 31px;
+                background-image: url("../layoutImg/illus/anim-cape-r2.png");
+                bottom: 160px;
+                margin-left: 28px;
+            }
         }
         #prix{
-            width: 250px;
+            width: 168px;
             height: 45px;
             background-size: 100% 100%;
-            margin: 0 0 0 -125px;
+            margin: 0 0 0 -84px;
         }
         #ombre-prix{
-            width: 208px;
-            height: 43px;
-            margin: 0 0 0 -104px;
+            width: 212px;
+            height: 45px;
+            margin: 0 0 0 -107px;
+            background-size: 100% 100%;
         }
     }
     /* @end */
@@ -986,14 +1002,33 @@
     #top-event{
         height: 428px;
     }
+    #wrapper-illus{
+        #glow{
+            display: none;
+        }
+    }
     /* @end */
 }
 
 @media (max-width: 374px) {
 /* @group Illus */
+    #top-event{
+        height: 406px;
+    }
     #wrapper-illus{
+        height: 345px;
+        #ensemble-crew{
+            height: 196px;
+        }
         #personnages{
             background-size: 360px 155px;
+            #cape{
+                width: 44px;
+                height: 27px;
+                background-image: url("../layoutImg/illus/anim-cape-r3.png");
+                bottom: 146px;
+                margin-left: 23px;
+            }
         }
     }
     /* @end */

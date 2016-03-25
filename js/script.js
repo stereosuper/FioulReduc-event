@@ -1,7 +1,9 @@
 // Variables
 var i,
 	myScroll,
-	spritesTab;
+	spritesTab,
+	spritesCape = new TimelineMax({repeat: -1}),
+	spritesGlow = new TimelineMax({repeat: -1});
 
 window.requestAnimFrame = (function(){
 	return  window.requestAnimationFrame   || 
@@ -30,12 +32,11 @@ function scrollPage(){
 }
 
 // Fonction d'animation de sprites
-function animSprites(sprite, frameWidth, frameHeight, numCols, numRows){
+function animSprites(sprite, timelineName, frameWidth, frameHeight, numCols, numRows){
 	i = 0;
 	var steppedEase = new SteppedEase(numCols-1);
-	spritesTab = new TimelineMax({repeat: -1});
 	for(i; i<numRows; i++){
-	    spritesTab.add(TweenMax.fromTo(sprite, 0.2, {backgroundPosition: '0 -'+(frameHeight*i)+'px'}, {backgroundPosition: '-'+(frameWidth*(numCols-1))+'px -'+(frameHeight*i)+'px', ease: steppedEase}));
+	    timelineName.add(TweenMax.fromTo(sprite, 0.2, {backgroundPosition: '0 -'+(frameHeight*i)+'px'}, {backgroundPosition: '-'+(frameWidth*(numCols-1))+'px -'+(frameHeight*i)+'px', ease: steppedEase}));
 	}
 }
 
@@ -83,15 +84,15 @@ function posiPopup(){
 }
 
 function posiSprites(){
-	animSprites($("#glow"), 635, 200, 5, 5);
+	animSprites($("#glow"), spritesGlow, 635, 200, 5, 5);
 	if($(window).width()>767){
-		animSprites($("#cape"), 96, 58, 2, 3);
+		animSprites($("#cape"), spritesCape, 96, 58, 2, 3);
 	}else if($(window).width()>530){
-		animSprites($("#cape"), 72, 44, 2, 3);
+		animSprites($("#cape"), spritesCape, 72, 44, 2, 3);
 	}else if($(window).width()>374){
-		animSprites($("#cape"), 52, 31, 2, 3);
+		animSprites($("#cape"), spritesCape, 52, 31, 2, 3);
 	}else{
-		animSprites($("#cape"), 44, 27, 2, 3);
+		animSprites($("#cape"), spritesCape, 44, 27, 2, 3);
 	}
 }
 
@@ -234,17 +235,15 @@ $(window).load(function() {
 
 var h = $(window).height(), w = $(window).width();
 $(window).resize(function(){
-
-	//spritesTab.kill();
-	//posiSprites();
 	// Positionnement des popup
 	posiPopup();
-
 	var nh = $(window).height(), nw = $(window).width();
 	if (nw != w){
 		$(".content-etape").attr("style","");
 		$("#etapes-event >li.open").removeClass("open");
 		$("#etapes-event >li").first().addClass("open");
+		spritesCape.clear();
+		posiSprites();
 	}
 	h = nh; w = nw;
 });

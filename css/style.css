@@ -2417,6 +2417,10 @@ input[type="tel"]#lien-partage {
     bottom: 229px;
     margin-left: 38px;
   }
+  #wrapper-illus #glow {
+    top: -30px;
+    left: 46%;
+  }
   /* @end */
 }
 @media (max-width: 660px) {
@@ -2588,6 +2592,9 @@ input[type="tel"]#lien-partage {
   /* @group Illus */
   #top-event {
     height: 428px;
+  }
+  #wrapper-illus #glow {
+    display: none;
   }
   /* @end */
 }

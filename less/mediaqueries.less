@@ -1011,7 +1011,7 @@
 }
 
 @media (max-width: 374px) {
-/* @group Illus */
+    /* @group Illus */
     #top-event{
         height: 406px;
     }
@@ -1109,4 +1109,64 @@
             }
         }
     }
+
+    /* @group Visu */
+    #wrapper-illus{
+        #prix{
+            background-image: url("../layoutImg/illus/prix@2x.png");
+            background-size: 268px 72px;
+            &.break{
+                background-image: url("../layoutImg/illus/prix-break@2x.png");
+            }
+        }
+        #ombre-prix{
+            background-image: url("../layoutImg/illus/ombre-prix@2x.png");
+            background-size: 333px 69px;
+        }
+        #personnages{
+            background-image: url("../layoutImg/illus/personnages@2x.png");
+            background-size: 784px 337px;
+            #cape{
+                //background-image: url("../layoutImg/illus/anim-cape@2x.png");
+                //background-size: 192px 174px;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        #wrapper-illus{
+            #personnages{
+                background-size: 600px 258px;
+            }
+        }
+    }
+
+    @media (max-width: 530px) {
+        #wrapper-illus{
+            #personnages{
+                background-size: 420px 181px;
+            }
+            #prix{
+                background-size: 100% 100%;
+            }
+            #ombre-prix{
+                background-size: 100% 100%;
+            }
+        }
+    }
+
+    @media (max-width: 374px) {
+        #wrapper-illus{
+            #personnages{
+                background-size: 360px 155px;
+                /*#cape{
+                    width: 44px;
+                    height: 27px;
+                    background-image: url("../layoutImg/illus/anim-cape-r3.png");
+                    bottom: 146px;
+                    margin-left: 23px;
+                }*/
+            }
+        }
+    }
+    /* @end */
 }

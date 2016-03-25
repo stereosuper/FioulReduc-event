@@ -413,11 +413,6 @@ strong {
   background: url("../layoutImg/illus/ombre-socle.png") no-repeat 0 0;
   background-size: 100%;
   opacity: 0;
-  /*&.fourth-step{
-			width: 869px;
-			opacity: 1;
-			bottom: 1%;
-		}*/
 }
 #wrapper-illus #ombre-socle.first-step {
   bottom: 4%;
@@ -429,6 +424,11 @@ strong {
   bottom: 5%;
 }
 #wrapper-illus #ombre-socle.third-step {
+  width: 950px;
+  opacity: 0.8;
+  bottom: 3%;
+}
+#wrapper-illus #ombre-socle.fourth-step {
   width: 950px;
   opacity: 0.8;
   bottom: 3%;
@@ -2655,6 +2655,23 @@ input[type="tel"]#lien-partage {
     background-image: url("../layoutImg/copy@2x.png");
     background-size: 12px 15px;
   }
+  /* @group Visu */
+  #wrapper-illus #prix {
+    background-image: url("../layoutImg/illus/prix@2x.png");
+    background-size: 268px 72px;
+  }
+  #wrapper-illus #prix.break {
+    background-image: url("../layoutImg/illus/prix-break@2x.png");
+  }
+  #wrapper-illus #ombre-prix {
+    background-image: url("../layoutImg/illus/ombre-prix@2x.png");
+    background-size: 333px 69px;
+  }
+  #wrapper-illus #personnages {
+    background-image: url("../layoutImg/illus/personnages@2x.png");
+    background-size: 784px 337px;
+  }
+  /* @end */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 979px), only screen and (min-resolution: 144dpi) and (max-width: 979px) {
   #etapes-event > li.etape-1 .content-etape:after {
@@ -2684,6 +2701,34 @@ input[type="tel"]#lien-partage {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), only screen and (min-resolution: 144dpi) and (max-width: 767px) {
   #etapes-event > li.etape-4 .content-etape:before {
     background-image: url("../img/illus-livraison-mobile@2x.png");
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), only screen and (min-resolution: 144dpi) and (max-width: 767px) {
+  #wrapper-illus #personnages {
+    background-size: 600px 258px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 530px), only screen and (min-resolution: 144dpi) and (max-width: 530px) {
+  #wrapper-illus #personnages {
+    background-size: 420px 181px;
+  }
+  #wrapper-illus #prix {
+    background-size: 100% 100%;
+  }
+  #wrapper-illus #ombre-prix {
+    background-size: 100% 100%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 374px), only screen and (min-resolution: 144dpi) and (max-width: 374px) {
+  #wrapper-illus #personnages {
+    background-size: 360px 155px;
+    /*#cape{
+                    width: 44px;
+                    height: 27px;
+                    background-image: url("../layoutImg/illus/anim-cape-r3.png");
+                    bottom: 146px;
+                    margin-left: 23px;
+                }*/
   }
 }
 /* @end */

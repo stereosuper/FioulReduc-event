@@ -258,6 +258,7 @@ $(document).on("scroll", function(){
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=first-step"});
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=fourth-step"});
 	}else if(myScroll>=20 && myScroll<59){
 		$("#prix").addClass("break");
 		TweenMax.to($("#prix"), 0.3, {bottom:"7%", scaleX:"1", scaleY:"1"});
@@ -266,6 +267,7 @@ $(document).on("scroll", function(){
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=first-step"});
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=fourth-step"});
 	}else if(myScroll>= 60 && myScroll<249){
 		TweenMax.to($("#prix"), 0.3, {bottom:"5%", scaleX:"0.95", scaleY:"0.75"});
 		TweenMax.to($("#ombre-prix"), 0.2, {scaleX:"0.95"});
@@ -274,13 +276,24 @@ $(document).on("scroll", function(){
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=second-step"});
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
-	}else if (myScroll>= 250 && myScroll<600){
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=fourth-step"});
+	}else if (myScroll>= 250 && myScroll<349){
+		$("#prix").addClass("break");
+		TweenMax.to($("#prix"), 0.6, { bottom:"4%", scaleX:"0.92" ,scaleY:"0.62", ease: Elastic.easeOut.config(2, 0.5) });
+		TweenMax.to($("#ombre-prix"), 0.2, {scaleX:"0.92"});
+		TweenMax.to($("#ensemble-crew"), 1, { bottom:"5%", ease: Elastic.easeOut });
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=third-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=fourth-step"});
+	}else if (myScroll>= 350 && myScroll<600){
 		$("#prix").addClass("break");
 		TweenMax.to($("#prix"), 0.6, { bottom:"3%", scaleX:"0.9" ,scaleY:"0.4", ease: Elastic.easeOut.config(2, 0.5) });
 		TweenMax.to($("#ombre-prix"), 0.2, {scaleX:"0.9"});
 		TweenMax.to($("#ensemble-crew"), 1, { bottom:"3%", ease: Elastic.easeOut });
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=first-step"});
 		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=second-step"});
-		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=third-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"-=third-step"});
+		TweenMax.to($("#ombre-socle"), 0.2, { className:"+=fourth-step"});
 	}
 });
